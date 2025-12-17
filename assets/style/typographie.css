@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Quablo";
+    src:
+        local("Quablo"),
+        url("/assets/fonts/quablo/Quablo-Medium.woff") format("woff"),
+        url("/assets/fonts/quablo/Quablo-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Fira";
+    font-weight: 700;
+    src:
+        local("Fira"),
+        url("/assets/fonts/fira/FiraSans-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Fira";
+    font-weight: 400;
+    src:
+        local("Fira"),
+        url("/assets/fonts/fira/FiraSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Fira";
+    font-weight: 300;
+    src:
+        local("Fira"),
+        url("/assets/fonts/fira/FiraSans-Light.woff") format("woff");
+}
+
+
+
+.title-1 {
+    font-family: "Fira";
+    font-size: 60px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    margin-bottom: 50px;
+}
+
+.title-2 {
+    font-family: "Fira";
+    font-size: 45px;
+    font-weight: var(--font-weight-light);
+    margin-bottom: 40px;
+}
+
+.title-3 {
+    font-family: "Fira";
+    font-size: 45px;
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 780px) {
+    .title-1 {
+        font-size: 50px;
+    }
+
+    .title-2 {
+        font-size: 35px;
+    }
+
+    .title-3 {
+        font-size: 30px;
+    }
+
+}
