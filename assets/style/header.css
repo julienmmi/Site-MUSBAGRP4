@@ -1,3 +1,109 @@
-.header {
+.en-tete {
+    width: 100%;
+    height: calc(128 / 1280 * 100vw);
+    min-height: 128px;
+    background-color: var(--color-background);
+    position: relative;
+    margin: 0 auto;
+}
 
+.en-tete .logo {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(32 / 1280 * 100vw);
+    width: calc(366 / 1280 * 100%);
+    height: calc(61 / 1280 * 100vw);
+    min-width: 183px;
+    min-height: 30.5px;
+}
+
+.logo .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.en-tete .lien {
+    position: absolute;
+    top: calc(60 / 1280 * 100vw);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    line-height: 100%;
+    color: var(--color-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.en-tete .lien:nth-of-type(1) {
+    left: calc(652 / 1280 * 100%);
+    width: calc(44 / 1280 * 100%);
+    height: calc(20 / 1280 * 100vw);
+}
+
+.en-tete .lien:nth-of-type(2) {
+    left: calc(715 / 1280 * 100%);
+    width: calc(79 / 1280 * 100%);
+    height: calc(20 / 1280 * 100vw);
+}
+
+.en-tete .lien:nth-of-type(3) {
+    left: calc(813 / 1280 * 100%);
+    width: calc(157 / 1280 * 100%);
+    height: calc(20 / 1280 * 100vw);
+}
+
+.en-tete .lien:nth-of-type(4) {
+    left: calc(989 / 1280 * 100%);
+    width: calc(69 / 1280 * 100%);
+    height: calc(20 / 1280 * 100vw);
+}
+
+.recherche {
+    position: absolute;
+    right: calc(180 / 2050 * 100%);
+    top: calc(65 / 1400 * 100vw);
+    width: calc(21 / 1400 * 100vw);
+    height: calc(21 / 1400 * 100vw);
+    min-width: 18px;
+    min-height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recherche svg {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.langue {
+    position: absolute;
+    left: calc(1077 / 1280 * 100%);
+    top: calc(60 / 1280 * 100vw);
+    width: calc(52 / 1280 * 100%);
+    height: calc(20 / 1280 * 100vw);
+}
+
+.texte-langue {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    line-height: 100%;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.en-tete .ligne {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(115 / 1280 * 100vw);
+    width: calc(858 / 1280 * 100%);
+    height: 1px;
+    background-color: var(--color-secondary);
 }

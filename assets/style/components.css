@@ -1,32 +1,52 @@
-.button {
-    border-radius: 3px;
-    background: #000;
-    color: white;
-    padding: 15px 40px;
-    text-decoration: none;
-    display: block;
-    width: fit-content;
-    transition: transform 0.3s;
+.expositions .bouton,
+.collections .bouton,
+.histoire .bouton,
+.boutique .bouton {
+    position: absolute;
+    background-color: var(--color-button);
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+    color: #FFFFFF;
+    line-height: 25px;
+    padding: 0 calc(18 / 1280 * 100vw);
+    text-align: left;
 }
 
-.button:hover {
-    transform: scale(0.9);
+.expositions .bouton {
+    left: calc(65 / 1280 * 100%);
+    top: calc(1193 / 1280 * 100vw);
+    width: calc(216 / 1280 * 100%);
+    height: calc(51 / 1280 * 100vw);
+    min-width: 108px;
+    min-height: 25.5px;
 }
 
-.button-secondary {
-    background: tomato;
-    color: black;
+.collections .bouton {
+    left: calc(554 / 1280 * 100%);
+    top: calc(2111 / 1280 * 100vw);
+    width: calc(216 / 1280 * 100%);
+    height: calc(51 / 1280 * 100vw);
+    min-width: 108px;
+    min-height: 25.5px;
 }
 
-.button-tertiary {
-    background: transparent;
-    border: 2px solid #000;
-    color: black;
-    padding: 10px 20px;
+.histoire .bouton {
+    left: calc(67 / 1280 * 100%);
+    top: calc(2833 / 1280 * 100vw);
+    width: calc(243 / 1280 * 100%);
+    height: calc(51 / 1280 * 100vw);
+    min-width: 121px;
+    min-height: 25.5px;
 }
 
-@media screen and (max-width: 780px) {
-    .button {
-        padding: 5px;
-    }
+.boutique .bouton {
+    left: calc(458 / 1280 * 100%);
+    top: calc(3595 / 1280 * 100vw);
+    width: calc(281 / 1280 * 100%);
+    height: calc(51 / 1280 * 100vw);
+    min-width: 140px;
+    min-height: 25.5px;
 }

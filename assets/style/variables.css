@@ -1,14 +1,8 @@
 :root {
     --color-background: #FFFFFF;
-    --color-primary: #051B3B;
+    --color-primary: #1C1C1C;
     --color-secondary: #000000;
-
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: #051B3B;
-        --color-primary: #FFFFFF;
-        --color-secondary: #d4d4d4;
-    }
+    --color-button: #5D360A;
+    --color-gold: #D4AF37;
+    --color-footer-bg: #E9ECEF;
 }

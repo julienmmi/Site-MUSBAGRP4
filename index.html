@@ -1,28 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusBA</title>
+    <title>MusBA - Musée des Beaux-Arts de Bordeaux</title>
     
-    <link rel="stylesheet" href="/assets/style/reset.css">
-    <link rel="stylesheet" href="/assets/style/variables.css">
-
-    <link rel="stylesheet" href="/assets/style/system.css">
-    <link rel="stylesheet" href="/assets/style/typography.css">
-    <link rel="stylesheet" href="/assets/style/components.css">
-    <link rel="stylesheet" href="/assets/style/header.css">
-    <link rel="stylesheet" href="/assets/style/footer.css">
-
-    <link rel="stylesheet" href="/assets/style/home/hero.css">
+    <link rel="stylesheet" href="assets/style/reset.css">
+    <link rel="stylesheet" href="assets/style/variables.css">
+    <link rel="stylesheet" href="assets/style/system.css">
+    <link rel="stylesheet" href="assets/style/typographie.css">
+    <link rel="stylesheet" href="assets/style/components.css">
+    <link rel="stylesheet" href="assets/style/header.css">
+    <link rel="stylesheet" href="assets/style/footer.css">
+    <link rel="stylesheet" href="assets/style/sections.css">
+    <link rel="stylesheet" href="assets/style/home/hero.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="en-tete">
+        <div class="logo">
+            <img src="https://www.figma.com/api/mcp/asset/9be65352-940a-4ce7-b537-7ea7eb2cde0d" alt="MusBA Logo" class="image">
+        </div>
+        <a href="#" class="lien">Visite</a>
+        <a href="#" class="lien">Découvrir</a>
+        <a href="#" class="lien">L'histoire du musée</a>
+        <a href="#" class="lien">Voir plus</a>
+        <button class="recherche" aria-label="Rechercher">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9.5" cy="9.5" r="8.5" stroke="#000000" stroke-width="1.5"/>
+                <line x1="14.5" y1="14.5" x2="20" y2="20" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="langue">
+            <span class="texte-langue">FR-EN</span>
+        </div>
+        <div class="ligne"></div>
+    </header>
+
+    <main>
+        <section class="accueil">
+            <div class="image-accueil">
+                <img src="https://www.figma.com/api/mcp/asset/2a364c0a-b6e7-4062-b664-61a56992dd42" alt="Récits d'enfance" class="image">
+            </div>
+            <div class="contenu">
+                <div class="titre-accueil">
+                    <span class="titre-principal">Récits d'enfance</span>
+                    <span class="sous-titre">Une exposition à voir et à écouter</span>
+                </div>
+                <p class="date">
+                    Jusqu'au 5 janvier 2026<br>MusBA
+                </p>
+            </div>
+        </section>
+
+        <section class="expositions">
+            <h2 class="titre">Expositions temporaires</h2>
+            <div class="contenu">
+                <div>
+                    <div class="texte">
+                        <p>Découvrez les nombreuses expositions variées temporaires du Musée des Beaux arts</p>
+                    </div>
+                    <button class="bouton">En savoir plus</button>
+                </div>
+                <div class="image-expositions">
+                    <img src="https://www.figma.com/api/mcp/asset/72abe68e-bc39-41d5-b686-6eb39d8e7ae7" alt="Exposition temporaire" class="image">
+                </div>
+            </div>
+        </section>
+
+        <section class="collections">
+            <h2 class="titre">Collections permanentes</h2>
+            <div class="contenu">
+                <div class="image-collections">
+                    <img src="https://www.figma.com/api/mcp/asset/dcb22aaa-b569-43ea-94c4-93788f4022f3" alt="Collections permanentes" class="image">
+                </div>
+                <div>
+                    <div class="texte">
+                        <p>La collection permanente de peinture et de sculpture européenne du musée se déploie dans les ailes Lacour et Bonheur, suivant un parcours qui reprend les grandes périodes de l'histoire de l'art, les grands foyers et les principaux courants du 15e au 20e siècle avec des œuvres de Pérugin, Titien, Véronèse, Brueghel de Velours, Van Dyck, Rubens, Chardin, Delacroix, Corot, Rodin, Kokoschka, Picasso, Matisse...</p>
+                    </div>
+                    <button class="bouton">Découvrir</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="histoire">
+            <h2 class="titre">L'histoire du Musée</h2>
+            <div class="contenu">
+                <div>
+                    <div class="texte">
+                        <p>Le musée des Beaux-Arts de Bordeaux (MusBA) - labellisé musée de France - propose à ses visiteurs un large panorama de l'art européen du 15e au 20e siècle. Avec plus de 8 400 œuvres (peintures, sculptures et arts graphiques), il est l'une des collections de beaux-arts majeures de Nouvelle-Aquitaine.</p>
+                    </div>
+                    <button class="bouton">Histoire du musée</button>
+                </div>
+                <div class="image-histoire">
+                    <img src="https://www.figma.com/api/mcp/asset/45c7a623-bf37-45cb-94e8-5273e17d8a4b" alt="Histoire du musée" class="image">
+                </div>
+            </div>
+        </section>
+
+        <section class="boutique">
+            <h2 class="titre">Boutique</h2>
+            <div class="contenu">
+                <div class="image-boutique">
+                    <img src="https://www.figma.com/api/mcp/asset/b7e6c585-497c-4532-8382-5f557ef8a69d" alt="Boutique" class="image">
+                </div>
+                <div>
+                    <div class="texte">
+                        <p>La boutique du musée propose une large gamme d'objets, cartes postales, livres, magazines, bijoux, foulards, jeux et divers produits en lien avec les collections du musée, ses expositions temporaires et plus largement les thématiques des Beaux-Arts et de l'histoire de l'art.</p>
+                    </div>
+                    <button class="bouton">Jetez un coup d'oeil</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pied-page">
+        <div class="conteneur">
+            <div class="colonne gauche">
+                <nav class="liens">
+                    <a href="#" class="lien">Plan du site</a>
+                    <a href="#" class="lien">Mention légales</a>
+                    <a href="#" class="lien">Protection des données personnelles</a>
+                </nav>
+                <div class="ligne-separation"></div>
+                <address class="section">
+                    <p class="titre titre-or">Collections permanentes</p>
+                    <p class="sous-titre">Musée des Beaux-Arts</p>
+                    <p class="texte-petit">20 Cours D'Albret, Bordeaux</p>
+                    <p class="texte-petit">+33 (0)5 56 10 20 56</p>
+                </address>
+                <div class="ligne-separation"></div>
+                <address class="section">
+                    <p class="titre titre-or">Expositions temporaires</p>
+                    <p class="sous-titre">Galerie du musée des Beaux-Arts</p>
+                    <p class="texte-petit">Place du Colonel Raynal, Bordeaux</p>
+                </address>
+            </div>
+            
+            <div class="colonne droite">
+                <div class="reseaux">
+                    <p class="suivre">Nous suivre :</p>
+                    <div class="icones">
+                        <a href="#" class="icone" aria-label="Facebook">
+
+
+                            
+                        </a>
+                        <a href="#" class="icone" aria-label="Instagram">
+
+
+
+                        </a>
+                        <a href="#" class="icone" aria-label="YouTube">
+
+
+                        </a>
+                        <a href="#" class="icone" aria-label="LinkedIn">
+
+
+                        </a>
+                    </div>
+                </div>
+                
+                <nav class="liens-nav">
+                    <ul class="liste-gauche">
+                        <li><a href="#" class="lien">Venir au musée</a></li>
+                        <li><a href="#" class="lien">Contact</a></li>
+                        <li><a href="#" class="lien">Presse</a></li>
+                        <li><a href="#" class="lien">Enseignant</a></li>
+                        <li><a href="#" class="lien">Photothèque</a></li>
+                    </ul>
+                    <ul class="liste-droite">
+                        <li><a href="#" class="lien">Lire l'infolettre du mois</a></li>
+                        <li class="saut-ligne"></li>
+                        <li><a href="#" class="lien">Recevoir l'invitation</a></li>
+                        <li class="saut-ligne"></li>
+                        <li><a href="#" class="lien">Lire l'agenda semestriel</a></li>
+                        <li class="logo-item">
+                            <div class="logo">
+                                <img src="https://www.figma.com/api/mcp/asset/76f0d85c-ca98-474f-b087-6e2fb3002041" alt="Ville de Bordeaux" class="image">
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="bas">
+                    <a href="#" class="lien accessibilite">Accessibilité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/style/script.js"></script>
 </body>
 </html>

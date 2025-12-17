@@ -1,24 +1,26 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    background: var(--color-background);
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-background);
     color: var(--color-primary);
-    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
 }
 
-.container {
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 30px;
-    padding-right: 30px;
+main {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    background-color: var(--color-background);
+    position: relative;
+    height: calc(3646 / 1280 * 100vw);
+    padding: 0;
+    padding-bottom: calc(80 / 1280 * 100vw);
 }
 
-@media screen and (max-width: 780px) {
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+.accueil .contenu,
+.expositions .contenu,
+.collections .contenu,
+.histoire .contenu,
+.boutique .contenu {
+    position: relative;
 }

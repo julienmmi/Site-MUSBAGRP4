@@ -1,3 +1,55 @@
-.hero {
-    
+.image-accueil {
+    position: absolute;
+    left: calc(66 / 1280 * 100%);
+    top: calc(20 / 1280 * 100vw);
+    width: calc(1147 / 1280 * 100%);
+    height: calc(610 / 1280 * 100vw);
+}
+
+.image-accueil .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titre-accueil {
+    position: absolute;
+    left: calc(162 / 1280 * 100%);
+    top: calc(710 / 1280 * 100vw);
+    width: calc(439 / 1280 * 100%);
+    height: calc(94 / 1280 * 100vw);
+}
+
+.titre-principal {
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(32px, calc(60 / 1280 * 100vw), 60px);
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color-primary);
+    display: block;
+    margin: 0;
+}
+
+.titre-accueil .sous-titre {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--color-primary);
+    display: block;
+    margin: 0 0 calc(20 / 1280 * 100vw) 0;
+}
+
+.date {
+    position: absolute;
+    left: calc(652 / 1280 * 100%);
+    top: calc(730 / 1280 * 100vw);
+    width: calc(229 / 1280 * 100%);
+    height: calc(74 / 1280 * 100vw);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--color-secondary);
+    margin: 0;
 }

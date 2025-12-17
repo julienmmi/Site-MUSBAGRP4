@@ -1,0 +1,188 @@
+.expositions .titre {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(841 / 1280 * 100vw);
+    width: calc(213 / 1280 * 100%);
+    height: calc(162 / 1280 * 100vw);
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(24px, calc(40 / 1280 * 100vw), 40px);
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.expositions .texte {
+    position: absolute;
+    left: calc(66 / 1280 * 100%);
+    top: calc(974 / 1280 * 100vw);
+    width: calc(268 / 1280 * 100%);
+    height: calc(104 / 1280 * 100vw);
+}
+
+.expositions .texte p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.image-expositions {
+    position: absolute;
+    left: calc(457 / 1280 * 100%);
+    top: calc(841 / 1280 * 100vw);
+    width: calc(756 / 1280 * 100%);
+    height: calc(403 / 1280 * 100vw);
+}
+
+.image-expositions .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collections .titre {
+    position: absolute;
+    left: calc(554 / 1280 * 100%);
+    top: calc(1457 / 1280 * 100vw);
+    width: calc(441 / 1280 * 100%);
+    height: calc(57 / 1280 * 100vw);
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(24px, calc(40 / 1280 * 100vw), 40px);
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-primary);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.image-collections {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(1457 / 1280 * 100vw);
+    width: calc(466 / 1280 * 100%);
+    height: calc(705 / 1280 * 100vw);
+}
+
+.image-collections .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collections .texte {
+    position: absolute;
+    left: calc(559 / 1280 * 100%);
+    top: calc(1541 / 1280 * 100vw);
+    width: calc(291 / 1280 * 100%);
+    height: calc(384 / 1280 * 100vw);
+}
+
+.collections .texte p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.histoire .titre {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(2388 / 1280 * 100vw);
+    width: calc(353 / 1280 * 100%);
+    height: calc(48 / 1280 * 100vw);
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(24px, calc(40 / 1280 * 100vw), 40px);
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.histoire .texte {
+    position: absolute;
+    left: calc(63 / 1280 * 100%);
+    top: calc(2479 / 1280 * 100vw);
+    width: calc(314 / 1280 * 100%);
+    height: calc(257 / 1280 * 100vw);
+}
+
+.histoire .texte p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(12px, calc(14 / 1280 * 100vw), 14px);
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.image-histoire {
+    position: absolute;
+    left: calc(457 / 1280 * 100%);
+    top: calc(2390 / 1280 * 100vw);
+    width: calc(756 / 1280 * 100%);
+    height: calc(494 / 1280 * 100vw);
+}
+
+.image-histoire .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boutique .titre {
+    position: absolute;
+    left: calc(456 / 1280 * 100%);
+    top: calc(3095 / 1280 * 100vw);
+    width: calc(183 / 1280 * 100%);
+    height: calc(66 / 1280 * 100vw);
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(24px, calc(40 / 1280 * 100vw), 40px);
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-primary);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.image-boutique {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(3095 / 1280 * 100vw);
+    width: calc(367 / 1280 * 100%);
+    height: calc(551 / 1280 * 100vw);
+}
+
+.image-boutique .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boutique .texte {
+    position: absolute;
+    left: calc(456 / 1280 * 100%);
+    top: calc(3177 / 1280 * 100vw);
+    width: calc(294 / 1280 * 100%);
+    height: calc(250 / 1280 * 100vw);
+}
+
+.boutique .texte p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(12px, calc(14 / 1280 * 100vw), 14px);
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--color-primary);
+    margin: 0;
+}
+

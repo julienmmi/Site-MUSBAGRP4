@@ -1,0 +1,517 @@
+/* Page Expositions Temporaires - Styles basés sur le design Figma exact */
+
+/* Import d'une police serif élégante */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600;700&family=Lora:wght@400;500;600&display=swap');
+
+main.page-expositions {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: calc(3000 / 1280 * 100vw);
+    height: auto;
+    padding: calc(80 / 1280 * 100vw) calc(64 / 1280 * 100%);
+    padding-bottom: calc(80 / 1280 * 100vw);
+    background-color: var(--color-background);
+}
+
+/* Titre principal de la page - Grand, police serif fine */
+.titre-principal {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, calc(64 / 1280 * 100vw), 64px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin: 0 0 calc(60 / 1280 * 100vw) 0;
+    padding: 0;
+    text-align: left;
+    letter-spacing: -0.01em;
+}
+
+/* Conteneur pour chaque exposition */
+.exposition-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: calc(80 / 1280 * 100vw);
+}
+
+/* Conteneur flex pour les deux colonnes */
+.exposition-contenu {
+    display: flex;
+    gap: calc(40 / 1280 * 100%);
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Colonne gauche - Image + Titre + Dates */
+.exposition-colonne-gauche {
+    flex: 0 0 58%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Colonne droite - Texte descriptif */
+.exposition-colonne-droite {
+    flex: 0 0 38%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* Exposition 1: Récits d'enfance */
+.exposition-1 .exposition-image {
+    width: 100%;
+    margin-bottom: calc(24 / 1280 * 100vw);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.exposition-1 .exposition-image .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.exposition-1 .exposition-info {
+    width: 100%;
+}
+
+/* Titre "Récits d'enfance" - Police MusBA */
+.exposition-1 .exposition-titre {
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--color-primary);
+    margin: 0 0 calc(8 / 1280 * 100vw) 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* Dates "13 juin - 5 janvier" - Police MusBA avec chiffres mis en valeur */
+.exposition-1 .exposition-dates {
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style pour les chiffres dans les dates - Légèrement plus grands */
+.exposition-1 .exposition-dates {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Alternative : Utiliser des spans pour les chiffres si besoin de plus de contrôle */
+.exposition-1 .exposition-dates .chiffre {
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+.exposition-1 .exposition-texte {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-self: flex-start;
+}
+
+/* Corps du texte descriptif - Police Montserrat */
+.exposition-1 .exposition-texte p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Lettrine "A" - Police MusBA avec style magazine */
+.exposition-1 .exposition-texte p .lettrine {
+    float: left;
+    font-family: 'MusBA', sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 0.8;
+    color: var(--color-primary);
+    margin: 0 10px 0 0;
+    padding: 0;
+    display: block;
+}
+
+/* Exposition 2: La puissance du trait */
+.exposition-2 {
+    top: calc(800 / 1280 * 100vw);
+}
+
+.exposition-2 .exposition-info {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: 0;
+    width: calc(300 / 1280 * 100%);
+}
+
+.exposition-2 .exposition-titre {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--color-primary);
+    margin: 0 0 calc(12 / 1280 * 100vw) 0;
+    padding: 0;
+    text-align: left;
+    letter-spacing: -0.01em;
+}
+
+.exposition-2 .exposition-dates {
+    font-family: 'Lora', serif;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    font-variant-numeric: oldstyle-nums;
+}
+
+.exposition-2 .exposition-images-double {
+    position: absolute;
+    left: calc(457 / 1280 * 100%);
+    top: 0;
+    width: calc(756 / 1280 * 100%);
+    display: flex;
+    gap: calc(16 / 1280 * 100%);
+}
+
+.exposition-2 .exposition-images-double .image-item {
+    flex: 1;
+    height: calc(350 / 1280 * 100vw);
+}
+
+.exposition-2 .exposition-images-double .image-item .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exposition-2 .exposition-texte {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(370 / 1280 * 100vw);
+    width: calc(1149 / 1280 * 100%);
+}
+
+.exposition-2 .exposition-texte p {
+    font-family: 'Lora', serif;
+    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* Exposition 3: Regards croisés contemporains */
+.exposition-3 {
+    top: calc(1250 / 1280 * 100vw);
+}
+
+.exposition-3 .exposition-info {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: 0;
+    width: calc(300 / 1280 * 100%);
+}
+
+.exposition-3 .exposition-titre {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--color-primary);
+    margin: 0 0 calc(12 / 1280 * 100vw) 0;
+    padding: 0;
+    text-align: left;
+    letter-spacing: -0.01em;
+}
+
+.exposition-3 .exposition-dates {
+    font-family: 'Lora', serif;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    font-variant-numeric: oldstyle-nums;
+}
+
+.exposition-3 .exposition-image {
+    position: absolute;
+    left: calc(457 / 1280 * 100%);
+    top: 0;
+    width: calc(756 / 1280 * 100%);
+    height: calc(403 / 1280 * 100vw);
+}
+
+.exposition-3 .exposition-image .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exposition-3 .exposition-texte {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(420 / 1280 * 100vw);
+    width: calc(1149 / 1280 * 100%);
+}
+
+.exposition-3 .exposition-texte p {
+    font-family: 'Lora', serif;
+    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* Exposition 4: Passions Collections */
+.exposition-4 {
+    top: calc(1750 / 1280 * 100vw);
+}
+
+.exposition-4 .exposition-info {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: 0;
+    width: calc(300 / 1280 * 100%);
+}
+
+.exposition-4 .exposition-titre {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--color-primary);
+    margin: 0 0 calc(12 / 1280 * 100vw) 0;
+    padding: 0;
+    text-align: left;
+    letter-spacing: -0.01em;
+}
+
+.exposition-4 .exposition-dates {
+    font-family: 'Lora', serif;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    font-variant-numeric: oldstyle-nums;
+}
+
+.exposition-4 .exposition-image {
+    position: absolute;
+    left: calc(457 / 1280 * 100%);
+    top: 0;
+    width: calc(756 / 1280 * 100%);
+    height: calc(403 / 1280 * 100vw);
+}
+
+.exposition-4 .exposition-image .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exposition-4 .exposition-texte {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(420 / 1280 * 100vw);
+    width: calc(1149 / 1280 * 100%);
+}
+
+.exposition-4 .exposition-texte p {
+    font-family: 'Lora', serif;
+    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* Exposition 5: Jean Dupas & Co */
+.exposition-5 {
+    top: calc(2250 / 1280 * 100vw);
+}
+
+.exposition-5 .exposition-info {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: 0;
+    width: calc(300 / 1280 * 100%);
+}
+
+.exposition-5 .exposition-titre {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--color-primary);
+    margin: 0 0 calc(12 / 1280 * 100vw) 0;
+    padding: 0;
+    text-align: left;
+    letter-spacing: -0.01em;
+}
+
+.exposition-5 .exposition-dates {
+    font-family: 'Lora', serif;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    font-variant-numeric: oldstyle-nums;
+}
+
+.exposition-5 .exposition-image {
+    position: absolute;
+    left: calc(457 / 1280 * 100%);
+    top: 0;
+    width: calc(756 / 1280 * 100%);
+    height: calc(403 / 1280 * 100vw);
+}
+
+.exposition-5 .exposition-image .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exposition-5 .exposition-texte {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    top: calc(420 / 1280 * 100vw);
+    width: calc(1149 / 1280 * 100%);
+}
+
+.exposition-5 .exposition-texte p {
+    font-family: 'Lora', serif;
+    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+/* Responsive Design - Mobile */
+@media screen and (max-width: 768px) {
+    main.page-expositions {
+        padding: 20px;
+        padding-top: 40px;
+    }
+
+    .titre-principal {
+        font-size: clamp(32px, 8vw, 40px);
+        margin-bottom: 30px;
+    }
+
+    .exposition-item {
+        margin-bottom: 50px;
+    }
+
+    .exposition-contenu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .exposition-colonne-gauche,
+    .exposition-colonne-droite {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .exposition-1 .exposition-image {
+        margin-bottom: 20px;
+    }
+
+    .exposition-1 .exposition-info {
+        margin-bottom: 20px;
+    }
+
+    .exposition-1 .exposition-texte p {
+        text-align: left;
+    }
+
+    .exposition-1 .exposition-texte p .lettrine {
+        font-size: 48px;
+        margin-right: 8px;
+    }
+
+    .exposition-2,
+    .exposition-3,
+    .exposition-4,
+    .exposition-5 {
+        top: 0;
+    }
+
+    .exposition-2 .exposition-info,
+    .exposition-3 .exposition-info,
+    .exposition-4 .exposition-info,
+    .exposition-5 .exposition-info {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .exposition-2 .exposition-images-double,
+    .exposition-3 .exposition-image,
+    .exposition-4 .exposition-image,
+    .exposition-5 .exposition-image {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .exposition-2 .exposition-images-double {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .exposition-2 .exposition-images-double .image-item {
+        height: auto;
+        min-height: 200px;
+    }
+
+    .exposition-2 .exposition-texte,
+    .exposition-3 .exposition-texte,
+    .exposition-4 .exposition-texte,
+    .exposition-5 .exposition-texte {
+        position: relative;
+        left: 0;
+        width: 100%;
+        top: 0;
+    }
+}
