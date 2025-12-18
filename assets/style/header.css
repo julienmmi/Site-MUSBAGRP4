@@ -24,32 +24,6 @@
     object-fit: contain;
 }
 
-.en-tete .lien {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
-    line-height: 100%;
-    color: var(--color-secondary);
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background-color 0.2s ease;
-    padding: calc(8 / 1280 * 100vw) calc(12 / 1280 * 100vw);
-    border-radius: 2px;
-}
-
-.en-tete .lien.menu-actif {
-    color: var(--color-secondary);
-}
-
-.en-tete .ligne {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    bottom: calc(13 / 1280 * 100vw);
-    width: calc(858 / 1280 * 100%);
-    height: 1px;
-    background-color: var(--color-secondary);
-}
-
 .en-tete .nav-container {
     display: flex;
     align-items: center;
@@ -62,19 +36,32 @@
     display: flex;
     align-items: center;
     gap: calc(19 / 1280 * 100%);
-    flex: 1;
-    justify-content: flex-start;
-    margin-left: calc(222 / 1280 * 100%);
+    margin-left: calc(524 / 1280 * 100%);
 }
 
-.en-tete .nav-links .lien {
+.en-tete .lien {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    line-height: 100%;
+    color: var(--color-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+    padding: calc(8 / 1280 * 100vw) calc(12 / 1280 * 100vw);
+    border-radius: 2px;
     flex-shrink: 0;
+}
+
+.en-tete .lien.menu-actif {
+    color: var(--color-secondary);
 }
 
 .en-tete .nav-right {
     display: flex;
     align-items: center;
     gap: calc(48 / 1280 * 100%);
+    margin-right: calc(103 / 1280 * 100%);
 }
 
 .recherche {
@@ -113,6 +100,15 @@
     cursor: pointer;
 }
 
+.en-tete .ligne {
+    position: absolute;
+    left: calc(64 / 1280 * 100%);
+    bottom: calc(13 / 1280 * 100vw);
+    width: calc(858 / 1280 * 100%);
+    height: 1px;
+    background-color: var(--color-secondary);
+}
+
 @media (max-width: 768px) {
     .en-tete {
         padding: 20px;
@@ -127,13 +123,14 @@
     }
 
     .en-tete .nav-links {
-        flex-wrap: wrap;
         margin-left: 0;
+        flex-wrap: wrap;
         gap: 10px;
         justify-content: center;
     }
 
     .en-tete .nav-right {
+        margin-right: 0;
         gap: 20px;
     }
 
