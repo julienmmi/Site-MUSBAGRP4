@@ -1,3 +1,29 @@
+.recherche:focus {
+    outline: none;
+    border: none;
+}
+.btn-francais,
+.btn-anglais {
+    outline: none;
+    border: none;
+    background: none;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 0 4px;
+    transition: color var(--transition-fast);
+}
+.btn-francais:focus,
+.btn-anglais:focus {
+    outline: none;
+    border: none;
+}
+.btn-francais:hover,
+.btn-anglais:hover {
+    color: var(--color-text-secondary);
+}
 /* Header et Navigation - Utilisation exclusive de Flexbox */
 
 .en-tete {

@@ -253,6 +253,7 @@
 @media (max-width: 768px) {
     .pied-page {
         padding: var(--spacing-xl) var(--container-padding) var(--spacing-lg);
+        justify-content: center;
     }
     
     .bas {
