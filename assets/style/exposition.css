@@ -6,26 +6,38 @@
 main.page-expositions {
     position: relative;
     width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: calc(3000 / 1280 * 100vw);
+    margin: 0;
+    min-height: calc(5376 / 1920 * 100vw); /* 3584px * 1.5 converti */
     height: auto;
-    padding: calc(80 / 1280 * 100vw) calc(64 / 1280 * 100%);
-    padding-bottom: calc(80 / 1280 * 100vw);
+    padding: calc(120 / 1920 * 100vw) calc(96 / 1920 * 100%); /* 80px et 64px * 1.5 */
+    padding-bottom: calc(120 / 1920 * 100vw);
     background-color: var(--color-background);
 }
 
-/* Titre principal de la page - Grand, police serif fine */
+/* Titre principal de la page - Police MusBA - Positions exactes depuis Figma converties pour 1920px */
 .titre-principal {
+<<<<<<< HEAD
     font-family: 'MusBa', serif;
     font-size: clamp(48px, calc(64 / 1280 * 100vw), 64px);
     font-weight: 300;
     line-height: 1.1;
     color: var(--color-primary);
     margin: 0 0 calc(60 / 1280 * 100vw) 0;
+=======
+    position: absolute;
+    left: calc(96 / 1920 * 100%); /* 64px * 1.5 */
+    top: calc(108 / 1920 * 100vw); /* 72px * 1.5 */
+    font-family: 'MusBA', sans-serif;
+    font-size: 60px; /* Taille exacte depuis Figma */
+    font-weight: 400;
+    line-height: 1;
+    color: #4a3a2a; /* Marron foncé depuis Figma */
+    margin: 0;
+>>>>>>> 9877f1b (ton message)
     padding: 0;
     text-align: left;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
+    width: auto;
 }
 
 /* Conteneur pour chaque exposition */
@@ -60,109 +72,116 @@ main.page-expositions {
     margin-top: 0;
 }
 
-/* Exposition 1: Récits d'enfance */
+/* Exposition 1: Récits d'enfance - Positions exactes depuis Figma converties pour 1920px */
+.exposition-1 {
+    position: relative;
+}
+
 .exposition-1 .exposition-image {
-    width: 100%;
-    margin-bottom: calc(24 / 1280 * 100vw);
-    margin-top: 0;
-    padding-top: 0;
+    position: absolute;
+    left: calc(94.5 / 1920 * 100%); /* 63px * 1.5 */
+    top: calc(274.5 / 1920 * 100vw); /* 183px * 1.5 */
+    width: calc(1140 / 1920 * 100%); /* 760px * 1.5 */
+    height: calc(606 / 1920 * 100vw); /* 404px * 1.5 */
 }
 
 .exposition-1 .exposition-image .image {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
     display: block;
     margin: 0;
     padding: 0;
 }
 
-.exposition-1 .exposition-info {
-    width: 100%;
-}
-
-/* Titre "Récits d'enfance" - Police MusBA */
+/* Titre "Récits d'enfance" - Positions exactes depuis Figma */
 .exposition-1 .exposition-titre {
+    position: absolute;
+    left: calc(94.5 / 1920 * 100%); /* 63px * 1.5 */
+    top: calc(912 / 1920 * 100vw); /* 608px * 1.5 */
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    font-size: 30px; /* Taille exacte depuis Figma */
     font-weight: 400;
-    line-height: 1.3;
-    color: var(--color-primary);
-    margin: 0 0 calc(8 / 1280 * 100vw) 0;
+    line-height: 1;
+    color: #1c1c1c;
+    margin: 0;
     padding: 0;
     text-align: left;
+    width: auto;
 }
 
-/* Dates "13 juin - 5 janvier" - Police MusBA avec chiffres mis en valeur */
+/* Dates "13 juin - 5 janvier" - Positions exactes depuis Figma converties pour 1920px */
 .exposition-1 .exposition-dates {
+    position: absolute;
+    left: calc(8.33% + 82.995px); /* calc(8.33%+55.33px) converti: 8.33% reste, 55.33px * 1.5 = 82.995px */
+    top: calc(997.5 / 1920 * 100vw); /* 665px * 1.5 */
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
     font-weight: 400;
-    line-height: 1.5;
-    color: #666666;
+    line-height: 1;
+    color: #4a3a2a; /* Marron foncé depuis Figma */
     margin: 0;
     padding: 0;
+    width: auto;
 }
 
-/* Style pour les chiffres dans les dates - Légèrement plus grands */
-.exposition-1 .exposition-dates {
-    font-variant-numeric: tabular-nums;
+/* Chiffres des dates en 40px */
+.exposition-1 .exposition-dates .date-chiffre {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    vertical-align: baseline;
 }
 
-/* Alternative : Utiliser des spans pour les chiffres si besoin de plus de contrôle */
-.exposition-1 .exposition-dates .chiffre {
-    font-size: 1.15em;
-    font-weight: 500;
+/* Texte des dates en 18px */
+.exposition-1 .exposition-dates .date-texte {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    vertical-align: baseline;
 }
 
+/* Texte descriptif - Positions exactes depuis Figma converties pour 1920px */
 .exposition-1 .exposition-texte {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    align-self: flex-start;
+    position: absolute;
+    left: calc(66.67% - 7.995px); /* calc(66.67%-5.33px) converti: 66.67% reste, 5.33px * 1.5 = 7.995px */
+    top: calc(274.5 / 1920 * 100vw); /* 183px * 1.5 */
+    width: calc(552 / 1920 * 100%); /* 368px * 1.5 */
+    height: calc(637.5 / 1920 * 100vw); /* 425px * 1.5 */
 }
 
-/* Corps du texte descriptif - Police Montserrat */
+/* Corps du texte descriptif - Police Montserrat Medium */
 .exposition-1 .exposition-texte p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--color-primary);
+    font-size: 18px; /* Taille exacte depuis Figma */
+    font-weight: 500; /* Medium depuis Figma */
+    line-height: 25px; /* Line height exact depuis Figma */
+    color: #000000;
     margin: 0;
     padding: 0;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
+    white-space: pre-wrap;
 }
 
-/* Lettrine "A" - Police MusBA avec style magazine */
+/* Lettrine "A" - Police MusBA 40px */
 .exposition-1 .exposition-texte p .lettrine {
-    float: left;
     font-family: 'MusBA', sans-serif;
-    font-size: 3em;
+    font-size: 40px; /* Taille exacte depuis Figma */
     font-weight: 400;
-    line-height: 0.8;
-    color: var(--color-primary);
-    margin: 0 10px 0 0;
+    line-height: 25px;
+    color: #000000;
+    margin: 0;
     padding: 0;
-    display: block;
+    display: inline;
 }
 
-/* Exposition 2: La puissance du trait */
+/* Exposition 2: La puissance du trait - Positions exactes depuis Figma converties pour 1920px */
 .exposition-2 {
-    top: calc(800 / 1280 * 100vw);
-}
-
-.exposition-2 .exposition-info {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: 0;
-    width: calc(300 / 1280 * 100%);
+    position: relative;
 }
 
 .exposition-2 .exposition-titre {
+<<<<<<< HEAD
     font-family: 'MusBa', serif;
     font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
     font-weight: 400;
@@ -180,248 +199,396 @@ main.page-expositions {
     font-weight: 400;
     line-height: 1.5;
     color: #666666;
+=======
+    position: absolute;
+    left: calc(75% - 21px); /* calc(75%-14px) converti: 75% reste, 14px * 1.5 = 21px */
+    top: calc(1966.5 / 1920 * 100vw); /* 1311px * 1.5 */
+    font-family: 'MusBA', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    color: #1c1c1c;
+>>>>>>> 9877f1b (ton message)
     margin: 0;
     padding: 0;
-    font-variant-numeric: oldstyle-nums;
+    text-align: left;
+    letter-spacing: 0;
+    width: auto;
 }
 
-.exposition-2 .exposition-images-double {
+/* Dates "5 novembre - 23 février" - Positions exactes depuis Figma converties pour 1920px */
+.exposition-2 .exposition-dates {
     position: absolute;
-    left: calc(457 / 1280 * 100%);
-    top: 0;
-    width: calc(756 / 1280 * 100%);
-    display: flex;
-    gap: calc(16 / 1280 * 100%);
+    left: calc(66.67% - 7.995px); /* calc(66.67%-5.33px) converti: 66.67% reste, 5.33px * 1.5 = 7.995px */
+    top: calc(2052 / 1920 * 100vw); /* 1368px * 1.5 */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+    color: #4a3a2a; /* Marron foncé depuis Figma */
+    margin: 0;
+    padding: 0;
+    width: auto;
 }
 
-.exposition-2 .exposition-images-double .image-item {
-    flex: 1;
-    height: calc(350 / 1280 * 100vw);
+/* Chiffres des dates en 40px - Police MusBA */
+.exposition-2 .exposition-dates .date-chiffre {
+    font-family: 'MusBA', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+    vertical-align: baseline;
 }
 
-.exposition-2 .exposition-images-double .image-item .image {
+/* Texte des dates en 18px - Police Montserrat Medium */
+.exposition-2 .exposition-dates .date-texte {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    vertical-align: baseline;
+}
+
+.exposition-2 .exposition-image {
+    position: absolute;
+    left: calc(33.33% + 45.495px); /* calc(33.33%+30.33px) converti: 33.33% reste, 30.33px * 1.5 = 45.495px */
+    top: calc(1330.5 / 1920 * 100vw); /* 887px * 1.5 */
+    width: calc(1134 / 1920 * 100%); /* 756px * 1.5 */
+    height: calc(604.5 / 1920 * 100vw); /* 403px * 1.5 */
+}
+
+.exposition-2 .exposition-image .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .exposition-2 .exposition-texte {
     position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: calc(370 / 1280 * 100vw);
-    width: calc(1149 / 1280 * 100%);
+    left: calc(96 / 1920 * 100%); /* 64px * 1.5 */
+    top: calc(1330.5 / 1920 * 100vw); /* 887px * 1.5 */
+    width: calc(517.5 / 1920 * 100%); /* 345px * 1.5 */
+    height: calc(475.5 / 1920 * 100vw); /* 317px * 1.5 */
 }
 
 .exposition-2 .exposition-texte p {
+<<<<<<< HEAD
     font-family: 'MusBa', serif;
     font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
     font-weight: 400;
     line-height: 1.7;
     color: var(--color-primary);
+=======
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #000000;
+>>>>>>> 9877f1b (ton message)
     margin: 0;
     padding: 0;
     text-align: left;
+    white-space: pre-wrap;
 }
 
-/* Exposition 3: Regards croisés contemporains */
+/* Lettrine "D" - Police MusBA 40px */
+.exposition-2 .exposition-texte p .lettrine {
+    font-family: 'MusBA', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+/* Exposition 3: Regards croisés contemporains - Positions exactes depuis Figma converties pour 1920px */
 .exposition-3 {
-    top: calc(1250 / 1280 * 100vw);
-}
-
-.exposition-3 .exposition-info {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: 0;
-    width: calc(300 / 1280 * 100%);
+    position: relative;
 }
 
 .exposition-3 .exposition-titre {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    position: absolute;
+    left: calc(96 / 1920 * 100%); /* 64px * 1.5 */
+    top: calc(3018 / 1920 * 100vw); /* 2012px * 1.5 */
+    font-family: 'MusBA', sans-serif;
+    font-size: 30px;
     font-weight: 400;
-    line-height: 1.3;
-    color: var(--color-primary);
-    margin: 0 0 calc(12 / 1280 * 100vw) 0;
+    line-height: 1;
+    color: #1c1c1c;
+    margin: 0;
     padding: 0;
     text-align: left;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
+    width: auto;
 }
 
 .exposition-3 .exposition-dates {
-    font-family: 'Lora', serif;
-    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
-    font-weight: 400;
-    line-height: 1.5;
-    color: #666666;
+    position: absolute;
+    left: calc(25% + 57px); /* calc(25%+38px) converti: 25% reste, 38px * 1.5 = 57px */
+    top: calc(3103.5 / 1920 * 100vw); /* 2069px * 1.5 */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+    color: #4a3a2a;
     margin: 0;
     padding: 0;
-    font-variant-numeric: oldstyle-nums;
+    width: auto;
+}
+
+.exposition-3 .exposition-dates .date-chiffre {
+    font-family: 'MusBA', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+    vertical-align: baseline;
+}
+
+.exposition-3 .exposition-dates .date-texte {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    vertical-align: baseline;
 }
 
 .exposition-3 .exposition-image {
     position: absolute;
-    left: calc(457 / 1280 * 100%);
-    top: 0;
-    width: calc(756 / 1280 * 100%);
-    height: calc(403 / 1280 * 100vw);
+    left: calc(96 / 1920 * 100%); /* 64px * 1.5 */
+    top: calc(2382 / 1920 * 100vw); /* 1588px * 1.5 */
+    width: calc(1134 / 1920 * 100%); /* 756px * 1.5 */
+    height: calc(604.5 / 1920 * 100vw); /* 403px * 1.5 */
 }
 
 .exposition-3 .exposition-image .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .exposition-3 .exposition-texte {
     position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: calc(420 / 1280 * 100vw);
-    width: calc(1149 / 1280 * 100%);
+    left: calc(66.67% - 7.995px); /* calc(66.67%-5.33px) converti */
+    top: calc(2382 / 1920 * 100vw); /* 1588px * 1.5 */
+    width: calc(529.5 / 1920 * 100%); /* 353px * 1.5 */
+    height: calc(604.5 / 1920 * 100vw); /* 403px * 1.5 */
 }
 
 .exposition-3 .exposition-texte p {
-    font-family: 'Lora', serif;
-    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--color-primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #000000;
     margin: 0;
     padding: 0;
     text-align: left;
+    white-space: pre-wrap;
 }
 
-/* Exposition 4: Passions Collections */
+.exposition-3 .exposition-texte p .lettrine {
+    font-family: 'MusBA', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+/* Exposition 4: Passions Collections - Positions exactes depuis Figma converties pour 1920px */
 .exposition-4 {
-    top: calc(1750 / 1280 * 100vw);
-}
-
-.exposition-4 .exposition-info {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: 0;
-    width: calc(300 / 1280 * 100%);
+    position: relative;
 }
 
 .exposition-4 .exposition-titre {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    position: absolute;
+    left: calc(75% - 21px); /* calc(75%-14px) converti */
+    top: calc(4105.5 / 1920 * 100vw); /* 2737px * 1.5 */
+    font-family: 'MusBA', sans-serif;
+    font-size: 30px;
     font-weight: 400;
-    line-height: 1.3;
-    color: var(--color-primary);
-    margin: 0 0 calc(12 / 1280 * 100vw) 0;
+    line-height: 1;
+    color: #1c1c1c;
+    margin: 0;
     padding: 0;
     text-align: left;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
+    width: auto;
 }
 
 .exposition-4 .exposition-dates {
-    font-family: 'Lora', serif;
-    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
-    font-weight: 400;
-    line-height: 1.5;
-    color: #666666;
+    position: absolute;
+    left: calc(58.33% + 4.995px); /* calc(58.33%+3.33px) converti: 58.33% reste, 3.33px * 1.5 = 4.995px */
+    top: calc(4191 / 1920 * 100vw); /* 2794px * 1.5 */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+    color: #4a3a2a;
     margin: 0;
     padding: 0;
-    font-variant-numeric: oldstyle-nums;
+    width: auto;
+}
+
+.exposition-4 .exposition-dates .date-chiffre {
+    font-family: 'MusBA', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+    vertical-align: baseline;
+}
+
+.exposition-4 .exposition-dates .date-texte {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    vertical-align: baseline;
 }
 
 .exposition-4 .exposition-image {
     position: absolute;
-    left: calc(457 / 1280 * 100%);
-    top: 0;
-    width: calc(756 / 1280 * 100%);
-    height: calc(403 / 1280 * 100vw);
+    left: calc(33.33% + 42.495px); /* calc(33.33%+28.33px) converti: 33.33% reste, 28.33px * 1.5 = 42.495px */
+    top: calc(3436.5 / 1920 * 100vw); /* 2291px * 1.5 */
+    width: calc(1140 / 1920 * 100%); /* 760px * 1.5 */
+    height: calc(637.5 / 1920 * 100vw); /* 425px * 1.5 */
 }
 
 .exposition-4 .exposition-image .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .exposition-4 .exposition-texte {
     position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: calc(420 / 1280 * 100vw);
-    width: calc(1149 / 1280 * 100%);
+    left: calc(94.5 / 1920 * 100%); /* 63px * 1.5 */
+    top: calc(3436.5 / 1920 * 100vw); /* 2291px * 1.5 */
+    width: calc(552 / 1920 * 100%); /* 368px * 1.5 */
+    height: calc(637.5 / 1920 * 100vw); /* 425px * 1.5 */
 }
 
 .exposition-4 .exposition-texte p {
-    font-family: 'Lora', serif;
-    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--color-primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #000000;
     margin: 0;
     padding: 0;
     text-align: left;
+    white-space: pre-wrap;
 }
 
-/* Exposition 5: Jean Dupas & Co */
+.exposition-4 .exposition-texte p .lettrine {
+    font-family: 'MusBA', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+/* Exposition 5: Jean Dupas & Co - Positions exactes depuis Figma converties pour 1920px */
 .exposition-5 {
-    top: calc(2250 / 1280 * 100vw);
-}
-
-.exposition-5 .exposition-info {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: 0;
-    width: calc(300 / 1280 * 100%);
+    position: relative;
 }
 
 .exposition-5 .exposition-titre {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, calc(36 / 1280 * 100vw), 36px);
+    position: absolute;
+    left: calc(96 / 1920 * 100%); /* 64px * 1.5 */
+    top: calc(5290.5 / 1920 * 100vw); /* 3527px * 1.5 */
+    font-family: 'MusBA', sans-serif;
+    font-size: 30px;
     font-weight: 400;
-    line-height: 1.3;
-    color: var(--color-primary);
-    margin: 0 0 calc(12 / 1280 * 100vw) 0;
+    line-height: 1;
+    color: #1c1c1c;
+    margin: 0;
     padding: 0;
     text-align: left;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
+    width: auto;
 }
 
 .exposition-5 .exposition-dates {
-    font-family: 'Lora', serif;
-    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
-    font-weight: 400;
-    line-height: 1.5;
-    color: #666666;
+    position: absolute;
+    left: calc(8.33% + 82.995px); /* calc(8.33%+55.33px) converti */
+    top: calc(5376 / 1920 * 100vw); /* 3584px * 1.5 */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+    color: #4a3a2a;
     margin: 0;
     padding: 0;
-    font-variant-numeric: oldstyle-nums;
+    width: auto;
+}
+
+.exposition-5 .exposition-dates .date-chiffre {
+    font-family: 'MusBA', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+    vertical-align: baseline;
+}
+
+.exposition-5 .exposition-dates .date-texte {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    vertical-align: baseline;
 }
 
 .exposition-5 .exposition-image {
     position: absolute;
-    left: calc(457 / 1280 * 100%);
-    top: 0;
-    width: calc(756 / 1280 * 100%);
-    height: calc(403 / 1280 * 100vw);
+    left: calc(96 / 1920 * 100%); /* 64px * 1.5 */
+    top: calc(4524 / 1920 * 100vw); /* 3016px * 1.5 */
+    width: calc(1140 / 1920 * 100%); /* 760px * 1.5 */
+    height: calc(735 / 1920 * 100vw); /* 490px * 1.5 */
 }
 
 .exposition-5 .exposition-image .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .exposition-5 .exposition-texte {
     position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: calc(420 / 1280 * 100vw);
-    width: calc(1149 / 1280 * 100%);
+    left: calc(66.67% - 7.995px); /* calc(66.67%-5.33px) converti */
+    top: calc(4524 / 1920 * 100vw); /* 3016px * 1.5 */
+    width: calc(550.5 / 1920 * 100%); /* 367px * 1.5 */
+    height: calc(492 / 1920 * 100vw); /* 328px * 1.5 */
 }
 
 .exposition-5 .exposition-texte p {
-    font-family: 'Lora', serif;
-    font-size: clamp(16px, calc(18 / 1280 * 100vw), 18px);
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--color-primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #000000;
     margin: 0;
     padding: 0;
     text-align: left;
+    white-space: pre-wrap;
+}
+
+.exposition-5 .exposition-texte p .lettrine {
+    font-family: 'MusBA', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: inline;
 }
 
 /* Responsive Design - Mobile */
