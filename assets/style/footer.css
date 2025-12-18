@@ -311,6 +311,7 @@
     object-fit: contain;
 }
 
+/* Footer responsive */ 
 @media (max-width: 768px) {
     .conteneur {
         grid-template-columns: 1fr;
@@ -337,5 +338,8 @@
     
     .en-tete .lien {
         font-size: 14px !important;
+    }
+    .pied-page .logo {
+        margin-left: 100px;
     }
 }

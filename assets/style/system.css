@@ -22,5 +22,5 @@ main {
 .collections .contenu,
 .histoire .contenu,
 .boutique .contenu {
-    position: relative;
+position: relative;
 }
