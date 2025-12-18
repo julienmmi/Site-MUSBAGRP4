@@ -53,6 +53,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: flex-start;
 }
 
 .suivre {
@@ -63,31 +64,57 @@
     color: var(--color-primary);
     margin: 0 0 calc(10 / 1280 * 100vw) 0;
     padding: 0;
+    text-align: left;
+    width: 100%;
 }
 
 .icones {
     display: flex;
-    gap: calc(8 / 1280 * 100vw);
+    gap: calc(40 / 1280 * 100vw);
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% - calc(120 / 1280 * 100vw) - calc(165 / 1280 * 100vw));
+    position: relative;
 }
 
 .icone {
     width: calc(48 / 1280 * 100vw);
     height: calc(48 / 1280 * 100vw);
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 48px;
+    max-height: 48px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
     background-color: #FFFFFF;
+    border: 1.5px solid #000000;
     border-radius: 4px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: transform 0.2s ease;
+    padding: calc(6 / 1280 * 100vw);
+    box-sizing: border-box;
+}
+
+.icone:hover {
+    transform: scale(1.05);
+}
+
+.icone .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: brightness(0);
+    opacity: 0.9;
+    display: block;
 }
 
 .icone svg {
@@ -100,7 +127,7 @@
 .liens-nav {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: calc(40 / 1280 * 100vw);
+    gap: calc(120 / 1280 * 100vw);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -132,27 +159,6 @@
     white-space: nowrap;
 }
 
-.logo-item {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: absolute;
-    top: calc(132 / 1280 * 100vw);
-    left: 0;
-}
-
-.logo-item .logo {
-    width: calc(400 / 1280 * 100%);
-    height: calc(80 / 1280 * 100vw);
-    min-width: 200px;
-    min-height: 40px;
-    margin: 0;
-    padding: 0;
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-start;
-}
-
 .saut-ligne {
     height: calc(10 / 1280 * 100vw);
     margin: 0;
@@ -164,6 +170,7 @@
 .liens-nav .liste-droite li {
     margin: 0 0 calc(5 / 1280 * 100vw) 0;
     padding: 0;
+    line-height: 1.8;
 }
 
 .liens-nav .liste-gauche li:last-child,
@@ -180,30 +187,35 @@
     padding-top: calc(20 / 1280 * 100vw);
     margin-bottom: 0;
     padding-bottom: 0;
-}
-
-.bas .logo {
-    width: calc(214 / 1280 * 100%);
-    height: calc(50 / 1280 * 100vw);
-    min-width: 107px;
-    min-height: 25px;
-    max-height: 50px;
-    margin: 0;
-    padding: 0;
-    flex-shrink: 0;
-    display: flex;
-    align-items: flex-end;
-}
-
-.bas .logo .image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: bottom;
+    position: relative;
 }
 
 .accessibilite {
     margin: 0;
+    align-self: flex-start;
+}
+
+.logo-bordeaux {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(255 / 1280 * 100%);
+    height: calc(59.5 / 1280 * 100vw);
+    min-width: 127.5px;
+    min-height: 29.75px;
+    max-height: 59.5px;
+    padding: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-bordeaux .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
 .section {
@@ -260,14 +272,6 @@
     margin: 0 0 calc(10 / 1280 * 100vw) 0;
 }
 
-.ligne-separation {
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-primary);
-    margin: calc(20 / 1280 * 100vw) 0;
-    padding: 0;
-}
-
 .pied-page .liens {
     display: flex;
     flex-direction: column;
@@ -281,11 +285,10 @@
 .pied-page .lien {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
-    font-weight: 500;
-    line-height: 25px;
-    color: var(--color-primary);
-    text-decoration: underline;
-    text-underline-position: from-font;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #000000;
+    text-decoration: none;
     margin: 0 0 calc(5 / 1280 * 100vw) 0;
     padding: 0;
     display: inline-block;

@@ -1,8 +1,99 @@
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link, .footer-link');
+    const headerLinks = document.querySelectorAll('.en-tete .lien');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const menus = {
+        'Visite': 'menu-visite',
+        'Découvrir': 'menu-decouvrir',
+        'L\'histoire du musée': 'menu-histoire',
+        'Voir plus': 'menu-savoir-plus'
+    };
     
+    let activeMenu = null;
+    let activeLink = null;
+    
+    function positionnerMenu(link, menu) {
+        const linkRect = link.getBoundingClientRect();
+        const header = document.querySelector('.en-tete');
+        const headerRect = header.getBoundingClientRect();
+        const menuContenu = menu.querySelector('.menu-contenu-blanc');
+        const menuListe = menu.querySelector('.menu-liste');
+        
+        if (menuContenu && menuListe) {
+            menu.style.left = '0';
+            menu.style.top = (headerRect.bottom - 50) + 'px';
+            
+            const linkStyle = window.getComputedStyle(link);
+            const linkPaddingLeft = parseFloat(linkStyle.paddingLeft) || 12;
+            
+            const menuLinkPadding = 24;
+            menuListe.style.paddingLeft = (linkRect.left + linkPaddingLeft - menuLinkPadding) + 'px';
+        }
+    }
+    
+    function ouvrirMenu(link, menuId) {
+        fermerMenu();
+        
+        const menu = document.getElementById(menuId);
+        if (menu) {
+            positionnerMenu(link, menu);
+            menuOverlay.classList.add('active');
+            menu.classList.add('active');
+            activeMenu = menu;
+            activeLink = link;
+            link.classList.add('menu-actif');
+        }
+    }
+    
+    function fermerMenu() {
+        if (activeMenu) {
+            menuOverlay.classList.remove('active');
+            activeMenu.classList.remove('active');
+            if (activeLink) {
+                activeLink.classList.remove('menu-actif');
+            }
+            activeMenu = null;
+            activeLink = null;
+        }
+    }
+    
+    headerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const linkText = this.textContent.trim();
+            const menuId = menus[linkText];
+            
+            if (menuId) {
+                if (activeMenu && activeMenu.id === menuId) {
+                    fermerMenu();
+                } else {
+                    ouvrirMenu(this, menuId);
+                }
+            }
+        });
+    });
+    
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', function(e) {
+            if (e.target === menuOverlay) {
+                fermerMenu();
+            }
+        });
+    }
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            fermerMenu();
+        }
+    });
+    
+    window.addEventListener('resize', function() {
+        if (activeMenu && activeLink) {
+            positionnerMenu(activeLink, activeMenu);
+        }
+    });
+    
+    const navLinks = document.querySelectorAll('.nav-link, .footer-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -19,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -34,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-
     const sections = document.querySelectorAll('.section-expo-temp, .section-collections, .section-histoire, .section-boutique');
     sections.forEach(section => {
         section.style.opacity = '0';
@@ -43,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-
     const langSelector = document.querySelector('.lang-text');
     if (langSelector) {
         langSelector.addEventListener('click', function() {
@@ -51,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.textContent = currentLang === 'FR-EN' ? 'EN-FR' : 'FR-EN';
         });
     }
-
 
     const buttons = document.querySelectorAll('button');
     buttons.forEach(button => {
@@ -65,4 +152,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-

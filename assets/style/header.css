@@ -33,6 +33,13 @@
     color: var(--color-secondary);
     text-decoration: none;
     white-space: nowrap;
+    transition: background-color 0.2s ease;
+    padding: calc(8 / 1280 * 100vw) calc(12 / 1280 * 100vw);
+    border-radius: 2px;
+}
+
+.en-tete .lien.menu-actif {
+    color: var(--color-secondary);
 }
 
 .en-tete .lien:nth-of-type(1) {
