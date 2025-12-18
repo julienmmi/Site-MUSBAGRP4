@@ -1,6 +1,115 @@
+/* Typographie */
+
+/* Import de la police MusBA si disponible */
 @font-face {
     font-family: 'MusBA';
     src: url('Musba.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
+}
+
+/* Styles de base pour le texte */
+p {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    line-height: 1.56;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+/* Titres */
+h1,
+.titre-principal {
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color-primary);
+}
+
+h2,
+.titre {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-primary);
+}
+
+h3 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+/* Textes secondaires */
+.texte-petit {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    line-height: 1.56;
+    color: var(--color-text-secondary);
+}
+
+.texte-secondaire {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    line-height: 1.56;
+    color: var(--color-text-secondary);
+}
+
+/* Sous-titres */
+.sous-titre {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--color-primary);
+}
+
+/* Titres avec couleur or */
+.titre-or {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-or);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Liens */
+.lien {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    transition: color var(--transition-fast);
+}
+
+.lien:hover {
+    color: var(--color-text-secondary);
+}
+
+/* Dates */
+.date {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--color-text-secondary);
+}
+
+/* Lettrine */
+.lettrine {
+    font-family: var(--font-display);
+    font-size: 3em;
+    line-height: 0.8;
+    float: left;
+    margin-right: 0.1em;
+    margin-top: 0.1em;
+    color: var(--color-primary);
 }

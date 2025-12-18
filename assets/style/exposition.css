@@ -1,306 +1,278 @@
-/* Page Expositions Temporaires - Design Figma exact en Flexbox pur */
+/* Page Expositions temporaires */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600;700&family=Lora:wght@400;500;600&display=swap');
-
-main.page-expositions {
+.page-expositions {
+    width: 100%;
+    padding: var(--spacing-xl) var(--container-padding);
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: calc(60 / 1920 * 100vw) calc(96 / 1920 * 100%) 0;
-    padding-bottom: calc(60 / 1920 * 100vw);
-    background-color: var(--color-background);
-    gap: 0;
+    gap: var(--spacing-xxxl);
 }
 
-.titre-principal {
-    font-family: 'MusBA', sans-serif;
-    font-size: 60px;
+/* Titre principal de la page */
+.page-expositions .titre-principal {
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
     font-weight: 400;
-    line-height: 1;
-    color: #4a3a2a;
-    margin: 0 0 calc(60 / 1920 * 100vw) 0;
+    color: var(--color-primary);
+    margin: 0;
     padding: 0;
     text-align: left;
-    letter-spacing: 0;
-    align-self: flex-start;
 }
 
+/* Item d'exposition */
 .exposition-item {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-bottom: calc(447 / 1920 * 100vw);
+    gap: var(--spacing-lg);
 }
 
 .exposition-contenu {
     display: flex;
-    gap: calc(60 / 1920 * 100%);
+    flex-direction: row;
     align-items: flex-start;
+    gap: var(--spacing-xxxl);
     width: 100%;
 }
 
-.exposition-colonne-gauche {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
+.exposition-colonne-gauche,
 .exposition-colonne-droite {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: var(--spacing-lg);
 }
 
+.exposition-colonne-gauche {
+    flex: 0 1 50%;
+}
+
+.exposition-colonne-droite {
+    flex: 0 1 50%;
+}
+
+/* Image d'exposition */
 .exposition-image {
     width: 100%;
+    height: auto;
 }
 
 .exposition-image .image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    object-position: 50% 50%;
-    display: block;
 }
 
+/* Titre d'exposition */
 .exposition-titre {
-    font-family: 'MusBA', sans-serif;
-    font-size: 30px;
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
     font-weight: 400;
-    line-height: 1;
-    color: #1c1c1c;
+    color: var(--color-primary);
     margin: 0;
     padding: 0;
-    text-align: left;
-    letter-spacing: 0;
+    line-height: 1.2;
 }
 
+/* Dates d'exposition */
 .exposition-dates {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
     font-weight: 500;
-    line-height: 25px;
-    color: #4a3a2a;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
     margin: 0;
-    padding: 0;
 }
 
-.exposition-dates .date-chiffre {
-    font-family: 'MusBA', sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 25px;
-    vertical-align: baseline;
+.date-chiffre {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--color-primary);
 }
 
-.exposition-dates .date-texte {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25px;
-    vertical-align: baseline;
+.date-texte {
+    color: var(--color-text-secondary);
 }
 
+/* Texte d'exposition */
 .exposition-texte {
     width: 100%;
 }
 
 .exposition-texte p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
     font-weight: 500;
-    line-height: 25px;
-    color: #000000;
+    line-height: 1.75;
+    color: var(--color-primary);
     margin: 0;
-    padding: 0;
-    text-align: left;
-    white-space: pre-wrap;
+    text-align: justify;
 }
 
-.exposition-texte p .lettrine {
-    font-family: 'MusBA', sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 25px;
-    color: #000000;
-    display: inline;
-}
-
-.exposition-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: calc(12 / 1920 * 100vw);
-}
-
+/* Header d'exposition (pour certaines expositions) */
 .exposition-header {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: calc(85.5 / 1920 * 100vw);
-    margin-top: calc(-636 / 1920 * 100vw);
-    align-self: flex-end;
-    width: calc(25% - 21px);
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
 }
 
-.exposition-1 {
-    margin-bottom: calc(447 / 1920 * 100vw);
+/* Styles spécifiques pour chaque exposition */
+
+/* Exposition 1: Récits d'enfance */
+.exposition-1 .exposition-contenu {
+    flex-direction: row;
 }
 
 .exposition-1 .exposition-colonne-gauche {
-    flex: 0 0 calc(1140 / 1920 * 100%);
+    flex: 0 1 60%;
 }
 
 .exposition-1 .exposition-colonne-droite {
-    flex: 0 0 calc(552 / 1920 * 100%);
+    flex: 0 1 40%;
 }
 
-.exposition-1 .exposition-image {
-    height: calc(606 / 1920 * 100vw);
-    margin-bottom: calc(36 / 1920 * 100vw);
+.exposition-1 .exposition-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
 }
 
-.exposition-1 .exposition-dates {
-    font-family: 'MusBA', sans-serif;
-    padding-left: calc(82.995 / 1920 * 100%);
-}
-
-.exposition-1 .exposition-dates .date-chiffre {
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1;
-}
-
-.exposition-1 .exposition-dates .date-texte {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1;
-}
-
-.exposition-2 {
-    margin-bottom: calc(447 / 1920 * 100vw);
-}
-
+/* Exposition 2: La puissance du trait */
 .exposition-2 .exposition-contenu {
-    margin-bottom: calc(636 / 1920 * 100vw);
+    flex-direction: row;
 }
 
 .exposition-2 .exposition-colonne-gauche {
-    flex: 0 0 calc(517.5 / 1920 * 100%);
+    flex: 0 1 40%;
 }
 
 .exposition-2 .exposition-colonne-droite {
-    flex: 0 0 calc(1134 / 1920 * 100%);
-}
-
-.exposition-2 .exposition-image {
-    height: calc(604.5 / 1920 * 100vw);
+    flex: 0 1 60%;
 }
 
 .exposition-2 .exposition-header {
-    margin-top: calc(-636 / 1920 * 100vw);
+    order: -1;
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg);
 }
 
-.exposition-3 {
-    margin-bottom: calc(447 / 1920 * 100vw);
+/* Exposition 3: Regards croisés contemporains */
+.exposition-3 .exposition-contenu {
+    flex-direction: row;
 }
 
 .exposition-3 .exposition-colonne-gauche {
-    flex: 0 0 calc(1134 / 1920 * 100%);
-    gap: calc(85.5 / 1920 * 100vw);
+    flex: 0 1 50%;
 }
 
 .exposition-3 .exposition-colonne-droite {
-    flex: 0 0 calc(529.5 / 1920 * 100%);
-    gap: calc(85.5 / 1920 * 100vw);
+    flex: 0 1 50%;
 }
 
-.exposition-3 .exposition-image {
-    height: calc(604.5 / 1920 * 100vw);
+.exposition-3 .exposition-titre {
+    margin-bottom: var(--spacing-lg);
 }
 
-.exposition-4 {
-    margin-bottom: calc(447 / 1920 * 100vw);
+.exposition-3 .exposition-dates {
+    margin-bottom: var(--spacing-lg);
 }
 
+/* Exposition 4: Passions Collections */
 .exposition-4 .exposition-contenu {
-    margin-bottom: calc(670.5 / 1920 * 100vw);
+    flex-direction: row;
 }
 
 .exposition-4 .exposition-colonne-gauche {
-    flex: 0 0 calc(552 / 1920 * 100%);
+    flex: 0 1 40%;
 }
 
 .exposition-4 .exposition-colonne-droite {
-    flex: 0 0 calc(1140 / 1920 * 100%);
-}
-
-.exposition-4 .exposition-image {
-    height: calc(637.5 / 1920 * 100vw);
+    flex: 0 1 60%;
 }
 
 .exposition-4 .exposition-header {
-    margin-top: calc(-670.5 / 1920 * 100vw);
+    order: -1;
+    margin-top: 0;
+    margin-bottom: var(--spacing-lg);
 }
 
-.exposition-5 {
-    margin-bottom: 0;
+/* Exposition 5: Jean Dupas & Co */
+.exposition-5 .exposition-contenu {
+    flex-direction: row;
 }
 
 .exposition-5 .exposition-colonne-gauche {
-    flex: 0 0 calc(1140 / 1920 * 100%);
-    gap: calc(85.5 / 1920 * 100vw);
+    flex: 0 1 50%;
 }
 
 .exposition-5 .exposition-colonne-droite {
-    flex: 0 0 calc(550.5 / 1920 * 100%);
-    gap: calc(85.5 / 1920 * 100vw);
+    flex: 0 1 50%;
 }
 
-.exposition-5 .exposition-image {
-    height: calc(735 / 1920 * 100vw);
+.exposition-5 .exposition-titre {
+    margin-bottom: var(--spacing-lg);
 }
 
 .exposition-5 .exposition-dates {
-    padding-left: calc(82.995 / 1920 * 100%);
+    margin-bottom: var(--spacing-lg);
 }
 
-@media screen and (max-width: 768px) {
-    main.page-expositions {
-        padding: 20px;
-        padding-top: 40px;
-        gap: 40px;
-    }
+/* Lettrine */
+.exposition-texte .lettrine {
+    font-family: var(--font-display);
+    font-size: 3.5em;
+    line-height: 0.8;
+    float: left;
+    margin-right: 0.15em;
+    margin-top: 0.1em;
+    color: var(--color-primary);
+}
 
-    .titre-principal {
-        font-size: clamp(32px, 8vw, 40px);
-        margin-bottom: 30px;
-    }
-
-    .exposition-item {
-        margin-bottom: 50px;
-    }
-
+/* Responsive */
+@media (max-width: 1024px) {
     .exposition-contenu {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column !important;
+        gap: var(--spacing-xl);
     }
-
+    
     .exposition-colonne-gauche,
     .exposition-colonne-droite {
-        flex: 1 1 100%;
+        flex: 1 1 100% !important;
         width: 100%;
     }
-
-    .exposition-image {
-        height: auto;
-        max-height: 400px;
+    
+    .exposition-2 .exposition-header,
+    .exposition-4 .exposition-header {
+        order: 0;
+        margin-top: var(--spacing-lg);
+        margin-bottom: 0;
     }
+}
 
-    .exposition-header {
-        margin-top: 20px;
-        width: 100%;
-        align-items: flex-start;
+@media (max-width: 768px) {
+    .page-expositions {
+        padding: var(--spacing-lg) var(--container-padding);
+        gap: var(--spacing-xl);
+    }
+    
+    .page-expositions .titre-principal {
+        font-size: var(--font-size-lg);
+    }
+    
+    .exposition-titre {
+        font-size: var(--font-size-base);
+    }
+    
+    .exposition-dates {
+        font-size: var(--font-size-sm);
+    }
+    
+    .exposition-texte p {
+        font-size: var(--font-size-xs);
+    }
+    
+    .exposition-texte .lettrine {
+        font-size: 2.5em;
     }
 }

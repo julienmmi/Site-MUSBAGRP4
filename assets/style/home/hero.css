@@ -1,9 +1,18 @@
+/* Hero Section - Utilisation exclusive de Flexbox */
+
+.accueil {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.56vw 5.16% 0;
+    gap: 0;
+}
+
 .image-accueil {
-    position: absolute;
-    left: calc(66 / 1280 * 100%);
-    top: calc(20 / 1280 * 100vw);
-    width: calc(1147 / 1280 * 100%);
-    height: calc(610 / 1280 * 100vw);
+    width: 89.61%;
+    height: 47.66vw;
+    align-self: flex-start;
+    display: flex;
 }
 
 .image-accueil .image {
@@ -12,17 +21,27 @@
     object-fit: cover;
 }
 
+.accueil .contenu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6.25vw;
+    gap: 0;
+}
+
 .titre-accueil {
-    position: absolute;
-    left: calc(162 / 1280 * 100%);
-    top: calc(710 / 1280 * 100vw);
-    width: calc(439 / 1280 * 100%);
-    height: calc(94 / 1280 * 100vw);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 34.3%;
+    gap: 0;
 }
 
 .titre-principal {
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(32px, calc(60 / 1280 * 100vw), 60px);
+    font-size: clamp(32px, 4.69vw, 60px);
     font-weight: 400;
     line-height: normal;
     color: var(--color-primary);
@@ -32,24 +51,49 @@
 
 .titre-accueil .sous-titre {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+    font-size: clamp(16px, 1.56vw, 20px);
     font-weight: 500;
     line-height: 25px;
     color: var(--color-primary);
     display: block;
-    margin: 0 0 calc(20 / 1280 * 100vw) 0;
+    margin: 0 0 1.56vw 0;
 }
 
 .date {
-    position: absolute;
-    left: calc(652 / 1280 * 100%);
-    top: calc(730 / 1280 * 100vw);
-    width: calc(229 / 1280 * 100%);
-    height: calc(74 / 1280 * 100vw);
+    display: flex;
+    align-items: flex-start;
+    width: 17.89%;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+    font-size: clamp(16px, 1.56vw, 20px);
     font-weight: 500;
     line-height: 25px;
     color: var(--color-secondary);
     margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .accueil {
+        padding: var(--spacing-md) var(--container-padding) 0;
+    }
+    
+    .image-accueil {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .accueil .contenu {
+        flex-direction: column;
+        margin-top: var(--spacing-xl);
+        gap: var(--spacing-lg);
+    }
+    
+    .titre-accueil {
+        width: 100%;
+    }
+    
+    .date {
+        width: 100%;
+    }
 }

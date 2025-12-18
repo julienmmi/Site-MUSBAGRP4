@@ -1,188 +1,395 @@
-.expositions .titre {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: calc(841 / 1280 * 100vw);
-    width: calc(213 / 1280 * 100%);
-    height: calc(162 / 1280 * 100vw);
+/* Sections principales - Utilisation exclusive de Flexbox */
+
+/* Section Hero - Récits d'enfance */
+.accueil {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.56vw 5.16% 0;
+    gap: 0;
+}
+
+.image-accueil {
+    width: 89.61%;
+    height: 47.66vw;
+    align-self: flex-start;
+    display: flex;
+}
+
+.image-accueil .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accueil .contenu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6.25vw;
+    gap: 0;
+}
+
+.titre-accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 34.3%;
+    gap: 0;
+}
+
+.titre-principal {
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(24px, calc(40 / 1280 * 100vw), 40px);
+    font-size: clamp(32px, 4.69vw, 60px);
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color-primary);
+    display: block;
+    margin: 0;
+}
+
+.titre-accueil .sous-titre {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(16px, 1.56vw, 20px);
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--color-primary);
+    display: block;
+    margin: 0 0 1.56vw 0;
+}
+
+.date {
+    display: flex;
+    align-items: flex-start;
+    width: 17.89%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(16px, 1.56vw, 20px);
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+/* Section Expositions temporaires */
+.expositions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 10.31vw;
+    gap: 5vw;
+}
+
+.expositions .titre {
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(24px, 3.13vw, 40px);
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
     margin: 0;
     padding: 0;
     text-align: left;
+    align-self: flex-start;
+}
+
+.expositions .contenu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 3vw;
+}
+
+.expositions .contenu > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.56vw;
+    width: 20.94%;
+    flex: 0 0 20.94%;
 }
 
 .expositions .texte {
-    position: absolute;
-    left: calc(66 / 1280 * 100%);
-    top: calc(974 / 1280 * 100vw);
-    width: calc(268 / 1280 * 100%);
-    height: calc(104 / 1280 * 100vw);
+    width: 100%;
 }
 
 .expositions .texte p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
+    font-size: clamp(16px, 1.56vw, 20px);
     font-weight: 500;
     line-height: 25px;
     color: var(--color-primary);
     margin: 0;
 }
 
-.image-expositions {
-    position: absolute;
-    left: calc(457 / 1280 * 100%);
-    top: calc(841 / 1280 * 100vw);
-    width: calc(756 / 1280 * 100%);
-    height: calc(403 / 1280 * 100vw);
+.expositions .image-expositions {
+    display: flex;
+    flex: 1 1 auto;
+    width: auto;
 }
 
-.image-expositions .image {
+.expositions .image-expositions .image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
+/* Section Collections permanentes */
+.collections {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 10.31vw;
+    gap: 5vw;
+}
+
 .collections .titre {
-    position: absolute;
-    left: calc(554 / 1280 * 100%);
-    top: calc(1457 / 1280 * 100vw);
-    width: calc(441 / 1280 * 100%);
-    height: calc(57 / 1280 * 100vw);
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(24px, calc(40 / 1280 * 100vw), 40px);
+    font-size: clamp(24px, 3.13vw, 40px);
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
     text-align: left;
     margin: 0;
     padding: 0;
+    align-self: flex-end;
 }
 
-.image-collections {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: calc(1457 / 1280 * 100vw);
-    width: calc(466 / 1280 * 100%);
-    height: calc(705 / 1280 * 100vw);
-}
-
-.image-collections .image {
+.collections .contenu {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    height: 100%;
+    gap: 3vw;
+}
+
+.collections .image-collections {
+    display: flex;
+    flex: 0 1 36.41%;
+    width: auto;
+}
+
+.collections .image-collections .image {
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
+.collections .contenu > div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.56vw;
+    width: 22.73%;
+    flex: 0 0 22.73%;
+}
+
 .collections .texte {
-    position: absolute;
-    left: calc(559 / 1280 * 100%);
-    top: calc(1541 / 1280 * 100vw);
-    width: calc(291 / 1280 * 100%);
-    height: calc(384 / 1280 * 100vw);
+    width: 100%;
 }
 
 .collections .texte p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
+    font-size: clamp(14px, 1.25vw, 16px);
     font-weight: 500;
     line-height: 25px;
     color: var(--color-primary);
     margin: 0;
 }
 
+/* Section Histoire du Musée */
+.histoire {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 10.31vw;
+    gap: 5vw;
+}
+
 .histoire .titre {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: calc(2388 / 1280 * 100vw);
-    width: calc(353 / 1280 * 100%);
-    height: calc(48 / 1280 * 100vw);
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(24px, calc(40 / 1280 * 100vw), 40px);
+    font-size: clamp(24px, 3.13vw, 40px);
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
     margin: 0;
     padding: 0;
     text-align: left;
+    align-self: flex-start;
+}
+
+.histoire .contenu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 3vw;
+}
+
+.histoire .contenu > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.56vw;
+    width: 24.53%;
+    flex: 0 0 24.53%;
 }
 
 .histoire .texte {
-    position: absolute;
-    left: calc(63 / 1280 * 100%);
-    top: calc(2479 / 1280 * 100vw);
-    width: calc(314 / 1280 * 100%);
-    height: calc(257 / 1280 * 100vw);
+    width: 100%;
 }
 
 .histoire .texte p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(12px, calc(14 / 1280 * 100vw), 14px);
+    font-size: clamp(12px, 1.09vw, 14px);
     font-weight: 500;
     line-height: 25px;
     color: var(--color-primary);
     margin: 0;
 }
 
-.image-histoire {
-    position: absolute;
-    left: calc(457 / 1280 * 100%);
-    top: calc(2390 / 1280 * 100vw);
-    width: calc(756 / 1280 * 100%);
-    height: calc(494 / 1280 * 100vw);
+.histoire .image-histoire {
+    display: flex;
+    flex: 0 1 59.06%;
+    width: auto;
 }
 
-.image-histoire .image {
+.histoire .image-histoire .image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
+/* Section Boutique */
+.boutique {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 10.31vw;
+    gap: 5vw;
+}
+
 .boutique .titre {
-    position: absolute;
-    left: calc(456 / 1280 * 100%);
-    top: calc(3095 / 1280 * 100vw);
-    width: calc(183 / 1280 * 100%);
-    height: calc(66 / 1280 * 100vw);
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(24px, calc(40 / 1280 * 100vw), 40px);
+    font-size: clamp(24px, 3.13vw, 40px);
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
     text-align: left;
     margin: 0;
     padding: 0;
+    align-self: flex-end;
 }
 
-.image-boutique {
-    position: absolute;
-    left: calc(64 / 1280 * 100%);
-    top: calc(3095 / 1280 * 100vw);
-    width: calc(367 / 1280 * 100%);
-    height: calc(551 / 1280 * 100vw);
-}
-
-.image-boutique .image {
+.boutique .contenu {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    height: 100%;
+    gap: 3vw;
+}
+
+.boutique .image-boutique {
+    display: flex;
+    flex: 0 1 28.67%;
+    width: auto;
+}
+
+.boutique .image-boutique .image {
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
+.boutique .contenu > div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.56vw;
+    width: 22.97%;
+    flex: 0 0 22.97%;
+}
+
 .boutique .texte {
-    position: absolute;
-    left: calc(456 / 1280 * 100%);
-    top: calc(3177 / 1280 * 100vw);
-    width: calc(294 / 1280 * 100%);
-    height: calc(250 / 1280 * 100vw);
+    width: 100%;
 }
 
 .boutique .texte p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(12px, calc(14 / 1280 * 100vw), 14px);
+    font-size: clamp(12px, 1.09vw, 14px);
     font-weight: 500;
     line-height: 25px;
     color: var(--color-primary);
     margin: 0;
 }
 
+/* Responsive */
+@media (max-width: 1024px) {
+    .expositions .contenu,
+    .collections .contenu,
+    .histoire .contenu,
+    .boutique .contenu {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+    
+    .expositions .contenu > div:first-child,
+    .collections .contenu > div:last-child,
+    .histoire .contenu > div:first-child,
+    .boutique .contenu > div:last-child {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+    
+    .expositions .image-expositions,
+    .collections .image-collections,
+    .histoire .image-histoire,
+    .boutique .image-boutique {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .accueil {
+        padding: var(--spacing-md) var(--container-padding) 0;
+    }
+    
+    .image-accueil {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .accueil .contenu {
+        flex-direction: column;
+        margin-top: var(--spacing-xl);
+        gap: var(--spacing-lg);
+    }
+    
+    .titre-accueil {
+        width: 100%;
+    }
+    
+    .date {
+        width: 100%;
+    }
+    
+    .expositions,
+    .collections,
+    .histoire,
+    .boutique {
+        padding: 0 var(--container-padding);
+        margin-top: var(--spacing-xl);
+        gap: var(--spacing-lg);
+    }
+}
