@@ -1,0 +1,151 @@
+/* Header et Navigation - Page Exposition - Utilisation exclusive de Flexbox */
+
+.en-tete {
+    width: 100%;
+    padding: var(--spacing-md) var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    background-color: var(--color-background);
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .image {
+    width: auto;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+/* Container de navigation */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--spacing-lg);
+}
+
+/* Navigation principale */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.nav-links-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.nav-links .lien {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    padding: var(--spacing-xs) 0;
+    transition: color var(--transition-fast);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links .lien:hover {
+    color: var(--color-primary);
+}
+
+/* Éléments de droite (recherche, langue) */
+.nav-right-elements {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+/* Bouton de recherche */
+.recherche {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 21px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+}
+
+.recherche:hover {
+    opacity: 0.7;
+}
+
+.recherche svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Sélecteur de langue */
+.langue {
+    display: flex;
+    align-items: center;
+}
+
+.texte-langue {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+}
+
+.texte-langue:hover {
+    color: var(--color-primary);
+}
+
+/* Ligne de séparation */
+.ligne {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin-top: var(--spacing-xs);
+    display: flex;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .en-tete {
+        padding: var(--spacing-sm) var(--container-padding);
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-right-elements {
+        gap: var(--spacing-md);
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

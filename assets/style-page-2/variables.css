@@ -1,0 +1,47 @@
+:root {
+    /* Couleurs principales */
+    --color-primary: #000000;
+    --color-secondary: #666666;
+    --color-button: #000000;
+    --color-background: #FFFFFF;
+    --color-or: #D4AF37;
+    
+    /* Couleurs de texte */
+    --color-text-primary: #000000;
+    --color-text-secondary: #666666;
+    --color-text-light: #FFFFFF;
+    
+    /* Polices */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-display: 'MusBA', sans-serif;
+    
+    /* Tailles de police */
+    --font-size-xs: clamp(12px, 1.09vw, 14px);
+    --font-size-sm: clamp(14px, 1.25vw, 16px);
+    --font-size-base: clamp(16px, 1.56vw, 20px);
+    --font-size-lg: clamp(24px, 3.13vw, 40px);
+    --font-size-xl: clamp(32px, 4.69vw, 60px);
+    
+    /* Espacements */
+    --spacing-xs: 0.5vw;
+    --spacing-sm: 1vw;
+    --spacing-md: 1.56vw;
+    --spacing-lg: 3vw;
+    --spacing-xl: 5vw;
+    --spacing-xxl: 6.25vw;
+    --spacing-xxxl: 10.31vw;
+    
+    /* Largeurs */
+    --container-padding: 5%;
+    --container-padding-alt: 5.16%;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Ombres */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}

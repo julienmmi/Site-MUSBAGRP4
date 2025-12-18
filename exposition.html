@@ -22,36 +22,21 @@
 <body>
     <header class="en-tete">
         <div class="logo-container">
-            <div>
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="https://www.figma.com/api/mcp/asset/9be65352-940a-4ce7-b537-7ea7eb2cde0d" alt="MusBA Logo" class="image">
-                    </a>
-                </div>
-                <div class="logo-texte">
-                    <div>Musée des Beaux-Arts</div>
-                    <div>Bordeaux</div>
-                </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://www.figma.com/api/mcp/asset/9be65352-940a-4ce7-b537-7ea7eb2cde0d" alt="MusBA Logo" class="image">
+                </a>
             </div>
         </div>
         <div class="nav-container">
-            <div class="nav-fragmented-text">
-                <div>Musée</div>
-                <div>des</div>
-                <div class="fragmented-line">
-                    <span>Beaux-</span>
-                    <nav class="nav-links">
-                        <div class="nav-links-row">
-                            <a href="index.html" class="lien">Visite</a>
-                            <a href="#" class="lien">Découvrir</a>
-                            <a href="#" class="lien">L'histoire du musée</a>
-                            <a href="#" class="lien">Voir</a>
-                        </div>
-                    </nav>
+            <nav class="nav-links">
+                <div class="nav-links-row">
+                    <a href="index.html" class="lien">Visite</a>
+                    <a href="#" class="lien">Découvrir</a>
+                    <a href="#" class="lien">L'histoire du musée</a>
+                    <a href="#" class="lien">Voir</a>
                 </div>
-                <div>Arts</div>
-                <div>Bordeaux</div>
-            </div>
+            </nav>
             <div class="nav-right-elements">
                 <button class="recherche" aria-label="Rechercher">
                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,9 +126,9 @@
         <h1 class="titre-principal">Expositions temporaires</h1>
 
         <!-- Exposition 1: Récits d'enfance -->
-        <section class="exposition-item exposition-1">
+        <article class="exposition-item exposition-1">
             <div class="exposition-contenu">
-                <div class="exposition-colonne-gauche">
+                <div class="exposition-gauche">
                     <div class="exposition-image">
                         <img src="https://www.figma.com/api/mcp/asset/5301abe5-bc77-4f73-adaf-884e0c570605" alt="Récits d'enfance" class="image">
                     </div>
@@ -154,97 +139,91 @@
                         </p>
                     </div>
                 </div>
-                <div class="exposition-colonne-droite">
-                    <div class="exposition-texte">
-                        <p><span class="lettrine">A</span> la fois sources de souvenirs et de rêveries poétiques, ces œuvres ont inspiré les récits d'enfance que les patients et soignants du Centre Hospitalier de Cadillac (hôpital de jour et CATTP de Villenave-d'Ornon), les résidents et les seniors du Centre Ressources de l'EHPAD Grand Bon Pasteur, ont pu réunir dans le cadre des actions menées hors les murs du musée. Tous ont ainsi partagé leurs meilleurs souvenirs et choisi une des œuvres de l'exposition qu'ils ont commentée, lors d'ateliers d'écriture et de pratique artistique.</p>
-                    </div>
+                <div class="exposition-texte">
+                    <p><span class="lettrine">A</span> la fois sources de souvenirs et de rêveries poétiques, ces œuvres ont inspiré les récits d'enfance que les patients et soignants du Centre Hospitalier de Cadillac (hôpital de jour et CATTP de Villenave-d'Ornon), les résidents et les seniors du Centre Ressources de l'EHPAD Grand Bon Pasteur, ont pu réunir dans le cadre des actions menées hors les murs du musée. Tous ont ainsi partagé leurs meilleurs souvenirs et choisi une des œuvres de l'exposition qu'ils ont commentée, lors d'ateliers d'écriture et de pratique artistique.</p>
                 </div>
             </div>
-        </section>
+        </article>
 
         <!-- Exposition 2: La puissance du trait -->
-        <section class="exposition-item exposition-2">
+        <article class="exposition-item exposition-2">
             <div class="exposition-contenu">
-                <div class="exposition-colonne-gauche">
-                    <div class="exposition-texte">
-                        <p><span class="lettrine">D</span>écouvrez, dans les deux ailes du musée, quatre dessins rarement exposés d'Eugène Delacroix, présentés pour la première fois en regard des œuvres originales, dont l'étude préparatoire pour La Grèce sur les ruines de Missolonghi, récemment acquise grâce à la générosité des Amis du musée des Beaux-Arts de Bordeaux.</p>
-                    </div>
+                <div class="exposition-texte">
+                    <p><span class="lettrine">D</span>écouvrez, dans les deux ailes du musée, quatre dessins rarement exposés d'Eugène Delacroix, présentés pour la première fois en regard des œuvres originales, dont l'étude préparatoire pour La Grèce sur les ruines de Missolonghi, récemment acquise grâce à la générosité des Amis du musée des Beaux-Arts de Bordeaux.</p>
                 </div>
-                <div class="exposition-colonne-droite">
+                <div class="exposition-media">
                     <div class="exposition-image">
                         <img src="https://www.figma.com/api/mcp/asset/045f31cf-020b-4f7c-aa2f-683794b5ad06" alt="La puissance du trait" class="image">
                     </div>
+                    <div class="exposition-info">
+                        <h2 class="exposition-titre">La puissance du trait</h2>
+                        <p class="exposition-dates">
+                            <span class="date-chiffre">5</span><span class="date-texte"> novembre  -  </span><span class="date-chiffre">23</span><span class="date-texte"> février</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="exposition-header">
-                <h2 class="exposition-titre">La puissance du trait</h2>
-                <p class="exposition-dates">
-                    <span class="date-chiffre">5</span><span class="date-texte"> novembre  -  </span><span class="date-chiffre">23</span><span class="date-texte"> février</span>
-                </p>
-            </div>
-        </section>
+        </article>
 
         <!-- Exposition 3: Regards croisés contemporains -->
-        <section class="exposition-item exposition-3">
+        <article class="exposition-item exposition-3">
             <div class="exposition-contenu">
-                <div class="exposition-colonne-gauche">
-                    <h2 class="exposition-titre">Regards croisés contemporains</h2>
+                <div class="exposition-media">
                     <div class="exposition-image">
                         <img src="https://www.figma.com/api/mcp/asset/9a599fe4-be0a-4cbb-b73c-9f044bdcf0af" alt="Regards croisés contemporains" class="image">
                     </div>
-                </div>
-                <div class="exposition-colonne-droite">
+                    <h2 class="exposition-titre">Regards croisés contemporains</h2>
                     <p class="exposition-dates">
                         <span class="date-chiffre">26</span><span class="date-texte"> février 2026 - </span><span class="date-chiffre">26</span><span class="date-texte"> mai</span>
                     </p>
+                </div>
+                <div class="exposition-texte-wrapper">
                     <div class="exposition-texte">
                         <p><span class="lettrine">L</span>'artiste Barbara Schroeder propose un contrepoint contemporain au chef-d'œuvre des collections La Leçon de labourage (1798) de François-André Vincent. Le travail de Barbara Schroeder puise dans les gestes agricoles, la mémoire des sols, l'enracinement et la fragilité des écosystèmes. À travers des matériaux bruts et organiques – porcelaine, mousses, bouse – cet ensemble apparaît ici comme un « labourage » de l'esprit et du paysage.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </article>
 
         <!-- Exposition 4: Passions Collections -->
-        <section class="exposition-item exposition-4">
+        <article class="exposition-item exposition-4">
             <div class="exposition-contenu">
-                <div class="exposition-colonne-gauche">
-                    <div class="exposition-texte">
-                        <p><span class="lettrine">C</span>et accrochage est l'occasion de revenir sur 10 années d'acquisitions, à travers la présentation d'une sélection d'œuvres particulièrement significatives et représentatives de la diversité des médiums représentés.  L'une des missions essentielles d'un musée est l'enrichissement de ses collections qui se traduit par une politique d'acquisitions visant à compléter et à renforcer certains fonds. Au MusBA, cette politique d'acquisitions est surtout axée depuis quelques années sur l'art bordelais du 18e au 20e siècle ainsi que sur le 19e siècle français, point fort des collections du musée.</p>
-                    </div>
+                <div class="exposition-texte">
+                    <p><span class="lettrine">C</span>et accrochage est l'occasion de revenir sur 10 années d'acquisitions, à travers la présentation d'une sélection d'œuvres particulièrement significatives et représentatives de la diversité des médiums représentés.  L'une des missions essentielles d'un musée est l'enrichissement de ses collections qui se traduit par une politique d'acquisitions visant à compléter et à renforcer certains fonds. Au MusBA, cette politique d'acquisitions est surtout axée depuis quelques années sur l'art bordelais du 18e au 20e siècle ainsi que sur le 19e siècle français, point fort des collections du musée.</p>
                 </div>
-                <div class="exposition-colonne-droite">
+                <div class="exposition-media">
                     <div class="exposition-image">
                         <img src="https://www.figma.com/api/mcp/asset/2c45dc13-1e0d-42c0-9143-328d51ba4d99" alt="Passions Collections" class="image">
                     </div>
+                    <div class="exposition-info">
+                        <h2 class="exposition-titre">Passions Collections</h2>
+                        <p class="exposition-dates">
+                            <span class="date-chiffre">1</span><span class="date-texte"> avril 2026 - </span><span class="date-chiffre">4</span><span class="date-texte"> janvier 2027</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="exposition-header">
-                <h2 class="exposition-titre">Passions Collections</h2>
-                <p class="exposition-dates">
-                    <span class="date-chiffre">1</span><span class="date-texte"> avril 2026 - </span><span class="date-chiffre">4</span><span class="date-texte"> janvier 2027</span>
-                </p>
-            </div>
-        </section>
+        </article>
 
         <!-- Exposition 5: Jean Dupas & Co -->
-        <section class="exposition-item exposition-5">
+        <article class="exposition-item exposition-5">
             <div class="exposition-contenu">
-                <div class="exposition-colonne-gauche">
-                    <h2 class="exposition-titre">Jean Dupas & Co</h2>
+                <div class="exposition-media">
                     <div class="exposition-image">
                         <img src="https://www.figma.com/api/mcp/asset/a3f653ea-e2ce-46da-ba78-55ef3a7223c6" alt="Jean Dupas & Co" class="image">
                     </div>
-                </div>
-                <div class="exposition-colonne-droite">
+                    <h2 class="exposition-titre">Jean Dupas & Co</h2>
                     <p class="exposition-dates">
                         <span class="date-chiffre">26</span><span class="date-texte"> juin - </span><span class="date-chiffre">29</span><span class="date-texte"> novembre 2026</span>
                     </p>
+                </div>
+                <div class="exposition-texte-wrapper">
                     <div class="exposition-texte">
                         <p><span class="lettrine">P</span>eintre, dessinateur et affichiste, Jean Dupas (1882-1964) est l'une des figures majeures de l'Art Déco, en France comme aux États-Unis. Son univers étrange et intemporel, peuplé d'élégantes silhouettes féminines longilignes, s'est imposé dans les pavillons des grandes expositions internationales, les intérieurs de collectionneurs, les salons des paquebots transatlantiques et les bâtiments civils et religieux.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </article>
     </main>
 
  <footer class="pied-page">

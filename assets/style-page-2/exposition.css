@@ -1,0 +1,480 @@
+/* Page Expositions temporaires - Dimensions exactes depuis Figma avec Flexbox uniquement */
+
+.page-expositions {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 80px 64px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow-x: visible;
+}
+
+/* Titre principal de la page */
+.page-expositions .titre-principal {
+    font-family: var(--font-display);
+    font-size: 60px;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 80px;
+    line-height: 1;
+}
+
+/* Article d'exposition */
+.exposition-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 132px;
+}
+
+.exposition-item:last-child {
+    margin-bottom: 0;
+}
+
+.exposition-contenu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 132px;
+    width: 100%;
+    max-width: none;
+}
+
+/* Media (image + infos) */
+.exposition-media {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* Image d'exposition */
+.exposition-image {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.exposition-image .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+/* Info (titre + dates sous l'image) */
+.exposition-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+/* Titre d'exposition */
+.exposition-titre {
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Dates d'exposition */
+.exposition-dates {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.date-chiffre {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-primary);
+    display: inline-flex;
+    line-height: 1;
+}
+
+.date-texte {
+    color: var(--color-text-secondary);
+    display: inline-flex;
+    font-size: 20px;
+}
+
+/* Texte d'exposition */
+.exposition-texte {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.exposition-texte p {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+    color: var(--color-primary);
+    margin: 0;
+    text-align: justify;
+}
+
+/* Wrapper pour texte avec dates (expositions 3 et 5) */
+.exposition-texte-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+}
+
+/* Lettrine */
+.exposition-texte .lettrine {
+    font-family: var(--font-display);
+    font-size: 56px;
+    line-height: 0.8;
+    margin-right: 6px;
+    margin-top: 4px;
+    color: var(--color-primary);
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+/* Styles spécifiques pour chaque exposition avec dimensions exactes */
+
+/* Exposition 1: Récits d'enfance - Image à gauche (libre, plus d'espace), texte à droite, titre/dates sous l'image */
+.exposition-1 .exposition-contenu {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 300px;
+    width: 100%;
+}
+
+.exposition-1 .exposition-gauche {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1 1 auto;
+    align-items: flex-start;
+    min-width: 0;
+    width: auto;
+}
+
+.exposition-1 .exposition-image {
+    width: auto !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+    max-width: none !important;
+    min-width: 2000px !important;
+}
+
+.exposition-1 .exposition-image .image {
+    width: 2000px !important;
+    height: auto !important;
+    min-width: 2000px !important;
+    max-width: 2000px !important;
+    object-fit: contain !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+}
+
+.exposition-1 .exposition-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    margin-top: 48px;
+    width: 100%;
+}
+
+.exposition-1 .exposition-titre {
+    margin: 0;
+    padding: 0;
+}
+
+.exposition-1 .exposition-dates {
+    margin: 0;
+    padding: 0;
+}
+
+.exposition-1 .exposition-texte {
+    flex: 0 0 350px;
+    display: flex;
+    align-items: flex-start;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+/* Exposition 2: La puissance du trait - Texte à gauche (40%), image + infos à droite (60%) */
+.exposition-2 .exposition-contenu {
+    flex-direction: row;
+}
+
+.exposition-2 .exposition-texte {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.exposition-2 .exposition-media {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.exposition-2 .exposition-image .image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.exposition-2 .exposition-info {
+    align-items: flex-end;
+}
+
+.exposition-2 .exposition-titre {
+    text-align: right;
+}
+
+.exposition-2 .exposition-dates {
+    justify-content: flex-end;
+}
+
+/* Exposition 3: Regards croisés contemporains - Titre + image à gauche (50%), dates + texte à droite (50%) */
+.exposition-3 .exposition-contenu {
+    flex-direction: row;
+}
+
+.exposition-3 .exposition-media {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.exposition-3 .exposition-image .image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.exposition-3 .exposition-texte-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.exposition-3 .exposition-titre {
+    margin-bottom: 48px;
+}
+
+/* Exposition 4: Passions Collections - Texte à gauche (40%), image + infos à droite (60%) */
+.exposition-4 .exposition-contenu {
+    flex-direction: row;
+}
+
+.exposition-4 .exposition-texte {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.exposition-4 .exposition-media {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.exposition-4 .exposition-image .image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.exposition-4 .exposition-info {
+    align-items: flex-end;
+}
+
+.exposition-4 .exposition-titre {
+    text-align: right;
+}
+
+.exposition-4 .exposition-dates {
+    justify-content: flex-end;
+}
+
+/* Exposition 5: Jean Dupas & Co - Titre + image à gauche (50%), dates + texte à droite (50%) */
+.exposition-5 .exposition-contenu {
+    flex-direction: row;
+}
+
+.exposition-5 .exposition-media {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.exposition-5 .exposition-image .image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.exposition-5 .exposition-texte-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.exposition-5 .exposition-titre {
+    margin-bottom: 48px;
+}
+
+/* Responsive - Conversion des pixels en valeurs responsives */
+@media (max-width: 1280px) {
+    .page-expositions {
+        padding: clamp(40px, 6.25vw, 80px) clamp(32px, 5vw, 64px);
+    }
+    
+    .page-expositions .titre-principal {
+        font-size: clamp(32px, 4.69vw, 60px);
+        margin-bottom: clamp(40px, 6.25vw, 80px);
+    }
+    
+    .exposition-item {
+        margin-bottom: clamp(66px, 10.31vw, 132px);
+    }
+    
+    .exposition-contenu {
+        gap: clamp(66px, 10.31vw, 132px);
+    }
+    
+    .exposition-titre {
+        font-size: clamp(24px, 3.13vw, 40px);
+    }
+    
+    .exposition-dates {
+        font-size: clamp(16px, 1.56vw, 20px);
+    }
+    
+    .date-chiffre {
+        font-size: clamp(20px, 1.88vw, 24px);
+    }
+    
+    .exposition-texte p {
+        font-size: clamp(14px, 1.25vw, 16px);
+    }
+    
+    .exposition-media {
+        gap: clamp(24px, 3.75vw, 48px);
+    }
+    
+    .exposition-texte-wrapper {
+        gap: clamp(24px, 3.75vw, 48px);
+    }
+    
+    .exposition-info {
+        gap: clamp(8px, 1.25vw, 16px);
+    }
+    
+    .exposition-texte .lettrine {
+        font-size: clamp(32px, 4.38vw, 56px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-expositions {
+        padding: 40px 32px;
+    }
+    
+    .exposition-contenu {
+        flex-direction: column !important;
+        gap: 48px;
+    }
+    
+    .exposition-media,
+    .exposition-texte,
+    .exposition-texte-wrapper {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        width: 100%;
+    }
+    
+    .exposition-2 .exposition-info,
+    .exposition-4 .exposition-info {
+        align-items: flex-start;
+    }
+    
+    .exposition-2 .exposition-titre,
+    .exposition-4 .exposition-titre {
+        text-align: left;
+    }
+    
+    .exposition-2 .exposition-dates,
+    .exposition-4 .exposition-dates {
+        justify-content: flex-start;
+    }
+    
+    .exposition-3 .exposition-titre,
+    .exposition-5 .exposition-titre {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-expositions {
+        padding: 32px 24px;
+    }
+    
+    .page-expositions .titre-principal {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .exposition-item {
+        margin-bottom: 60px;
+    }
+    
+    .exposition-contenu {
+        gap: 32px;
+    }
+    
+    .exposition-titre {
+        font-size: 24px;
+    }
+    
+    .exposition-dates {
+        font-size: 16px;
+    }
+    
+    .date-chiffre {
+        font-size: 20px;
+    }
+    
+    .exposition-texte p {
+        font-size: 14px;
+    }
+    
+    .exposition-media {
+        gap: 24px;
+    }
+    
+    .exposition-texte-wrapper {
+        gap: 24px;
+    }
+    
+    .exposition-info {
+        gap: 12px;
+    }
+    
+    .exposition-texte .lettrine {
+        font-size: 40px;
+    }
+}

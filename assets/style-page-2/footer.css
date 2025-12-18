@@ -1,0 +1,235 @@
+/* Footer - Page Exposition - Utilisation exclusive de Flexbox */
+
+.pied-page {
+    width: 100%;
+    background-color: var(--color-background);
+    padding: var(--spacing-xxxl) var(--container-padding) var(--spacing-xl);
+    margin-top: var(--spacing-xxxl);
+    border-top: 1px solid var(--color-primary);
+    display: flex;
+}
+
+.pied-page .conteneur {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-xxxl);
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Colonnes */
+.colonne {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.colonne.gauche {
+    flex: 0 1 auto;
+    min-width: 200px;
+}
+
+.colonne.droite {
+    flex: 1 1 auto;
+    max-width: 60%;
+}
+
+/* Navigation des liens */
+.liens {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.liens .lien {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+    display: flex;
+}
+
+.liens .lien:hover {
+    color: var(--color-text-secondary);
+}
+
+/* Sections d'adresse */
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    font-style: normal;
+}
+
+.section .titre {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--color-or);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.section .sous-titre {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.section .texte-petit {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* Réseaux sociaux */
+.reseaux {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.suivre {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: opacity var(--transition-fast);
+}
+
+.icone:hover {
+    opacity: 0.7;
+}
+
+.icone .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Navigation des liens du footer */
+.liens-nav {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-xxxl);
+    align-items: flex-start;
+}
+
+.liste-gauche,
+.liste-droite {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.liste-gauche .lien,
+.liste-droite .lien {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+    display: flex;
+}
+
+.liste-gauche .lien:hover,
+.liste-droite .lien:hover {
+    color: var(--color-text-secondary);
+}
+
+.saut-ligne {
+    height: var(--spacing-md);
+    display: flex;
+}
+
+/* Bas du footer */
+.bas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-primary);
+}
+
+.lien.accessibilite {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    transition: color var(--transition-fast);
+    display: flex;
+}
+
+.lien.accessibilite:hover {
+    color: var(--color-text-secondary);
+}
+
+.logo-bordeaux {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo-bordeaux .image {
+    width: auto;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .pied-page .conteneur {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+    
+    .colonne.droite {
+        max-width: 100%;
+    }
+    
+    .liens-nav {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .pied-page {
+        padding: var(--spacing-xl) var(--container-padding) var(--spacing-lg);
+    }
+    
+    .bas {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+    
+    .logo-bordeaux {
+        align-self: flex-start;
+    }
+}
