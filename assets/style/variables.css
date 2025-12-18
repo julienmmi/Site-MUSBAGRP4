@@ -1,14 +1,14 @@
 :root {
     /* Couleurs principales */
-    --color-primary: #000000;
-    --color-secondary: #666666;
-    --color-button: #000000;
+    --color-primary: #1C1C1C;
+    --color-secondary: #A67C52;
+    --color-button: #4A3A2A;
     --color-background: #FFFFFF;
-    --color-or: #D4AF37;
+    --color-or: #D6C3A5;
     
     /* Couleurs de texte */
-    --color-text-primary: #000000;
-    --color-text-secondary: #666666;
+    --color-text-primary: #1C1C1C;
+    --color-text-secondary: #A67C52;
     --color-text-light: #FFFFFF;
     
     /* Polices */
