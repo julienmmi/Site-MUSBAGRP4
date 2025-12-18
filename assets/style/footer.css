@@ -226,6 +226,8 @@
 .section p {
     margin: 0;
     padding: 0;
+    color: #FFFFFF;
+
 }
 
 .section .titre {
@@ -233,14 +235,11 @@
     font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
     font-weight: 700;
     line-height: 25px;
-    color: var(--color-primary);
+    color: var(--color-gold);
     margin: 0 0 calc(10 / 1280 * 100vw) 0;
-    padding: 0;
+    padding-top: 30px;
 }
 
-.titre-or {
-    color: var(--color-gold);
-}
 
 .section p:not(.titre):not(.texte-petit):not(.sous-titre) {
     font-family: 'Montserrat', sans-serif;
@@ -256,7 +255,7 @@
     font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
     font-weight: 700;
     line-height: 25px;
-    color: #000000;
+    color: #ffffff;
     margin: 0 0 calc(10 / 1280 * 100vw) 0;
     padding: 0;
 }
@@ -266,7 +265,7 @@
     font-size: clamp(14px, calc(16 / 1280 * 100vw), 16px);
     font-weight: 400;
     line-height: 25px;
-    color: var(--color-primary);
+    color: #ffffff;
     margin: 0 0 calc(10 / 1280 * 100vw) 0;
 }
 
@@ -285,8 +284,8 @@
     font-size: clamp(16px, calc(20 / 1280 * 100vw), 20px);
     font-weight: 400;
     line-height: 1.8;
-    color: #000000;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
     margin: 0 0 calc(5 / 1280 * 100vw) 0;
     padding: 0;
     display: inline-block;
@@ -310,6 +309,7 @@
     object-fit: contain;
 }
 
+/* Footer responsive */ 
 @media (max-width: 768px) {
     .conteneur {
         flex-direction: column;
@@ -341,5 +341,8 @@
     
     .en-tete .lien {
         font-size: 14px !important;
+    }
+    .pied-page .logo {
+        margin-left: 100px;
     }
 }
