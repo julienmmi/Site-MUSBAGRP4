@@ -1,39 +1,94 @@
+.recherche:focus {
+    outline: none;
+    border: none;
+}
+.btn-francais,
+.btn-anglais {
+    outline: none;
+    border: none;
+    background: none;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 0 4px;
+    transition: color var(--transition-fast);
+}
+.btn-francais:focus,
+.btn-anglais:focus {
+    outline: none;
+    border: none;
+}
+.btn-francais:hover,
+.btn-anglais:hover {
+    color: var(--color-text-secondary);
+}
 /* Header et Navigation - Utilisation exclusive de Flexbox */
 
 .en-tete {
     width: 100%;
-    padding: var(--spacing-md) var(--container-padding);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    background-color: var(--color-background);
+        padding: 16px 32px 4px 32px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-background);
+        gap: 0;
 }
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.inner {
+    display: flex;
+    
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.ligne {
+    width: 100%;
+    height: 1px;
+    background: var(--color-primary, #222);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    opacity: 0.15;
+}
+
 
 /* Logo */
 .logo {
     display: flex;
     align-items: center;
 }
-
 .logo .image {
     width: auto;
     height: auto;
     max-height: 60px;
     object-fit: contain;
 }
-
 .logo-container {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
 }
-
 .logo-container > div {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
 }
-
 .logo-texte {
     display: flex;
     flex-direction: column;
@@ -44,12 +99,11 @@
     line-height: 1.2;
 }
 
-/* Container de navigation */
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-end;
+    flex: 1;
     gap: var(--spacing-lg);
 }
 
@@ -70,6 +124,12 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    outline: none;
+    border: none;
+}
+.nav-links .lien:focus {
+    outline: none;
+    border: none;
 }
 
 .nav-links .lien:hover {
@@ -164,7 +224,7 @@
     width: 100%;
     height: 1px;
     background-color: var(--color-primary);
-    margin-top: var(--spacing-xs);
+        margin-top: var(--spacing-xs);
     display: flex;
 }
 
