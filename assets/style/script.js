@@ -13,15 +13,23 @@ document.addEventListener('DOMContentLoaded', function() {
     let activeLink = null;
     
     function positionnerMenu(link, menu) {
+        if (!link || !menu) return;
+        
         const linkRect = link.getBoundingClientRect();
         const header = document.querySelector('.en-tete');
+        if (!header) return;
+        
         const headerRect = header.getBoundingClientRect();
         const menuContenu = menu.querySelector('.menu-contenu-blanc');
-        const menuListe = menu.querySelector('.menu-liste');
+        let menuListe = menu.querySelector('.menu-liste');
+        
+        if (!menuListe && menuContenu) {
+            menuListe = menuContenu.querySelector('.menu-liste');
+        }
         
         if (menuContenu && menuListe) {
             menu.style.left = '0';
-            menu.style.top = (headerRect.bottom - 50) + 'px';
+            menu.style.top = (headerRect.bottom - 45) + 'px';
             
             const linkStyle = window.getComputedStyle(link);
             const linkPaddingLeft = parseFloat(linkStyle.paddingLeft) || 12;
@@ -32,12 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function ouvrirMenu(link, menuId) {
-        fermerMenu();
+        if (activeMenu && activeMenu.id === menuId) {
+            fermerMenu();
+            return;
+        }
+        
+        if (activeMenu && activeMenu.id !== menuId) {
+            fermerMenu();
+        }
         
         const menu = document.getElementById(menuId);
         if (menu) {
             positionnerMenu(link, menu);
-            menuOverlay.classList.add('active');
+            if (menuOverlay) {
+                menuOverlay.classList.add('active');
+            }
             menu.classList.add('active');
             activeMenu = menu;
             activeLink = link;
@@ -64,11 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const menuId = menus[linkText];
             
             if (menuId) {
-                if (activeMenu && activeMenu.id === menuId) {
-                    fermerMenu();
-                } else {
-                    ouvrirMenu(this, menuId);
-                }
+                ouvrirMenu(this, menuId);
             }
         });
     });
@@ -87,11 +100,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    let scrollTimeout = null;
+    
     window.addEventListener('resize', function() {
         if (activeMenu && activeLink) {
             positionnerMenu(activeLink, activeMenu);
         }
     });
+    
+    window.addEventListener('scroll', function() {
+        if (activeMenu && activeLink) {
+            if (scrollTimeout) {
+                cancelAnimationFrame(scrollTimeout);
+            }
+            scrollTimeout = requestAnimationFrame(function() {
+                positionnerMenu(activeLink, activeMenu);
+            });
+        }
+    }, { passive: true });
     
     const navLinks = document.querySelectorAll('.nav-link, .footer-link');
     navLinks.forEach(link => {

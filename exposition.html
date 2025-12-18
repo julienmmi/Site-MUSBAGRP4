@@ -24,18 +24,24 @@
         <div class="logo">
             <img src="https://www.figma.com/api/mcp/asset/9be65352-940a-4ce7-b537-7ea7eb2cde0d" alt="MusBA Logo" class="image">
         </div>
-        <a href="index.html" class="lien">Visite</a>
-        <a href="#" class="lien">Découvrir</a>
-        <a href="#" class="lien">L'histoire du musée</a>
-        <a href="#" class="lien">Voir plus</a>
-        <button class="recherche" aria-label="Rechercher">
-            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="9.5" cy="9.5" r="8.5" stroke="#000000" stroke-width="1.5"/>
-                <line x1="14.5" y1="14.5" x2="20" y2="20" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-        </button>
-        <div class="langue">
-            <span class="texte-langue">FR-EN</span>
+        <div class="nav-container">
+            <nav class="nav-links">
+                <a href="index.html" class="lien">Visite</a>
+                <a href="#" class="lien">Découvrir</a>
+                <a href="#" class="lien">L'histoire du musée</a>
+                <a href="#" class="lien">Voir plus</a>
+            </nav>
+            <div class="nav-right">
+                <button class="recherche" aria-label="Rechercher">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" stroke="#000000" stroke-width="1.5"/>
+                        <line x1="14.5" y1="14.5" x2="20" y2="20" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="langue">
+                    <span class="texte-langue">FR-EN</span>
+                </div>
+            </div>
         </div>
         <div class="ligne"></div>
     </header>
@@ -44,48 +50,68 @@
     <div class="menu-overlay" id="menu-overlay">
         <div class="menu-deroulant" id="menu-visite">
             <div class="menu-contenu-blanc">
-                <ul class="menu-liste">
-                    <li><a href="#" class="menu-lien">Planifiez votre visite</a></li>
-                    <li><a href="#" class="menu-lien">Tarifs et Horaires</a></li>
-                    <li><a href="#" class="menu-lien">Accessibilité</a></li>
-                    <li><a href="#" class="menu-lien">Agenda</a></li>
-                    <li><a href="#" class="menu-lien">Parcours</a></li>
-                    <li><a href="#" class="menu-lien">Aide a la visite</a></li>
-                </ul>
+                <div class="menu-titre-zone">
+                    <h3 class="menu-titre">Visite</h3>
+                </div>
+                <div class="menu-contenu-zone">
+                    <ul class="menu-liste">
+                        <li><a href="#" class="menu-lien">Planifiez votre visite</a></li>
+                        <li><a href="#" class="menu-lien">Tarifs et Horaires</a></li>
+                        <li><a href="#" class="menu-lien">Accessibilité</a></li>
+                        <li><a href="#" class="menu-lien">Agenda</a></li>
+                        <li><a href="#" class="menu-lien">Parcours</a></li>
+                        <li><a href="#" class="menu-lien">Aide a la visite</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="menu-deroulant" id="menu-decouvrir">
             <div class="menu-contenu-blanc">
-                <ul class="menu-liste">
-                    <li><a href="exposition.html" class="menu-lien">Expositions temporaires</a></li>
-                    <li><a href="#" class="menu-lien">Collections permanentes</a></li>
-                    <li><a href="#" class="menu-lien">Oeuvres commentées</a></li>
-                    <li><a href="#" class="menu-lien">Depuis chez vous</a></li>
-                    <li><a href="#" class="menu-lien">Base de donnée des oeuvres</a></li>
-                </ul>
+                <div class="menu-titre-zone">
+                    <h3 class="menu-titre">Découvrir</h3>
+                </div>
+                <div class="menu-contenu-zone">
+                    <ul class="menu-liste">
+                        <li><a href="exposition.html" class="menu-lien">Expositions temporaires</a></li>
+                        <li><a href="#" class="menu-lien">Collections permanentes</a></li>
+                        <li><a href="#" class="menu-lien">Oeuvres commentées</a></li>
+                        <li><a href="#" class="menu-lien">Depuis chez vous</a></li>
+                        <li><a href="#" class="menu-lien">Base de donnée des oeuvres</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="menu-deroulant" id="menu-histoire">
             <div class="menu-contenu-blanc">
-                <ul class="menu-liste">
-                    <li><a href="#" class="menu-lien">Le musée aujourd'hui</a></li>
-                    <li><a href="#" class="menu-lien">Plus de 200 ans d'histoire</a></li>
-                    <li><a href="#" class="menu-lien">Les expositions de 1834 a aujourd'hui</a></li>
-                    <li><a href="#" class="menu-lien">Vie des collections</a></li>
-                    <li><a href="#" class="menu-lien">Info journalistes</a></li>
-                    <li><a href="#" class="menu-lien">Nous soutenir</a></li>
-                </ul>
+                <div class="menu-titre-zone">
+                    <h3 class="menu-titre">L'Histoire du musée</h3>
+                </div>
+                <div class="menu-contenu-zone">
+                    <ul class="menu-liste">
+                        <li><a href="#" class="menu-lien">Le musée aujourd'hui</a></li>
+                        <li><a href="#" class="menu-lien">Plus de 200 ans d'histoire</a></li>
+                        <li><a href="#" class="menu-lien">Les expositions de 1834 a aujourd'hui</a></li>
+                        <li><a href="#" class="menu-lien">Vie des collections</a></li>
+                        <li><a href="#" class="menu-lien">Info journalistes</a></li>
+                        <li><a href="#" class="menu-lien">Nous soutenir</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="menu-deroulant" id="menu-savoir-plus">
             <div class="menu-contenu-blanc">
-                <ul class="menu-liste">
-                    <li><a href="#" class="menu-lien">Privatisation d'espace</a></li>
-                    <li><a href="#" class="menu-lien">Tournage et prise de vue</a></li>
-                    <li><a href="#" class="menu-lien">Ressources documentaires</a></li>
-                    <li><a href="#" class="menu-lien">Boutique</a></li>
-                    <li><a href="#" class="menu-lien">Nous contacter</a></li>
-                </ul>
+                <div class="menu-titre-zone">
+                    <h3 class="menu-titre">En savoir plus</h3>
+                </div>
+                <div class="menu-contenu-zone">
+                    <ul class="menu-liste">
+                        <li><a href="#" class="menu-lien">Privatisation d'espace</a></li>
+                        <li><a href="#" class="menu-lien">Tournage et prise de vue</a></li>
+                        <li><a href="#" class="menu-lien">Ressources documentaires</a></li>
+                        <li><a href="#" class="menu-lien">Boutique</a></li>
+                        <li><a href="#" class="menu-lien">Nous contacter</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -117,57 +143,85 @@
 
         <!-- Exposition 2: La puissance du trait -->
         <section class="exposition-item exposition-2">
-            <h2 class="exposition-titre">La puissance du trait</h2>
-            <p class="exposition-dates">
-                <span class="date-chiffre">5</span><span class="date-texte"> novembre  -  </span><span class="date-chiffre">23</span><span class="date-texte"> février</span>
-            </p>
-            <div class="exposition-image">
-                <img src="https://www.figma.com/api/mcp/asset/045f31cf-020b-4f7c-aa2f-683794b5ad06" alt="La puissance du trait" class="image">
+            <div class="exposition-contenu">
+                <div class="exposition-colonne-gauche">
+                    <div class="exposition-texte">
+                        <p><span class="lettrine">D</span>écouvrez, dans les deux ailes du musée, quatre dessins rarement exposés d'Eugène Delacroix, présentés pour la première fois en regard des œuvres originales, dont l'étude préparatoire pour La Grèce sur les ruines de Missolonghi, récemment acquise grâce à la générosité des Amis du musée des Beaux-Arts de Bordeaux.</p>
+                    </div>
+                </div>
+                <div class="exposition-colonne-droite">
+                    <div class="exposition-image">
+                        <img src="https://www.figma.com/api/mcp/asset/045f31cf-020b-4f7c-aa2f-683794b5ad06" alt="La puissance du trait" class="image">
+                    </div>
+                </div>
             </div>
-            <div class="exposition-texte">
-                <p><span class="lettrine">D</span>écouvrez, dans les deux ailes du musée, quatre dessins rarement exposés d'Eugène Delacroix, présentés pour la première fois en regard des œuvres originales, dont l'étude préparatoire pour La Grèce sur les ruines de Missolonghi, récemment acquise grâce à la générosité des Amis du musée des Beaux-Arts de Bordeaux.</p>
+            <div class="exposition-header">
+                <h2 class="exposition-titre">La puissance du trait</h2>
+                <p class="exposition-dates">
+                    <span class="date-chiffre">5</span><span class="date-texte"> novembre  -  </span><span class="date-chiffre">23</span><span class="date-texte"> février</span>
+                </p>
             </div>
         </section>
 
         <!-- Exposition 3: Regards croisés contemporains -->
         <section class="exposition-item exposition-3">
-            <h2 class="exposition-titre">Regards croisés contemporains</h2>
-            <p class="exposition-dates">
-                <span class="date-chiffre">26</span><span class="date-texte"> février 2026 - </span><span class="date-chiffre">26</span><span class="date-texte"> mai</span>
-            </p>
-            <div class="exposition-image">
-                <img src="https://www.figma.com/api/mcp/asset/9a599fe4-be0a-4cbb-b73c-9f044bdcf0af" alt="Regards croisés contemporains" class="image">
-            </div>
-            <div class="exposition-texte">
-                <p><span class="lettrine">L</span>'artiste Barbara Schroeder propose un contrepoint contemporain au chef-d'œuvre des collections La Leçon de labourage (1798) de François-André Vincent. Le travail de Barbara Schroeder puise dans les gestes agricoles, la mémoire des sols, l'enracinement et la fragilité des écosystèmes. À travers des matériaux bruts et organiques – porcelaine, mousses, bouse – cet ensemble apparaît ici comme un « labourage » de l'esprit et du paysage.</p>
+            <div class="exposition-contenu">
+                <div class="exposition-colonne-gauche">
+                    <h2 class="exposition-titre">Regards croisés contemporains</h2>
+                    <div class="exposition-image">
+                        <img src="https://www.figma.com/api/mcp/asset/9a599fe4-be0a-4cbb-b73c-9f044bdcf0af" alt="Regards croisés contemporains" class="image">
+                    </div>
+                </div>
+                <div class="exposition-colonne-droite">
+                    <p class="exposition-dates">
+                        <span class="date-chiffre">26</span><span class="date-texte"> février 2026 - </span><span class="date-chiffre">26</span><span class="date-texte"> mai</span>
+                    </p>
+                    <div class="exposition-texte">
+                        <p><span class="lettrine">L</span>'artiste Barbara Schroeder propose un contrepoint contemporain au chef-d'œuvre des collections La Leçon de labourage (1798) de François-André Vincent. Le travail de Barbara Schroeder puise dans les gestes agricoles, la mémoire des sols, l'enracinement et la fragilité des écosystèmes. À travers des matériaux bruts et organiques – porcelaine, mousses, bouse – cet ensemble apparaît ici comme un « labourage » de l'esprit et du paysage.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Exposition 4: Passions Collections -->
         <section class="exposition-item exposition-4">
-            <h2 class="exposition-titre">Passions Collections</h2>
-            <p class="exposition-dates">
-                <span class="date-chiffre">1</span><span class="date-texte"> avril 2026 - </span><span class="date-chiffre">4</span><span class="date-texte"> janvier 2027</span>
-            </p>
-            <div class="exposition-image">
-                <img src="https://www.figma.com/api/mcp/asset/2c45dc13-1e0d-42c0-9143-328d51ba4d99" alt="Passions Collections" class="image">
+            <div class="exposition-contenu">
+                <div class="exposition-colonne-gauche">
+                    <div class="exposition-texte">
+                        <p><span class="lettrine">C</span>et accrochage est l'occasion de revenir sur 10 années d'acquisitions, à travers la présentation d'une sélection d'œuvres particulièrement significatives et représentatives de la diversité des médiums représentés.  L'une des missions essentielles d'un musée est l'enrichissement de ses collections qui se traduit par une politique d'acquisitions visant à compléter et à renforcer certains fonds. Au MusBA, cette politique d'acquisitions est surtout axée depuis quelques années sur l'art bordelais du 18e au 20e siècle ainsi que sur le 19e siècle français, point fort des collections du musée.</p>
+                    </div>
+                </div>
+                <div class="exposition-colonne-droite">
+                    <div class="exposition-image">
+                        <img src="https://www.figma.com/api/mcp/asset/2c45dc13-1e0d-42c0-9143-328d51ba4d99" alt="Passions Collections" class="image">
+                    </div>
+                </div>
             </div>
-            <div class="exposition-texte">
-                <p><span class="lettrine">C</span>et accrochage est l'occasion de revenir sur 10 années d'acquisitions, à travers la présentation d'une sélection d'œuvres particulièrement significatives et représentatives de la diversité des médiums représentés.  L'une des missions essentielles d'un musée est l'enrichissement de ses collections qui se traduit par une politique d'acquisitions visant à compléter et à renforcer certains fonds. Au MusBA, cette politique d'acquisitions est surtout axée depuis quelques années sur l'art bordelais du 18e au 20e siècle ainsi que sur le 19e siècle français, point fort des collections du musée.</p>
+            <div class="exposition-header">
+                <h2 class="exposition-titre">Passions Collections</h2>
+                <p class="exposition-dates">
+                    <span class="date-chiffre">1</span><span class="date-texte"> avril 2026 - </span><span class="date-chiffre">4</span><span class="date-texte"> janvier 2027</span>
+                </p>
             </div>
         </section>
 
         <!-- Exposition 5: Jean Dupas & Co -->
         <section class="exposition-item exposition-5">
-            <h2 class="exposition-titre">Jean Dupas & Co</h2>
-            <p class="exposition-dates">
-                <span class="date-chiffre">26</span><span class="date-texte"> juin - </span><span class="date-chiffre">29</span><span class="date-texte"> novembre 2026</span>
-            </p>
-            <div class="exposition-image">
-                <img src="https://www.figma.com/api/mcp/asset/a3f653ea-e2ce-46da-ba78-55ef3a7223c6" alt="Jean Dupas & Co" class="image">
-            </div>
-            <div class="exposition-texte">
-                <p><span class="lettrine">P</span>eintre, dessinateur et affichiste, Jean Dupas (1882-1964) est l'une des figures majeures de l'Art Déco, en France comme aux États-Unis. Son univers étrange et intemporel, peuplé d'élégantes silhouettes féminines longilignes, s'est imposé dans les pavillons des grandes expositions internationales, les intérieurs de collectionneurs, les salons des paquebots transatlantiques et les bâtiments civils et religieux.</p>
+            <div class="exposition-contenu">
+                <div class="exposition-colonne-gauche">
+                    <h2 class="exposition-titre">Jean Dupas & Co</h2>
+                    <div class="exposition-image">
+                        <img src="https://www.figma.com/api/mcp/asset/a3f653ea-e2ce-46da-ba78-55ef3a7223c6" alt="Jean Dupas & Co" class="image">
+                    </div>
+                </div>
+                <div class="exposition-colonne-droite">
+                    <p class="exposition-dates">
+                        <span class="date-chiffre">26</span><span class="date-texte"> juin - </span><span class="date-chiffre">29</span><span class="date-texte"> novembre 2026</span>
+                    </p>
+                    <div class="exposition-texte">
+                        <p><span class="lettrine">P</span>eintre, dessinateur et affichiste, Jean Dupas (1882-1964) est l'une des figures majeures de l'Art Déco, en France comme aux États-Unis. Son univers étrange et intemporel, peuplé d'élégantes silhouettes féminines longilignes, s'est imposé dans les pavillons des grandes expositions internationales, les intérieurs de collectionneurs, les salons des paquebots transatlantiques et les bâtiments civils et religieux.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

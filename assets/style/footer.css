@@ -2,7 +2,6 @@
     width: 100%;
     max-width: 100vw;
     background-color: var(--color-footer-bg);
-    position: relative;
     margin: 0;
     margin-top: calc(60 / 1280 * 100vw);
     padding: calc(40 / 1280 * 100vw) calc(162 / 1280 * 100%);
@@ -12,8 +11,7 @@
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: calc(80 / 1280 * 100vw);
     align-items: flex-start;
 }
@@ -25,6 +23,7 @@
 }
 
 .gauche {
+    flex: 1 1 50%;
     width: 100%;
 }
 
@@ -41,6 +40,7 @@
 }
 
 .droite {
+    flex: 1 1 50%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -76,8 +76,7 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: calc(100% - calc(120 / 1280 * 100vw) - calc(165 / 1280 * 100vw));
-    position: relative;
+    width: 100%;
 }
 
 .icone {
@@ -88,7 +87,6 @@
     max-width: 48px;
     max-height: 48px;
     overflow: hidden;
-    position: relative;
     cursor: pointer;
     background-color: #FFFFFF;
     border: 1.5px solid #000000;
@@ -125,8 +123,7 @@
 }
 
 .liens-nav {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     gap: calc(120 / 1280 * 100vw);
     margin: 0;
     padding: 0;
@@ -142,6 +139,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-shrink: 0;
 }
 
 .liens-nav .liste-droite {
@@ -151,8 +149,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 1;
     min-width: 0;
-    position: relative;
 }
 
 .liens-nav .liste-droite .lien {
@@ -314,12 +312,17 @@
 
 @media (max-width: 768px) {
     .conteneur {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: calc(40 / 1280 * 100vw);
     }
     
+    .gauche,
+    .droite {
+        flex: 1 1 100%;
+    }
+    
     .liens-nav {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: calc(20 / 1280 * 100vw);
     }
     

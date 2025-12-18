@@ -25,18 +25,24 @@
         <div class="logo">
             <img src="https://www.figma.com/api/mcp/asset/9be65352-940a-4ce7-b537-7ea7eb2cde0d" alt="MusBA Logo" class="image">
         </div>
-        <a href="#" class="lien">Visite</a>
-        <a href="#" class="lien">Découvrir</a>
-        <a href="#" class="lien">L'histoire du musée</a>
-        <a href="#" class="lien">Voir plus</a>
-        <button class="recherche" aria-label="Rechercher">
-            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="9.5" cy="9.5" r="8.5" stroke="#000000" stroke-width="1.5"/>
-                <line x1="14.5" y1="14.5" x2="20" y2="20" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-        </button>
-        <div class="langue">
-            <span class="texte-langue">FR-EN</span>
+        <div class="nav-container">
+            <nav class="nav-links">
+                <a href="#" class="lien">Visite</a>
+                <a href="#" class="lien">Découvrir</a>
+                <a href="#" class="lien">L'histoire du musée</a>
+                <a href="#" class="lien">Voir plus</a>
+            </nav>
+            <div class="nav-right">
+                <button class="recherche" aria-label="Rechercher">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9.5" cy="9.5" r="8.5" stroke="#000000" stroke-width="1.5"/>
+                        <line x1="14.5" y1="14.5" x2="20" y2="20" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="langue">
+                    <span class="texte-langue">FR-EN</span>
+                </div>
+            </div>
         </div>
         <div class="ligne"></div>
     </header>
@@ -45,48 +51,68 @@
     <div class="menu-overlay" id="menu-overlay">
         <div class="menu-deroulant" id="menu-visite">
             <div class="menu-contenu-blanc">
-                <ul class="menu-liste">
-                    <li><a href="#" class="menu-lien">Planifiez votre visite</a></li>
-                    <li><a href="#" class="menu-lien">Tarifs et Horaires</a></li>
-                    <li><a href="#" class="menu-lien">Accessibilité</a></li>
-                    <li><a href="#" class="menu-lien">Agenda</a></li>
-                    <li><a href="#" class="menu-lien">Parcours</a></li>
-                    <li><a href="#" class="menu-lien">Aide a la visite</a></li>
-                </ul>
+                <div class="menu-titre-zone">
+                    <h3 class="menu-titre">Visite</h3>
+                </div>
+                <div class="menu-contenu-zone">
+                    <ul class="menu-liste">
+                        <li><a href="#" class="menu-lien">Planifiez votre visite</a></li>
+                        <li><a href="#" class="menu-lien">Tarifs et Horaires</a></li>
+                        <li><a href="#" class="menu-lien">Accessibilité</a></li>
+                        <li><a href="#" class="menu-lien">Agenda</a></li>
+                        <li><a href="#" class="menu-lien">Parcours</a></li>
+                        <li><a href="#" class="menu-lien">Aide a la visite</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="menu-deroulant" id="menu-decouvrir">
             <div class="menu-contenu-blanc">
-                <ul class="menu-liste">
-                    <li><a href="exposition.html" class="menu-lien">Expositions temporaires</a></li>
-                    <li><a href="#" class="menu-lien">Collections permanentes</a></li>
-                    <li><a href="#" class="menu-lien">Oeuvres commentées</a></li>
-                    <li><a href="#" class="menu-lien">Depuis chez vous</a></li>
-                    <li><a href="#" class="menu-lien">Base de donnée des oeuvres</a></li>
-                </ul>
+                <div class="menu-titre-zone">
+                    <h3 class="menu-titre">Découvrir</h3>
+                </div>
+                <div class="menu-contenu-zone">
+                    <ul class="menu-liste">
+                        <li><a href="exposition.html" class="menu-lien">Expositions temporaires</a></li>
+                        <li><a href="#" class="menu-lien">Collections permanentes</a></li>
+                        <li><a href="#" class="menu-lien">Oeuvres commentées</a></li>
+                        <li><a href="#" class="menu-lien">Depuis chez vous</a></li>
+                        <li><a href="#" class="menu-lien">Base de donnée des oeuvres</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="menu-deroulant" id="menu-histoire">
             <div class="menu-contenu-blanc">
-                <ul class="menu-liste">
-                    <li><a href="#" class="menu-lien">Le musée aujourd'hui</a></li>
-                    <li><a href="#" class="menu-lien">Plus de 200 ans d'histoire</a></li>
-                    <li><a href="#" class="menu-lien">Les expositions de 1834 a aujourd'hui</a></li>
-                    <li><a href="#" class="menu-lien">Vie des collections</a></li>
-                    <li><a href="#" class="menu-lien">Info journalistes</a></li>
-                    <li><a href="#" class="menu-lien">Nous soutenir</a></li>
-                </ul>
+                <div class="menu-titre-zone">
+                    <h3 class="menu-titre">L'Histoire du musée</h3>
+                </div>
+                <div class="menu-contenu-zone">
+                    <ul class="menu-liste">
+                        <li><a href="#" class="menu-lien">Le musée aujourd'hui</a></li>
+                        <li><a href="#" class="menu-lien">Plus de 200 ans d'histoire</a></li>
+                        <li><a href="#" class="menu-lien">Les expositions de 1834 a aujourd'hui</a></li>
+                        <li><a href="#" class="menu-lien">Vie des collections</a></li>
+                        <li><a href="#" class="menu-lien">Info journalistes</a></li>
+                        <li><a href="#" class="menu-lien">Nous soutenir</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="menu-deroulant" id="menu-savoir-plus">
             <div class="menu-contenu-blanc">
-                <ul class="menu-liste">
-                    <li><a href="#" class="menu-lien">Privatisation d'espace</a></li>
-                    <li><a href="#" class="menu-lien">Tournage et prise de vue</a></li>
-                    <li><a href="#" class="menu-lien">Ressources documentaires</a></li>
-                    <li><a href="#" class="menu-lien">Boutique</a></li>
-                    <li><a href="#" class="menu-lien">Nous contacter</a></li>
-                </ul>
+                <div class="menu-titre-zone">
+                    <h3 class="menu-titre">En savoir plus</h3>
+                </div>
+                <div class="menu-contenu-zone">
+                    <ul class="menu-liste">
+                        <li><a href="#" class="menu-lien">Privatisation d'espace</a></li>
+                        <li><a href="#" class="menu-lien">Tournage et prise de vue</a></li>
+                        <li><a href="#" class="menu-lien">Ressources documentaires</a></li>
+                        <li><a href="#" class="menu-lien">Boutique</a></li>
+                        <li><a href="#" class="menu-lien">Nous contacter</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
