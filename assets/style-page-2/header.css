@@ -124,28 +124,43 @@
     margin-top: var(--spacing-xs);
     display: flex;
 }
+.burger {
+    position: relative;
+    z-index: 2000;
+}
 
-/* Responsive */
+.en-tete {
+    position: relative;
+    z-index: 1000;
+}
+
+
 @media (max-width: 768px) {
-    .en-tete {
-        padding: var(--spacing-sm) var(--container-padding);
+
+    .burger {
+        display: flex;
+        position: relative;
+        z-index: 2000;
     }
-    
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--spacing-md);
-    }
-    
+
     .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--spacing-sm);
-    }
-    
-    .nav-right-elements {
-        gap: var(--spacing-md);
+        display: none; /* 👈 ESSENTIEL */
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        justify-content: flex-start;
+        background-color: white;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        z-index: 1500;
+    }
+
+    .nav-links.active {
+        display: flex; /* 👈 CE QUE LE JS ACTIVE */
+    }
+
+    .nav-right {
+        display: none;
     }
 }
