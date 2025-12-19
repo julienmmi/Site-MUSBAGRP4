@@ -11,15 +11,15 @@
 
 .image-accueil {
     width: 89.61%;
-    height: 47.66vw;
+    height: auto;
     align-self: flex-start;
     display: flex;
 }
 
 .image-accueil .image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 }
 
 .accueil .contenu {
@@ -112,8 +112,6 @@
     justify-content: flex-start;
     width: 20.94%;
     flex: 0 0 20.94%;
-    transform: scaleY(0.95);
-    transform-origin: top left;
 }
 
 
@@ -143,8 +141,6 @@
     display: flex;
     flex: 1 1 auto;
     width: auto;
-    transform: scale(0.95);
-    transform-origin: top right;
     margin-left: auto;
     margin-right: calc(-5% + 32px);
 }
@@ -153,7 +149,7 @@
 .expositions .image-expositions .image {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Section Collections permanentes */
@@ -197,7 +193,7 @@
 .collections .image-collections .image {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .collections .contenu > div:last-child {
@@ -266,8 +262,6 @@
     justify-content: flex-start;
     width: 24.53%;
     flex: 0 0 24.53%;
-    transform: scaleY(0.90);
-    transform-origin: top left;
 }
 
 .histoire .texte {
@@ -294,8 +288,6 @@
     display: flex;
     flex: 1 1 auto;
     width: auto;
-    transform: scale(0.90);
-    transform-origin: top right;
     margin-left: auto;
     margin-right: calc(-5% + 32px);
 }
@@ -304,7 +296,7 @@
 .histoire .image-histoire .image {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Section Boutique */
@@ -347,7 +339,7 @@
 .boutique .image-boutique .image {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .boutique .contenu > div:last-child {
@@ -437,9 +429,16 @@
     .image-accueil {
         width: 100%;
         height: auto;
-        min-height: 200px;
         margin-left: 0;
         align-self: center;
+        display: flex;
+    }
+    
+    .image-accueil .image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
     }
     
     .accueil .contenu {
@@ -551,6 +550,13 @@
         gap: 5vw;
         align-items: stretch;
     }
+    
+    .expositions .contenu > div,
+    .collections .contenu > div,
+    .histoire .contenu > div,
+    .boutique .contenu > div {
+        width: 100%;
+    }
 
     .expositions .contenu > div:first-child,
     .collections .contenu > div:last-child,
@@ -585,6 +591,8 @@
         margin-left: 0;
         margin-right: 0;
         order: -1;
+        height: auto;
+        display: flex;
     }
 
     .expositions .image-expositions .image,
@@ -592,6 +600,9 @@
     .histoire .image-histoire .image,
     .boutique .image-boutique .image {
         width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
     }
 
     .expositions .bouton,

@@ -11,7 +11,7 @@
 
 .image-accueil {
     width: calc(100vw - 64px);
-    height: 47.66vw;
+    height: auto;
     align-self: flex-start;
     display: flex;
     margin-left: calc(50% - 50vw + 32px);
@@ -20,8 +20,8 @@
 
 .image-accueil .image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 }
 
 .accueil .contenu {
@@ -89,9 +89,16 @@
     .image-accueil {
         width: 100%;
         height: auto;
-        min-height: 200px;
         margin-left: 0;
         align-self: center;
+        display: flex;
+    }
+    
+    .image-accueil .image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
     }
     
     .accueil .contenu {
