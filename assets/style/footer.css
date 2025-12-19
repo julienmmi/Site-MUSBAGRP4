@@ -255,13 +255,26 @@
         padding: var(--spacing-xl) var(--container-padding) var(--spacing-lg);
         justify-content: center;
     }
-    
+
+    .pied-page .conteneur {
+        flex-direction: column;
+    }
+
+    .pied-page .colonne {
+        width: 100%;
+    }
+
+    .pied-page .conteneur {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .bas {
         flex-direction: column;
         gap: var(--spacing-md);
         align-items: flex-start;
     }
-    
+
     .logo-bordeaux {
         align-self: flex-start;
     }
