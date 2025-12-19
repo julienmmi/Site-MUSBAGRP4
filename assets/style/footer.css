@@ -239,14 +239,17 @@
     .pied-page .conteneur {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 36px;
     }
     .colonne.droite {
         max-width: 100%;
     }
     .liens-nav {
-        flex-direction: column;
+        flex-direction: row;
         gap: 16px;
+    }
+    .liste-droite{
+        
     }
 }
 
