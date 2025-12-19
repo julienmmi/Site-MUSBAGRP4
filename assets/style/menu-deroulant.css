@@ -1,10 +1,8 @@
-/* Menus déroulants PC - Rectangle blanc pleine largeur */
 
 .menu-overlay {
     display: none;
 }
 
-/* Menu déroulant individuel */
 .menu-deroulant {
     position: absolute;
     top: calc(100% - 10px);
@@ -35,7 +33,6 @@
     padding: 42px 32px 32px 32px;
 }
 
-/* Contenu du menu - Flexbox vertical */
 .menu-contenu-blanc {
     display: flex;
     flex-direction: column;
@@ -44,7 +41,6 @@
     transition: none;
 }
 
-/* Zone du titre */
 .menu-titre-zone {
     display: none;
 }
@@ -59,7 +55,6 @@
     line-height: 1.2;
 }
 
-/* Zone du contenu */
 .menu-contenu-zone {
     flex: 1 1 auto;
     display: flex;
@@ -95,7 +90,6 @@
     color: var(--color-text-secondary);
 }
 
-/* Responsive - cacher sur mobile */
 @media (max-width: 768px) {
     .menu-deroulant {
         display: none;

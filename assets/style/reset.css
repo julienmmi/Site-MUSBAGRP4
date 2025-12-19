@@ -1,4 +1,3 @@
-/* Reset CSS */
 *,
 *::before,
 *::after {
@@ -75,14 +74,12 @@ select {
     font-size: inherit;
 }
 
-/* Suppression des styles par défaut pour les éléments interactifs */
 button:focus,
 a:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
-/* Amélioration de l'accessibilité */
 :focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;

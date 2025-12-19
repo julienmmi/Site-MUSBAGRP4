@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expositions temporaires du Musée des Beaux-Arts de Bordeaux - Récits d'enfance, La puissance du trait, Regards croisés contemporains et plus encore.">
+    <meta name="description" content="Page non trouvée - Musée des Beaux-Arts de Bordeaux">
     <meta name="theme-color" content="#1c1f21">
-    <title>Expositions temporaires - MusBA</title>
+    <title>Page non trouvée - MusBA</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="assets/img/img-expo/Enfants.jpg" as="image">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/style/reset.css">
@@ -21,8 +19,75 @@
     <link rel="stylesheet" href="assets/style/header.css">
     <link rel="stylesheet" href="assets/style/menu-deroulant.css">
     <link rel="stylesheet" href="assets/style/footer.css">
-    <link rel="stylesheet" href="assets/style/exposition.css">
-    <link rel="stylesheet" href="assets/style/popup-tarifs.css">
+    
+    <style>
+        .page-404 {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .page-404 .code-erreur {
+            font-family: 'MusbaRegular', serif;
+            font-size: 150px;
+            font-weight: 400;
+            color: #1c1f21;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        
+        .page-404 .titre-erreur {
+            font-family: 'MusbaRegular', serif;
+            font-size: 36px;
+            color: #1c1f21;
+            margin-bottom: 20px;
+        }
+        
+        .page-404 .texte-erreur {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: #666;
+            max-width: 500px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .page-404 .btn-retour {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+            background-color: #8B7355;
+            padding: 16px 40px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .page-404 .btn-retour:hover {
+            background-color: #6d5a43;
+        }
+        
+        @media (max-width: 768px) {
+            .page-404 .code-erreur {
+                font-size: 100px;
+            }
+            
+            .page-404 .titre-erreur {
+                font-size: 24px;
+            }
+            
+            .page-404 .texte-erreur {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="en-tete">
@@ -77,9 +142,9 @@
                 </nav>
                 <div class="nav-right">
                     <div class="langue">
-                        <a href="exposition.html" class="btn-francais active">FR</a>
+                        <a href="404.html" class="btn-francais active">FR</a>
                         <span class="separateur">|</span>
-                        <a href="exposition-en.html" class="btn-anglais">EN</a>
+                        <a href="404-en.html" class="btn-anglais">EN</a>
                     </div>
                     <button class="recherche" aria-label="Rechercher">
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,108 +225,11 @@
         </div>
     </header>
 
-    <main class="page-expositions">
-        <h1 class="titre-principal">Expositions temporaires</h1>
-
-        <article class="exposition-item exposition-1">
-            <div class="exposition-contenu">
-                <div class="exposition-gauche">
-                    <div class="exposition-image">
-                        <img src="assets/img/img-expo/Enfants.jpg" alt="Récits d'enfance" class="image" width="750" height="500" fetchpriority="high">
-                    </div>
-                    <div class="exposition-info">
-                        <h2 class="exposition-titre">Récits d'enfance</h2>
-                        <p class="exposition-dates">
-                            <span class="date-chiffre">13</span><span class="date-texte"> juin - </span><span class="date-chiffre">5</span><span class="date-texte"> janvier</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="exposition-texte texte-limite">
-                    <p><span class="lettrine">A</span> la fois sources de souvenirs et de rêveries poétiques, ces œuvres ont inspiré les récits d'enfance que les patients et soignants du Centre Hospitalier de Cadillac (hôpital de jour et CATTP de Villenave-d'Ornon), les résidents et les seniors du Centre Ressources de l'EHPAD Grand Bon Pasteur, ont pu réunir dans le cadre des actions menées hors les murs du musée. Tous ont ainsi partagé leurs meilleurs souvenirs et choisi une des œuvres de l'exposition qu'ils ont commentée, lors d'ateliers d'écriture et de pratique artistique.</p>
-                    <button class="btn-voir-plus" aria-label="Voir plus"></button>
-                </div>
-            </div>
-        </article>
-
-        <article class="exposition-item exposition-2">
-            <div class="exposition-contenu">
-                <div class="exposition-texte texte-limite">
-                    <p><span class="lettrine">D</span>écouvrez, dans les deux ailes du musée, quatre dessins rarement exposés d'Eugène Delacroix, présentés pour la première fois en regard des œuvres originales, dont l'étude préparatoire pour La Grèce sur les ruines de Missolonghi, récemment acquise grâce à la générosité des Amis du musée des Beaux-Arts de Bordeaux.</p>
-                    <button class="btn-voir-plus" aria-label="Voir plus"></button>
-                </div>
-                <div class="exposition-media">
-                    <div class="exposition-image">
-                        <img src="assets/img/img-expo/Delacroix.jpg" alt="La puissance du trait" class="image" width="850" height="567" loading="lazy">
-                    </div>
-                    <div class="exposition-info">
-                        <h2 class="exposition-titre">La puissance du trait</h2>
-                        <p class="exposition-dates">
-                            <span class="date-chiffre">5</span><span class="date-texte"> novembre  -  </span><span class="date-chiffre">23</span><span class="date-texte"> février</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <article class="exposition-item exposition-3">
-            <div class="exposition-contenu">
-                <div class="exposition-media">
-                    <div class="exposition-image">
-                        <img src="assets/img/img-expo/Ferme.jpg" alt="Regards croisés contemporains" class="image" width="850" height="567" loading="lazy">
-                    </div>
-                    <h2 class="exposition-titre">Regards croisés contemporains</h2>
-                    <p class="exposition-dates">
-                        <span class="date-chiffre">26</span><span class="date-texte"> février 2026 - </span><span class="date-chiffre">26</span><span class="date-texte"> mai</span>
-                    </p>
-                </div>
-                <div class="exposition-texte-wrapper">
-                    <div class="exposition-texte texte-limite">
-                        <p><span class="lettrine">L</span>'artiste Barbara Schroeder propose un contrepoint contemporain au chef-d'œuvre des collections La Leçon de labourage (1798) de François-André Vincent. Le travail de Barbara Schroeder puise dans les gestes agricoles, la mémoire des sols, l'enracinement et la fragilité des écosystèmes. À travers des matériaux bruts et organiques – porcelaine, mousses, bouse – cet ensemble apparaît ici comme un « labourage » de l'esprit et du paysage.</p>
-                        <button class="btn-voir-plus" aria-label="Voir plus"></button>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <article class="exposition-item exposition-4">
-            <div class="exposition-contenu">
-                <div class="exposition-texte texte-limite">
-                    <p><span class="lettrine">C</span>et accrochage est l'occasion de revenir sur 10 années d'acquisitions, à travers la présentation d'une sélection d'œuvres particulièrement significatives et représentatives de la diversité des médiums représentés.  L'une des missions essentielles d'un musée est l'enrichissement de ses collections qui se traduit par une politique d'acquisitions visant à compléter et à renforcer certains fonds. Au MusBA, cette politique d'acquisitions est surtout axée depuis quelques années sur l'art bordelais du 18e au 20e siècle ainsi que sur le 19e siècle français, point fort des collections du musée.</p>
-                    <button class="btn-voir-plus" aria-label="Voir plus"></button>
-                </div>
-                <div class="exposition-media">
-                    <div class="exposition-image">
-                        <img src="assets/img/img-expo/Femme.jpg" alt="Passions Collections" class="image" width="750" height="500" loading="lazy">
-                    </div>
-                    <div class="exposition-info">
-                        <h2 class="exposition-titre">Passions Collections</h2>
-                        <p class="exposition-dates">
-                            <span class="date-chiffre">1</span><span class="date-texte"> avril 2026 - </span><span class="date-chiffre">4</span><span class="date-texte"> janvier 2027</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </article>
-
-        <article class="exposition-item exposition-5">
-            <div class="exposition-contenu">
-                <div class="exposition-media">
-                    <div class="exposition-image">
-                        <img src="assets/img/img-expo/ange.jpg" alt="Jean Dupas & Co" class="image" width="800" height="533" loading="lazy">
-                    </div>
-                    <h2 class="exposition-titre">Jean Dupas & Co</h2>
-                    <p class="exposition-dates">
-                        <span class="date-chiffre">26</span><span class="date-texte"> juin - </span><span class="date-chiffre">29</span><span class="date-texte"> novembre 2026</span>
-                    </p>
-                </div>
-                <div class="exposition-texte-wrapper">
-                    <div class="exposition-texte texte-limite">
-                        <p><span class="lettrine">P</span>eintre, dessinateur et affichiste, Jean Dupas (1882-1964) est l'une des figures majeures de l'Art Déco, en France comme aux États-Unis. Son univers étrange et intemporel, peuplé d'élégantes silhouettes féminines longilignes, s'est imposé dans les pavillons des grandes expositions internationales, les intérieurs de collectionneurs, les salons des paquebots transatlantiques et les bâtiments civils et religieux.</p>
-                        <button class="btn-voir-plus" aria-label="Voir plus"></button>
-                    </div>
-                </div>
-            </div>
-        </article>
+    <main class="page-404">
+        <p class="code-erreur">404</p>
+        <h1 class="titre-erreur">Page non trouvée</h1>
+        <p class="texte-erreur">Désolé, la page que vous recherchez n'existe pas encore ou a été déplacée. Revenez à l'accueil pour continuer votre visite.</p>
+        <a href="index.html" class="btn-retour">Retour à l'accueil</a>
     </main>
 
     <footer class="pied-page">
@@ -331,31 +299,6 @@
         </div>
     </footer>
 
-    <div class="popup-tarifs" id="popup-tarifs">
-        <button class="btn-fermer" aria-label="Fermer">&times;</button>
-        <a href="404.html" class="btn-tarifs">TARIFS</a>
-        <p class="fermeture">Fermeture exceptionnelle du<br>XX au XX Décembre</p>
-        <p class="horaires"><span class="ouvert">Ouvert</span> <span class="heures">de 8h à 19h</span></p>
-    </div>
-
     <script src="assets/style/script.js" defer></script>
-    <script>
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const boutonsVoirPlus = document.querySelectorAll('.btn-voir-plus');
-            
-            boutonsVoirPlus.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const texteContainer = this.closest('.exposition-texte');
-                    
-                    if (texteContainer) {
-                        
-                        texteContainer.classList.toggle('texte-complet');
-                        texteContainer.classList.toggle('texte-limite');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>

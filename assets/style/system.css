@@ -1,12 +1,9 @@
-/* Styles système et utilitaires */
 
-/* Conteneur principal */
 body {
     width: 100%;
     overflow-x: hidden;
 }
 
-/* Classes utilitaires pour les images */
 .image {
     width: 100%;
     height: auto;
@@ -14,14 +11,12 @@ body {
     display: block;
 }
 
-/* Classes utilitaires pour les conteneurs */
 .conteneur {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
 }
 
-/* Classes utilitaires pour les flexbox */
 .flex {
     display: flex;
 }
@@ -62,7 +57,6 @@ body {
     justify-content: space-between;
 }
 
-/* Classes utilitaires pour les espacements */
 .gap-sm {
     gap: var(--spacing-sm);
 }
@@ -79,7 +73,6 @@ body {
     gap: var(--spacing-xl);
 }
 
-/* Classes utilitaires pour la visibilité */
 .hidden {
     display: none;
 }
@@ -88,19 +81,16 @@ body {
     display: block;
 }
 
-/* Classes utilitaires pour les transitions */
 .transition {
     transition: all var(--transition-base);
 }
 
-/* Classes utilitaires pour les états */
 .disabled {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
 }
 
-/* Responsive utilities */
 @media (max-width: 768px) {
     .mobile-hidden {
         display: none;

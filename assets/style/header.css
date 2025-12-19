@@ -24,7 +24,6 @@
 .btn-anglais:hover {
     color: var(--color-text-secondary);
 }
-/* Header et Navigation - Utilisation exclusive de Flexbox */
 
 .en-tete {
     width: 100%;
@@ -81,7 +80,6 @@
 }
 
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -127,7 +125,6 @@
     gap: var(--spacing-lg);
 }
 
-/* Navigation principale */
 .nav-links {
     display: flex;
     align-items: center;
@@ -156,7 +153,10 @@
     color: var(--color-text-secondary);
 }
 
-/* Navigation fragmentée (page exposition) */
+.nav-links .sous-menu {
+    display: none;
+}
+
 .nav-fragmented-text {
     display: flex;
     align-items: center;
@@ -184,7 +184,6 @@
     gap: var(--spacing-md);
 }
 
-/* Éléments de droite (recherche, langue) */
 .nav-right {
     display: flex;
     align-items: center;
@@ -197,7 +196,6 @@
     gap: var(--spacing-lg);
 }
 
-/* Bouton de recherche */
 .recherche {
     display: flex;
     align-items: center;
@@ -220,7 +218,6 @@
     height: 100%;
 }
 
-/* Sélecteur de langue */
 .langue {
     display: flex;
     align-items: center;
@@ -239,7 +236,6 @@
     color: var(--color-primary);
 }
 
-/* Ligne de séparation */
 .ligne {
     width: 100%;
     height: 1px;
@@ -248,7 +244,6 @@
     display: flex;
 }
 
-/* Responsive - Styles supplémentaires */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: row;
@@ -302,17 +297,16 @@
     outline: none;
 }
 
-/* État actif : transformation en forme de "M" */
 .burger.active span:nth-child(1) {
-    transform: translateY(6px) rotate(20deg);
+    transform: translateY(7px) rotate(45deg);
 }
 
 .burger.active span:nth-child(2) {
-    transform: translateY(-2px);
+    opacity: 0;
 }
 
 .burger.active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-20deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -341,14 +335,14 @@
     .nav-links {
         display: none;
         position: fixed;
-        top: 0;
+        top: 70px;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: calc(100vh - 70px);
         flex-direction: column;
         background-color: var(--color-background);
-        padding: 80px 5% 20px;
-        gap: 24px;
+        padding: 20px 5%;
+        gap: 0;
         z-index: 99;
         overflow-y: auto;
     }
@@ -357,7 +351,71 @@
         display: flex;
     }
 
+    .burger.active {
+        z-index: 101;
+    }
+
+    .en-tete {
+        z-index: 100;
+    }
+
     .nav-right {
         display: none;
+    }
+
+    .nav-links .lien {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links .lien::after {
+        content: '+';
+        font-size: 20px;
+        font-weight: 300;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links .lien.active::after {
+        transform: rotate(45deg);
+    }
+
+    .nav-links .sous-menu {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        width: 100%;
+    }
+
+    .nav-links .sous-menu.active {
+        max-height: 500px;
+        padding-bottom: 10px;
+    }
+
+    .nav-links .sous-menu li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links .sous-menu li a {
+        display: block;
+        padding: 10px 0 10px 20px;
+        font-family: var(--font-primary);
+        font-size: 14px;
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .nav-links .sous-menu li a:hover {
+        color: var(--color-primary);
+        padding-left: 28px;
     }
 }

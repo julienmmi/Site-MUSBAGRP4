@@ -1,4 +1,3 @@
-/* Footer - Utilisation exclusive de Flexbox */
 
 .pied-page {
     width: 100%;
@@ -9,7 +8,6 @@
     display: flex;
 }
 
-/* Layout PC - Deux colonnes */
 .pied-page .conteneur {
     display: flex;
     flex-direction: row;
@@ -20,7 +18,6 @@
     justify-content: space-between;
 }
 
-/* Colonnes PC */
 .pied-page .colonne {
     display: flex;
     flex-direction: column;
@@ -54,7 +51,6 @@
     padding-top: 0;
 }
 
-/* Aligner le contenu de la colonne droite à gauche (aligné sur Accessibilité) */
 .colonne.droite .reseaux {
     align-items: flex-start;
 }
@@ -70,7 +66,6 @@
     align-items: flex-end;
 }
 
-/* Navigation des liens */
 .liens {
     display: flex;
     flex-direction: column;
@@ -91,7 +86,6 @@
     color: #ffffff;
 }
 
-/* Sections d'adresse */
 .section {
     display: flex;
     flex-direction: column;
@@ -125,7 +119,6 @@
     margin: 0;
 }
 
-/* Réseaux sociaux */
 .reseaux {
     display: flex;
     flex-direction: column;
@@ -146,7 +139,6 @@
     gap: var(--spacing-md);
 }
 
-/* Style PC - Fond blanc carré, icônes noires */
 .icone {
     display: flex;
     align-items: center;
@@ -179,7 +171,6 @@
     object-fit: contain;
 }
 
-/* Navigation des liens du footer */
 .liens-nav {
     display: flex;
     flex-direction: row;
@@ -217,7 +208,6 @@
     display: flex;
 }
 
-/* Bas du footer */
 .bas {
     display: flex;
     align-items: center;
@@ -255,7 +245,6 @@
     object-fit: contain;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .pied-page .conteneur {
         display: flex;
@@ -283,13 +272,13 @@
         gap: 0;
     }
 
-    /* Masquer les colonnes PC */
+    
     .colonne.gauche,
     .colonne.droite {
         display: contents;
     }
 
-    /* Réorganiser l'ordre pour mobile */
+    
     .colonne.droite .liens-nav {
         order: 1;
     }
@@ -309,7 +298,7 @@
         order: 6;
     }
 
-    /* Sections avec séparateurs */
+    
     .colonne.gauche > *,
     .colonne.droite > * {
         width: 100%;
@@ -325,14 +314,14 @@
         padding-top: 0;
     }
 
-    /* Navigation en deux colonnes */
+    
     .liens-nav {
         display: flex;
         flex-direction: row;
         gap: 32px;
     }
 
-    /* Style mobile - Icônes avec bordure blanche, fond transparent */
+    
     .icone {
         width: 42px;
         height: 42px;
@@ -346,7 +335,7 @@
         fill: #ffffff;
     }
 
-    /* Bas du footer */
+    
     .bas {
         flex-direction: column;
         gap: var(--spacing-md);
@@ -358,6 +347,7 @@
 
     .lien.accessibilite {
         margin-bottom: var(--spacing-sm);
+        align-self: flex-end;
     }
 
     .logo-bordeaux {

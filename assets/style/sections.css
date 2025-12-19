@@ -1,6 +1,4 @@
-/* Sections principales - Utilisation exclusive de Flexbox */
 
-/* Section Hero - Récits d'enfance */
 .accueil {
     display: flex;
     flex-direction: column;
@@ -74,7 +72,6 @@
     justify-content: flex-end;
 }
 
-/* Section Expositions temporaires */
 .expositions {
     display: flex;
     flex-direction: column;
@@ -131,7 +128,6 @@
     margin: 0;
 }
 
-/* Lettrine - Style commun pour toutes les sections */
 .texte .lettrine {
     font-family: 'MusBA', sans-serif;
     font-size: 4em;
@@ -163,7 +159,6 @@
     object-fit: contain;
 }
 
-/* Section Collections permanentes */
 .collections {
     display: flex;
     flex-direction: column;
@@ -235,7 +230,6 @@
     align-self: flex-start;
 }
 
-/* Section Histoire du Musée */
 .histoire {
     display: flex;
     flex-direction: column;
@@ -310,7 +304,6 @@
     object-fit: contain;
 }
 
-/* Section Boutique */
 .boutique {
     display: flex;
     flex-direction: column;
@@ -381,7 +374,6 @@
     align-self: flex-start;
 }
 
-/* Section Informations pratiques */
 .informations {
     display: flex;
     flex-direction: column;
@@ -428,9 +420,7 @@
     margin: 0;
 }
 
-/* Media Queries - Responsive Design */
 
-/* Section Hero - Responsive */
 @media (max-width: 768px) {
     .accueil {
         padding: 5vw 5% 0;
@@ -485,9 +475,8 @@
     }
 }
 
-/* Tablette */
 @media (max-width: 1024px) {
-    /* Sections générales */
+    
     .expositions,
     .collections,
     .histoire,
@@ -533,9 +522,8 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
-    /* Sections générales */
+    
     .expositions,
     .collections,
     .histoire,
@@ -625,7 +613,7 @@
         width: 100%;
     }
 
-    /* Section Informations pratiques */
+    
     .informations {
         padding: 0 5%;
         margin-top: 8vw;

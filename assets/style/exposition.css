@@ -1,4 +1,3 @@
-/* Page Expositions temporaires */
 
 .page-expositions {
     width: 100%;
@@ -15,7 +14,6 @@
     margin-bottom: 0;
 }
 
-/* Titre principal de la page */
 .page-expositions .titre-principal {
     font-family: var(--font-display);
     font-size: 36px;
@@ -28,7 +26,6 @@
     flex-shrink: 0;
 }
 
-/* Item d'exposition */
 .exposition-item {
     width: 100%;
     display: flex;
@@ -59,7 +56,6 @@
     flex: 0 1 50%;
 }
 
-/* Image d'exposition */
 .exposition-image {
     width: 100%;
     height: auto;
@@ -74,7 +70,6 @@
     object-fit: contain;
 }
 
-/* Titre d'exposition */
 .exposition-titre {
     font-family: var(--font-display);
     font-size: 20px;
@@ -85,7 +80,6 @@
     line-height: 1.2;
 }
 
-/* Dates d'exposition */
 .exposition-dates {
     font-family: var(--font-primary);
     font-size: var(--font-size-base);
@@ -105,7 +99,6 @@
     color: var(--color-text-secondary);
 }
 
-/* Texte d'exposition */
 .exposition-texte {
     width: 100%;
     margin-top: 0;
@@ -123,7 +116,6 @@
     text-align: justify;
 }
 
-/* Header d'exposition (pour certaines expositions) */
 .exposition-header {
     display: flex;
     flex-direction: column;
@@ -131,9 +123,7 @@
     margin-top: var(--spacing-lg);
 }
 
-/* Styles spécifiques pour chaque exposition */
 
-/* Exposition 1: Récits d'enfance */
 .exposition-1 .exposition-contenu {
     flex-direction: row;
     align-items: flex-start;
@@ -187,7 +177,6 @@
     color: #000000;
 }
 
-/* Styles pour la structure HTML réelle de l'exposition 1 */
 .exposition-1 .exposition-gauche {
     flex: 0 0 auto;
     min-width: 750px;
@@ -226,7 +215,6 @@
     align-self: flex-start;
 }
 
-/* Exposition 2: La puissance du trait */
 .exposition-2 .exposition-contenu {
     flex-direction: row;
     align-items: flex-start;
@@ -316,7 +304,6 @@
     color: #000000;
 }
 
-/* Exposition 3: Regards croisés contemporains */
 .exposition-3 .exposition-contenu {
     flex-direction: row;
     align-items: flex-start;
@@ -395,7 +382,6 @@
     color: #000000;
 }
 
-/* Exposition 4: Passions Collections */
 .exposition-4 .exposition-contenu {
     flex-direction: row;
     align-items: flex-start;
@@ -485,7 +471,6 @@
     display: block;
 }
 
-/* Exposition 5: Jean Dupas & Co */
 .exposition-5 .exposition-contenu {
     flex-direction: row;
     align-items: flex-start;
@@ -561,7 +546,6 @@
     color: #000000;
 }
 
-/* Lettrine */
 .exposition-texte .lettrine {
     font-family: var(--font-display);
     font-size: 4em;
@@ -572,7 +556,6 @@
     color: var(--color-primary);
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .page-expositions {
         padding: var(--spacing-lg) var(--container-padding);
@@ -590,7 +573,7 @@
         width: 100%;
     }
     
-    /* Images centrées et pleine largeur */
+    
     .exposition-image {
         width: 100%;
         display: flex;
@@ -606,7 +589,7 @@
         object-fit: contain;
     }
     
-    /* Structure verticale : Image → Titre → Dates → Texte */
+    
     .exposition-1 .exposition-gauche,
     .exposition-2 .exposition-media,
     .exposition-3 .exposition-media,
@@ -655,7 +638,7 @@
         text-align: left;
     }
     
-    /* Suppression des crops en responsive */
+    
     .exposition-4 .exposition-image,
     .exposition-5 .exposition-image {
         clip-path: none;
@@ -680,7 +663,7 @@
         margin-bottom: 0;
     }
     
-    /* Espacement entre les articles */
+    
     .exposition-item {
         margin-bottom: var(--spacing-xxxl);
     }
@@ -704,7 +687,7 @@
         gap: var(--spacing-md);
     }
     
-    /* Images pleine largeur et centrées */
+    
     .exposition-image {
         width: 100%;
         margin-bottom: var(--spacing-md);
@@ -720,14 +703,14 @@
         margin: 0 auto;
     }
     
-    /* Titres */
+    
     .exposition-titre {
         font-size: var(--font-size-base);
         margin-bottom: var(--spacing-sm);
         text-align: left;
     }
     
-    /* Dates - garder le format avec grands chiffres */
+    
     .exposition-dates {
         font-size: var(--font-size-sm);
         margin-bottom: var(--spacing-md);
@@ -742,7 +725,7 @@
         font-size: 16px;
     }
     
-    /* Texte de description */
+    
     .exposition-texte {
         width: 100%;
         margin-top: var(--spacing-sm);
@@ -756,7 +739,7 @@
         margin: 0;
     }
     
-    /* Limiter le texte à 4-5 lignes par défaut */
+    
     .exposition-texte.texte-limite p {
         display: -webkit-box;
         -webkit-line-clamp: 5;
@@ -765,7 +748,7 @@
         text-overflow: ellipsis;
     }
     
-    /* Texte complet - afficher tout */
+    
     .exposition-texte.texte-complet p {
         display: block;
         -webkit-line-clamp: none;
@@ -773,7 +756,7 @@
         overflow: visible;
     }
     
-    /* Bouton voir plus */
+    
     .btn-voir-plus {
         display: block;
         margin: var(--spacing-sm) auto 0;
@@ -802,7 +785,7 @@
         content: " voir plus";
     }
     
-    /* Masquer le bouton sur desktop */
+    
     @media (min-width: 769px) {
         .btn-voir-plus {
             display: none;
@@ -822,7 +805,7 @@
         margin-top: 0.1em;
     }
     
-    /* Structure verticale stricte */
+    
     .exposition-1 .exposition-gauche {
         width: 100%;
         min-width: auto;
@@ -844,7 +827,7 @@
         margin-top: var(--spacing-md);
     }
     
-    /* Alignement à gauche pour tous les éléments */
+    
     .exposition-1 .exposition-dates,
     .exposition-2 .exposition-dates,
     .exposition-3 .exposition-dates,
@@ -864,7 +847,7 @@
         text-align: left;
     }
     
-    /* Media queries spécifiques pour chaque exposition */
+    
     .exposition-1 .exposition-image .image {
         width: 100%;
         max-width: 100%;
@@ -895,7 +878,7 @@
         min-width: auto !important;
     }
     
-    /* Structure pour exposition 2 */
+    
     .exposition-2 .exposition-texte {
         order: 3;
         width: 100%;
@@ -906,7 +889,7 @@
         width: 100%;
     }
     
-    /* Structure pour exposition 3 */
+    
     .exposition-3 .exposition-media {
         order: 1;
         width: 100%;
@@ -917,7 +900,7 @@
         width: 100%;
     }
     
-    /* Structure pour exposition 4 */
+    
     .exposition-4 .exposition-texte {
         order: 3;
         width: 100%;
@@ -928,7 +911,7 @@
         width: 100%;
     }
     
-    /* Structure pour exposition 5 */
+    
     .exposition-5 .exposition-media {
         order: 1;
         width: 100%;

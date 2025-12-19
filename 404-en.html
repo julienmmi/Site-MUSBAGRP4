@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Museum of Fine Arts of Bordeaux - Discover over 8400 works of European art from the 15th to the 20th century. Temporary exhibitions, permanent collections and cultural events.">
+    <meta name="description" content="Page not found - Museum of Fine Arts of Bordeaux">
     <meta name="theme-color" content="#1c1f21">
-    <title>MusBA - Museum of Fine Arts of Bordeaux</title>
+    <title>Page not found - MusBA</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="assets/img/img-expo/Enfants.jpg" as="image">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/style/reset.css">
@@ -21,10 +19,75 @@
     <link rel="stylesheet" href="assets/style/header.css">
     <link rel="stylesheet" href="assets/style/menu-deroulant.css">
     <link rel="stylesheet" href="assets/style/footer.css">
-    <link rel="stylesheet" href="assets/style/sections.css">
-    <link rel="stylesheet" href="assets/style/home/hero.css">
-    <link rel="stylesheet" href="assets/style/Mobile-accueil.css">
-    <link rel="stylesheet" href="assets/style/popup-tarifs.css">
+    
+    <style>
+        .page-404 {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .page-404 .code-erreur {
+            font-family: 'MusbaRegular', serif;
+            font-size: 150px;
+            font-weight: 400;
+            color: #1c1f21;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        
+        .page-404 .titre-erreur {
+            font-family: 'MusbaRegular', serif;
+            font-size: 36px;
+            color: #1c1f21;
+            margin-bottom: 20px;
+        }
+        
+        .page-404 .texte-erreur {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: #666;
+            max-width: 500px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .page-404 .btn-retour {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+            background-color: #8B7355;
+            padding: 16px 40px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .page-404 .btn-retour:hover {
+            background-color: #6d5a43;
+        }
+        
+        @media (max-width: 768px) {
+            .page-404 .code-erreur {
+                font-size: 100px;
+            }
+            
+            .page-404 .titre-erreur {
+                font-size: 24px;
+            }
+            
+            .page-404 .texte-erreur {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="en-tete">
@@ -79,9 +142,9 @@
                 </nav>
                 <div class="nav-right">
                     <div class="langue">
-                        <a href="index.html" class="btn-francais">FR</a>
+                        <a href="404.html" class="btn-francais">FR</a>
                         <span class="separateur">|</span>
-                        <a href="index-en.html" class="btn-anglais active">EN</a>
+                        <a href="404-en.html" class="btn-anglais active">EN</a>
                     </div>
                     <button class="recherche" aria-label="Search">
                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,81 +225,11 @@
         </div>
     </header>
 
-    <main>
-        <section class="accueil">
-            <div class="image-accueil">
-                <img src="assets/img/img-expo/Enfants.jpg" alt="Childhood Stories" class="image" width="1200" height="600" fetchpriority="high">
-            </div>
-            <div class="contenu">
-                <div class="titre-accueil">
-                    <span class="titre-principal">Childhood Stories</span>
-                    <span class="sous-titre">An exhibition to see and hear</span>
-                </div>
-                <p class="date">
-                    Until January 5, 2026
-                </p>
-            </div>
-        </section>
-
-        <section class="expositions">
-            <div class="contenu">
-                <div>
-                    <h2 class="titre">Temporary Exhibitions</h2>
-                    <div class="texte">
-                        <p><span class="lettrine">D</span>iscover the many varied temporary exhibitions at the Museum of Fine Arts</p>
-                    </div>
-                    <button class="bouton">Learn more</button>
-                </div>
-                <div class="image-expositions">
-                    <img src="assets/img/img-expo/Ferme.jpg" alt="Temporary exhibition" class="image" width="600" height="400" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section class="collections">
-            <div class="contenu">
-                <div class="image-collections">
-                    <img src="assets/img/img-home/Collection permanentes.jpg" alt="Permanent collections" class="image" width="600" height="400" loading="lazy">
-                </div>
-                <div>
-                    <h2 class="titre">Permanent Collections</h2>
-                    <div class="texte">
-                        <p><span class="lettrine">T</span>he permanent collection of European painting and sculpture is displayed in the Lacour and Bonheur wings, following a journey through the major periods of art history, the great centers and main movements from the 15th to the 20th century with works by Perugino, Titian, Veronese, Brueghel the Elder, Van Dyck, Rubens, Chardin, Delacroix, Corot, Rodin, Kokoschka, Picasso, Matisse...</p>
-                    </div>
-                    <a href="exposition-en.html" class="bouton">Discover</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="histoire">
-            <div class="contenu">
-                <div>
-                    <h2 class="titre">Museum History</h2>
-                    <div class="texte">
-                        <p><span class="lettrine">T</span>he Museum of Fine Arts of Bordeaux (MusBA) - labeled Museum of France - offers visitors a broad panorama of European art from the 15th to the 20th century. With more than 8,400 works (paintings, sculptures and graphic arts), it is one of the major fine arts collections in Nouvelle-Aquitaine.</p>
-                    </div>
-                    <button class="bouton">Museum history</button>
-                </div>
-                <div class="image-histoire">
-                    <img src="assets/img/img-home/musée.webp" alt="Museum history" class="image" width="600" height="400" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section class="boutique">
-            <div class="contenu">
-                <div class="image-boutique">
-                    <img src="assets/img/img-home/boutique.jpg" alt="Shop" class="image" width="600" height="400" loading="lazy">
-                </div>
-                <div>
-                    <h2 class="titre">Shop</h2>
-                    <div class="texte">
-                        <p><span class="lettrine">T</span>he museum shop offers a wide range of objects, postcards, books, magazines, jewelry, scarves, games and various products related to the museum's collections, temporary exhibitions and more broadly the themes of Fine Arts and art history.</p>
-                    </div>
-                    <button class="bouton">Take a look</button>
-                </div>
-            </div>
-        </section>
+    <main class="page-404">
+        <p class="code-erreur">404</p>
+        <h1 class="titre-erreur">Page not found</h1>
+        <p class="texte-erreur">Sorry, the page you are looking for does not exist yet or has been moved. Return to the homepage to continue your visit.</p>
+        <a href="index-en.html" class="btn-retour">Back to home</a>
     </main>
 
     <footer class="pied-page">
@@ -292,7 +285,7 @@
                         <li class="saut-ligne"></li>
                         <li><a href="404-en.html" class="lien">Receive the invitation</a></li>
                         <li class="saut-ligne"></li>
-                        <li><a href="404-en.html" class="lien">Read the semester calendar</a></li>
+                        <li><a href="404-en.html" class="lien">Read the semester agenda</a></li>
                     </ul>
                 </nav>
                 
@@ -305,13 +298,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="popup-tarifs" id="popup-tarifs">
-        <button class="btn-fermer" aria-label="Close">&times;</button>
-        <a href="404-en.html" class="btn-tarifs">PRICES</a>
-        <p class="fermeture">Exceptional closure from<br>XX to XX December</p>
-        <p class="horaires"><span class="ouvert">Open</span> <span class="heures">from 8am to 7pm</span></p>
-    </div>
 
     <script src="assets/style/script.js" defer></script>
 </body>
