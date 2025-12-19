@@ -131,6 +131,17 @@
     margin: 0;
 }
 
+/* Lettrine - Style commun pour toutes les sections */
+.texte .lettrine {
+    font-family: 'MusBA', sans-serif;
+    font-size: 4em;
+    line-height: 0.8;
+    float: left;
+    margin-right: 0.1em;
+    margin-top: 0.05em;
+    color: var(--color-primary);
+}
+
 .expositions .bouton {
     margin-top: auto;
     align-self: flex-start;
