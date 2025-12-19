@@ -166,6 +166,7 @@
     margin: 0;
     margin-bottom: 1.56vw;
     padding: 0;
+    white-space: nowrap;
 }
 
 .collections .contenu {
@@ -189,13 +190,14 @@
     object-fit: cover;
 }
 
-.collections .contenu > div:first-child {
+.collections .contenu > div:last-child {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.56vw;
     width: 22.73%;
     flex: 0 0 22.73%;
+    align-self: flex-end;
 }
 
 .collections .texte {
@@ -209,6 +211,10 @@
     line-height: 25px;
     color: var(--color-primary);
     margin: 0;
+}
+
+.collections .bouton {
+    margin-top: auto;
 }
 
 /* Section Histoire du Musée */
