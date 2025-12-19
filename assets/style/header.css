@@ -53,6 +53,10 @@
     
 }
 
+.inner .logo-container {
+    margin-right: auto;
+}
+
 .nav-container {
     display: flex;
     align-items: center;
