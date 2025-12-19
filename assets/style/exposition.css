@@ -153,20 +153,29 @@
     flex-direction: column;
     gap: var(--spacing-sm);
     margin-top: var(--spacing-sm);
+    align-items: flex-end;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
 }
 
 .exposition-1 .exposition-titre {
     margin: 0;
     padding: 0;
+    font-size: 30px;
 }
 
 .exposition-1 .exposition-dates {
     color: #000000;
     margin: 0;
     padding: 0;
-    padding-left: 0.55em;
+    padding-right: 0;
+    margin-right: 0;
     display: flex;
     align-items: baseline;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100%;
 }
 
 .exposition-1 .date-chiffre {
@@ -191,6 +200,8 @@
     flex-direction: column;
     gap: var(--spacing-sm);
     align-self: flex-start;
+    padding-right: 0;
+    margin-right: 0;
 }
 
 .exposition-1 .exposition-image {
@@ -417,19 +428,37 @@
     flex-direction: column;
     gap: 0;
     align-self: flex-start;
+    width: 750px;
 }
 
 .exposition-4 .exposition-info {
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-top: 0;
+    margin-top: -135px;
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.exposition-4 .exposition-titre {
+    text-align: right;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
 }
 
 .exposition-4 .exposition-dates {
     color: #000000;
     display: flex;
     align-items: baseline;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
 }
 
 .exposition-4 .date-chiffre {
@@ -453,6 +482,8 @@
     clip-path: inset(100px 0 135px 0);
     padding-top: 100px;
     margin-top: -100px;
+    padding-right: 0;
+    margin-right: 0;
 }
 
 .exposition-4 .exposition-image .image {
@@ -464,6 +495,8 @@
     display: block;
     margin-top: -175px;
     margin-bottom: -135px;
+    margin-right: 0;
+    padding-right: 0;
 }
 
 /* Exposition 5: Jean Dupas & Co */
@@ -557,9 +590,14 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .page-expositions {
+        padding: var(--spacing-lg) var(--container-padding);
+    }
+    
     .exposition-contenu {
         flex-direction: column !important;
-        gap: var(--spacing-xl);
+        gap: var(--spacing-lg);
+        align-items: center;
     }
     
     .exposition-colonne-gauche,
@@ -568,37 +606,352 @@
         width: 100%;
     }
     
+    /* Images centrées et pleine largeur */
+    .exposition-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .exposition-image .image {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto !important;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    /* Structure verticale : Image → Titre → Dates → Texte */
+    .exposition-1 .exposition-gauche,
+    .exposition-2 .exposition-media,
+    .exposition-3 .exposition-media,
+    .exposition-4 .exposition-media,
+    .exposition-5 .exposition-media {
+        width: 100%;
+        order: 1;
+    }
+    
+    .exposition-1 .exposition-info,
+    .exposition-2 .exposition-info,
+    .exposition-3 .exposition-info,
+    .exposition-4 .exposition-info,
+    .exposition-5 .exposition-info {
+        order: 2;
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .exposition-1 .exposition-titre,
+    .exposition-2 .exposition-titre,
+    .exposition-3 .exposition-titre,
+    .exposition-4 .exposition-titre,
+    .exposition-5 .exposition-titre {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .exposition-1 .exposition-dates,
+    .exposition-2 .exposition-dates,
+    .exposition-3 .exposition-dates,
+    .exposition-4 .exposition-dates,
+    .exposition-5 .exposition-dates {
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .exposition-texte,
+    .exposition-texte-wrapper {
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        text-align: left;
+    }
+    
+    /* Suppression des crops en responsive */
+    .exposition-4 .exposition-image,
+    .exposition-5 .exposition-image {
+        clip-path: none;
+        padding-top: 0;
+        margin-top: 0;
+        overflow: visible;
+    }
+    
+    .exposition-4 .exposition-image .image,
+    .exposition-5 .exposition-image .image {
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
+    
     .exposition-2 .exposition-header,
     .exposition-4 .exposition-header {
         order: 0;
         margin-top: var(--spacing-lg);
         margin-bottom: 0;
     }
+    
+    /* Espacement entre les articles */
+    .exposition-item {
+        margin-bottom: var(--spacing-xxxl);
+    }
 }
 
 @media (max-width: 768px) {
     .page-expositions {
         padding: var(--spacing-lg) var(--container-padding);
-        gap: var(--spacing-xl);
     }
     
     .page-expositions .titre-principal {
-        font-size: var(--font-size-lg);
+        font-size: 40px;
+        margin-bottom: var(--spacing-xl);
     }
     
+    .exposition-item {
+        margin-bottom: var(--spacing-xxxl);
+    }
+    
+    .exposition-contenu {
+        gap: var(--spacing-md);
+    }
+    
+    /* Images pleine largeur et centrées */
+    .exposition-image {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .exposition-image .image {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto !important;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Titres */
     .exposition-titre {
         font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-sm);
+        text-align: left;
     }
     
+    /* Dates - garder le format avec grands chiffres */
     .exposition-dates {
         font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-md);
+        text-align: left;
+    }
+    
+    .date-chiffre {
+        font-size: 28px;
+    }
+    
+    .date-texte {
+        font-size: 16px;
+    }
+    
+    /* Texte de description */
+    .exposition-texte {
+        width: 100%;
+        margin-top: var(--spacing-sm);
+        position: relative;
     }
     
     .exposition-texte p {
         font-size: var(--font-size-xs);
+        text-align: left;
+        line-height: 1.6;
+        margin: 0;
+    }
+    
+    /* Limiter le texte à 4-5 lignes par défaut */
+    .exposition-texte.texte-limite p {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Texte complet - afficher tout */
+    .exposition-texte.texte-complet p {
+        display: block;
+        -webkit-line-clamp: none;
+        -webkit-box-orient: initial;
+        overflow: visible;
+    }
+    
+    /* Bouton voir plus */
+    .btn-voir-plus {
+        display: block;
+        margin: var(--spacing-sm) auto 0;
+        font-family: var(--font-primary);
+        font-size: var(--font-size-xs);
+        font-weight: 500;
+        color: var(--color-primary);
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        text-decoration: underline;
+        transition: opacity var(--transition-fast);
+        text-align: center;
+    }
+    
+    .btn-voir-plus:hover {
+        opacity: 0.7;
+    }
+    
+    .exposition-texte.texte-complet .btn-voir-plus::after {
+        content: " voir moins";
+    }
+    
+    .exposition-texte.texte-limite .btn-voir-plus::after {
+        content: " voir plus";
+    }
+    
+    /* Masquer le bouton sur desktop */
+    @media (min-width: 769px) {
+        .btn-voir-plus {
+            display: none;
+        }
+        
+        .exposition-texte.texte-limite p {
+            display: block;
+            -webkit-line-clamp: none;
+            overflow: visible;
+        }
     }
     
     .exposition-texte .lettrine {
         font-size: 2.5em;
+        float: left;
+        margin-right: 0.15em;
+        margin-top: 0.1em;
+    }
+    
+    /* Structure verticale stricte */
+    .exposition-1 .exposition-gauche {
+        width: 100%;
+        min-width: auto;
+        max-width: 100%;
+        order: 1;
+    }
+    
+    .exposition-1 .exposition-image {
+        order: 1;
+    }
+    
+    .exposition-1 .exposition-info {
+        order: 2;
+        margin-top: var(--spacing-md);
+    }
+    
+    .exposition-1 .exposition-texte {
+        order: 3;
+        margin-top: var(--spacing-md);
+    }
+    
+    /* Alignement à gauche pour tous les éléments */
+    .exposition-1 .exposition-dates,
+    .exposition-2 .exposition-dates,
+    .exposition-3 .exposition-dates,
+    .exposition-4 .exposition-dates,
+    .exposition-5 .exposition-dates {
+        justify-content: flex-start;
+    }
+    
+    .exposition-2 .exposition-info,
+    .exposition-4 .exposition-info {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .exposition-2 .exposition-titre,
+    .exposition-4 .exposition-titre {
+        text-align: left;
+    }
+    
+    /* Media queries spécifiques pour chaque exposition */
+    .exposition-1 .exposition-image .image {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto !important;
+    }
+    
+    .exposition-2 .exposition-image .image {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto !important;
+    }
+    
+    .exposition-3 .exposition-image .image {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto !important;
+    }
+    
+    .exposition-4 .exposition-image .image {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto !important;
+    }
+    
+    .exposition-5 .exposition-image .image {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto !important;
+    }
+    
+    /* Structure pour exposition 2 */
+    .exposition-2 .exposition-texte {
+        order: 3;
+        width: 100%;
+    }
+    
+    .exposition-2 .exposition-media {
+        order: 1;
+        width: 100%;
+    }
+    
+    /* Structure pour exposition 3 */
+    .exposition-3 .exposition-media {
+        order: 1;
+        width: 100%;
+    }
+    
+    .exposition-3 .exposition-texte-wrapper {
+        order: 3;
+        width: 100%;
+    }
+    
+    /* Structure pour exposition 4 */
+    .exposition-4 .exposition-texte {
+        order: 3;
+        width: 100%;
+    }
+    
+    .exposition-4 .exposition-media {
+        order: 1;
+        width: 100%;
+    }
+    
+    /* Structure pour exposition 5 */
+    .exposition-5 .exposition-media {
+        order: 1;
+        width: 100%;
+    }
+    
+    .exposition-5 .exposition-texte-wrapper {
+        order: 3;
+        width: 100%;
     }
 }

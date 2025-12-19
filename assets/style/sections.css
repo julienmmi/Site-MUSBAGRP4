@@ -80,18 +80,19 @@
     padding: 0 5%;
     margin-top: 10.31vw;
     gap: 5vw;
+    overflow-x: visible;
 }
 
 .expositions .titre {
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(24px, 3.13vw, 40px);
+    font-size: 40px;
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
     margin: 0;
+    margin-bottom: 1.56vw;
     padding: 0;
     text-align: left;
-    align-self: flex-start;
 }
 
 .expositions .contenu {
@@ -112,6 +113,10 @@
     flex: 0 0 20.94%;
 }
 
+.expositions .bouton {
+    margin-top: 215px;
+}
+
 .expositions .texte {
     width: 100%;
 }
@@ -129,6 +134,10 @@
     display: flex;
     flex: 1 1 auto;
     width: auto;
+    transform: scale(0.95);
+    transform-origin: top right;
+    margin-left: auto;
+    margin-right: calc(-5% + 32px);
 }
 
 .expositions .image-expositions .image {
@@ -149,19 +158,19 @@
 
 .collections .titre {
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(24px, 3.13vw, 40px);
+    font-size: 40px;
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
     text-align: left;
     margin: 0;
+    margin-bottom: 1.56vw;
     padding: 0;
-    align-self: flex-end;
 }
 
 .collections .contenu {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
@@ -180,7 +189,7 @@
     object-fit: cover;
 }
 
-.collections .contenu > div:last-child {
+.collections .contenu > div:first-child {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

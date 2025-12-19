@@ -4,15 +4,18 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 1.56vw 5.16% 0;
+    padding: 1.56vw 0 0;
     gap: 0;
+    overflow-x: visible;
 }
 
 .image-accueil {
-    width: 89.61%;
+    width: calc(100vw - 64px);
     height: 47.66vw;
     align-self: flex-start;
     display: flex;
+    margin-left: calc(50% - 50vw + 32px);
+    position: relative;
 }
 
 .image-accueil .image {
@@ -37,6 +40,7 @@
     align-items: flex-start;
     width: 34.3%;
     gap: 0;
+    margin-left: 150px;
 }
 
 .titre-principal {
@@ -67,8 +71,10 @@
     font-size: clamp(16px, 1.56vw, 20px);
     font-weight: 500;
     line-height: 25px;
-    color: var(--color-secondary);
+    color: #000000;
     margin: 0;
+    margin-right: 150px;
+    align-self: flex-start;
 }
 
 /* Responsive */
