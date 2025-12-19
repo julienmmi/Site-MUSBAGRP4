@@ -225,7 +225,7 @@
 
 .collections .bouton {
     margin-top: auto;
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
 /* Section Histoire du Musée */
@@ -375,7 +375,7 @@
 
 .boutique .bouton {
     margin-top: auto;
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
 /* Section Informations pratiques */

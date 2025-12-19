@@ -1,7 +1,8 @@
 /* Composants réutilisables - Utilisation exclusive de Flexbox */
 
 /* Boutons */
-.bouton {
+.bouton,
+a.bouton {
     background-color: var(--color-button);
     border: 2px solid var(--color-button);
     border-radius: 0;
@@ -24,21 +25,26 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
 }
 
-.bouton:hover {
+.bouton:hover,
+a.bouton:hover {
     background-color: #3A2A1A;
     border-color: #3A2A1A;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-1px);
+    color: #FFFFFF;
 }
 
-.bouton:active {
+.bouton:active,
+a.bouton:active {
     transform: translateY(0);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.bouton:focus {
+.bouton:focus,
+a.bouton:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
