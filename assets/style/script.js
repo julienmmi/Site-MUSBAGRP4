@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Menus déroulants PC - Survol
+    // Menus déroulants PC - Survol avec délai
     const navLinksDesktop = document.querySelectorAll('.nav-links .lien');
     const menuVisite = document.getElementById('menu-visite');
     const menuDecouvrir = document.getElementById('menu-decouvrir');
@@ -40,33 +40,68 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuSavoirPlus = document.getElementById('menu-savoir-plus');
     const allMenus = [menuVisite, menuDecouvrir, menuHistoire, menuSavoirPlus];
     const header = document.querySelector('.en-tete');
+    
+    let closeTimeout = null;
+    let currentMenu = null;
 
     // Fonction pour fermer tous les menus
     function closeAllMenus() {
         allMenus.forEach(menu => {
             if (menu) {
                 menu.classList.remove('active');
-                const contenu = menu.querySelector('.menu-contenu-blanc');
-                if (contenu) contenu.style.marginLeft = '';
             }
         });
+        currentMenu = null;
+    }
+    
+    // Fonction pour fermer avec délai
+    function closeMenuWithDelay() {
+        closeTimeout = setTimeout(function() {
+            closeAllMenus();
+        }, 150);
+    }
+    
+    // Fonction pour annuler la fermeture
+    function cancelClose() {
+        if (closeTimeout) {
+            clearTimeout(closeTimeout);
+            closeTimeout = null;
+        }
     }
 
-    // Fonction pour positionner le contenu sous le lien (rectangle pleine largeur)
+    // Fonction pour positionner le contenu sous le lien
     function openMenuUnderLink(menu, link) {
-        closeAllMenus();
-        if (menu && link) {
-            // Obtenir la position du lien
-            const linkRect = link.getBoundingClientRect();
-            
-            // Positionner le contenu du menu sous le lien
+        cancelClose();
+        
+        if (!menu || !link) return;
+        
+        // Obtenir la position du lien
+        const linkRect = link.getBoundingClientRect();
+        const newMarginLeft = (linkRect.left - 32) + 'px';
+        
+        // Si c'est le même menu déjà ouvert, juste mettre à jour la position
+        if (currentMenu === menu && menu.classList.contains('active')) {
             const contenu = menu.querySelector('.menu-contenu-blanc');
             if (contenu) {
-                contenu.style.marginLeft = (linkRect.left - 32) + 'px'; // 32px = padding du menu
+                contenu.style.marginLeft = newMarginLeft;
             }
-            
-            menu.classList.add('active');
+            return;
         }
+        
+        // Si un autre menu est ouvert, le fermer d'abord sans animation
+        if (currentMenu && currentMenu !== menu) {
+            currentMenu.classList.remove('active');
+        }
+        
+        // Positionner le contenu du nouveau menu AVANT de l'ouvrir
+        const contenu = menu.querySelector('.menu-contenu-blanc');
+        if (contenu) {
+            contenu.style.marginLeft = newMarginLeft;
+        }
+        
+        // Ouvrir le nouveau menu
+        menu.classList.add('active');
+        currentMenu = menu;
     }
 
     // Association des liens aux menus (FR et EN)
@@ -75,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         link.addEventListener('mouseenter', function() {
             if (window.innerWidth > 768) {
-                // Français
+                cancelClose();
                 if (linkText === 'visite' || linkText === 'visit') {
                     openMenuUnderLink(menuVisite, link);
                 } else if (linkText === 'découvrir' || linkText === 'discover') {
@@ -87,42 +122,68 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
+        
+        link.addEventListener('mouseleave', function() {
+            closeMenuWithDelay();
+        });
     });
 
     // Garder le menu ouvert quand on survole le menu lui-même
     allMenus.forEach(menu => {
         if (menu) {
             menu.addEventListener('mouseenter', function() {
-                // Ne rien faire, le menu reste ouvert
+                cancelClose();
             });
 
             menu.addEventListener('mouseleave', function() {
-                closeAllMenus();
+                closeMenuWithDelay();
             });
         }
     });
 
-    // Fermer le menu si on quitte la zone de navigation
-    const navContainer = document.querySelector('.nav-container');
-    if (navContainer) {
-        navContainer.addEventListener('mouseleave', function(e) {
-            // Vérifier si on va vers un menu déroulant
-            const relatedTarget = e.relatedTarget;
-            const isGoingToMenu = allMenus.some(menu => menu && menu.contains(relatedTarget));
-            
-            if (!isGoingToMenu) {
-                closeAllMenus();
-            }
-        });
-    }
-
     // Fermer le menu si on clique ailleurs
+    const navContainer = document.querySelector('.nav-container');
     document.addEventListener('click', function(event) {
         const isClickInMenu = allMenus.some(menu => menu && menu.contains(event.target));
         const isClickInNav = navContainer && navContainer.contains(event.target);
         
         if (!isClickInMenu && !isClickInNav) {
+            cancelClose();
             closeAllMenus();
         }
     });
+
+    // ===== POPUP TARIFS - Apparaît au scroll =====
+    const popupTarifs = document.getElementById('popup-tarifs');
+    const btnFermerPopup = popupTarifs ? popupTarifs.querySelector('.btn-fermer') : null;
+    let popupFerme = false;
+    
+    if (popupTarifs) {
+        // Afficher/masquer le popup selon le scroll
+        function checkScroll() {
+            if (popupFerme) return;
+            
+            const scrollY = window.scrollY || window.pageYOffset;
+            
+            if (scrollY > 200) {
+                popupTarifs.classList.add('visible');
+            } else {
+                popupTarifs.classList.remove('visible');
+            }
+        }
+        
+        // Écouter le scroll
+        window.addEventListener('scroll', checkScroll, { passive: true });
+        
+        // Vérifier au chargement
+        checkScroll();
+        
+        // Bouton fermer
+        if (btnFermerPopup) {
+            btnFermerPopup.addEventListener('click', function() {
+                popupTarifs.classList.remove('visible');
+                popupFerme = true;
+            });
+        }
+    }
 });
