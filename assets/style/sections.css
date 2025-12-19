@@ -70,6 +70,8 @@
     line-height: 25px;
     color: var(--color-secondary);
     margin: 0;
+    text-align: right;
+    justify-content: flex-end;
 }
 
 /* Section Expositions temporaires */
@@ -77,10 +79,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 5%;
+    padding: 5vw 5%;
     margin-top: 10.31vw;
     gap: 5vw;
-    overflow-x: visible;
+    background-color: #FFFFFF;
 }
 
 .expositions .titre {
@@ -89,16 +91,15 @@
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
-    margin: 0;
-    margin-bottom: 1.56vw;
-    padding: 0;
     text-align: left;
+    margin: 0;
+    padding: 0;
 }
 
 .expositions .contenu {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
     width: 100%;
     gap: 3vw;
@@ -108,27 +109,35 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.56vw;
+    justify-content: flex-start;
     width: 20.94%;
     flex: 0 0 20.94%;
+    transform: scaleY(0.95);
+    transform-origin: top left;
 }
 
-.expositions .bouton {
-    margin-top: 215px;
-}
 
 .expositions .texte {
     width: 100%;
+    flex: 0 0 auto;
+    margin-top: 1.56vw;
 }
+
 
 .expositions .texte p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(16px, 1.56vw, 20px);
+    font-size: 18px;
     font-weight: 500;
     line-height: 25px;
-    color: var(--color-primary);
+    color: #000000;
     margin: 0;
 }
+
+.expositions .bouton {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
 
 .expositions .image-expositions {
     display: flex;
@@ -139,6 +148,7 @@
     margin-left: auto;
     margin-right: calc(-5% + 32px);
 }
+
 
 .expositions .image-expositions .image {
     width: 100%;
@@ -151,9 +161,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 5%;
-    margin-top: 10.31vw;
+    padding: 5vw 5%;
+    margin-top: 0;
     gap: 5vw;
+    background-color: #F7F6F3;
 }
 
 .collections .titre {
@@ -164,7 +175,6 @@
     color: var(--color-primary);
     text-align: left;
     margin: 0;
-    margin-bottom: 1.56vw;
     padding: 0;
     white-space: nowrap;
 }
@@ -172,7 +182,7 @@
 .collections .contenu {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
     width: 100%;
     gap: 3vw;
@@ -194,27 +204,28 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.56vw;
+    justify-content: flex-start;
     width: 22.73%;
     flex: 0 0 22.73%;
-    align-self: flex-end;
 }
 
 .collections .texte {
     width: 100%;
+    margin-top: 1.56vw;
 }
 
 .collections .texte p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(14px, 1.25vw, 16px);
+    font-size: 18px;
     font-weight: 500;
     line-height: 25px;
-    color: var(--color-primary);
+    color: #000000;
     margin: 0;
 }
 
 .collections .bouton {
     margin-top: auto;
+    align-self: flex-end;
 }
 
 /* Section Histoire du Musée */
@@ -222,28 +233,28 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 5%;
-    margin-top: 10.31vw;
-    gap: 5vw;
+    padding: 5vw 5%;
+    margin-top: 0;
+    gap: 0;
+    background-color: #FFFFFF;
 }
 
 .histoire .titre {
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(24px, 3.13vw, 40px);
+    font-size: 40px;
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
     margin: 0;
     padding: 0;
     text-align: left;
-    align-self: flex-start;
 }
 
 .histoire .contenu {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-end;
+    align-items: stretch;
+    justify-content: flex-start;
     width: 100%;
     gap: 3vw;
 }
@@ -252,29 +263,43 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.56vw;
+    justify-content: flex-start;
     width: 24.53%;
     flex: 0 0 24.53%;
+    transform: scaleY(0.90);
+    transform-origin: top left;
 }
 
 .histoire .texte {
     width: 100%;
+    margin-top: 1.56vw;
 }
 
 .histoire .texte p {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(12px, 1.09vw, 14px);
+    font-size: 18px;
     font-weight: 500;
     line-height: 25px;
-    color: var(--color-primary);
+    color: #000000;
     margin: 0;
 }
 
+.histoire .bouton {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+
 .histoire .image-histoire {
     display: flex;
-    flex: 0 1 59.06%;
+    flex: 1 1 auto;
     width: auto;
+    transform: scale(0.90);
+    transform-origin: top right;
+    margin-left: auto;
+    margin-right: calc(-5% + 32px);
 }
+
 
 .histoire .image-histoire .image {
     width: 100%;
@@ -287,27 +312,27 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 5%;
-    margin-top: 10.31vw;
-    gap: 5vw;
+    padding: 5vw 5%;
+    margin-top: 0;
+    gap: 0;
+    background-color: #F7F6F3;
 }
 
 .boutique .titre {
     font-family: 'MusBA', sans-serif;
-    font-size: clamp(24px, 3.13vw, 40px);
+    font-size: 40px;
     font-weight: 400;
     line-height: 100%;
     color: var(--color-primary);
     text-align: left;
     margin: 0;
     padding: 0;
-    align-self: flex-end;
 }
 
 .boutique .contenu {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: stretch;
     justify-content: flex-start;
     width: 100%;
     gap: 3vw;
@@ -329,16 +354,69 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.56vw;
+    justify-content: flex-start;
     width: 22.97%;
     flex: 0 0 22.97%;
 }
 
 .boutique .texte {
     width: 100%;
+    margin-top: 1.56vw;
 }
 
 .boutique .texte p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #000000;
+    margin: 0;
+}
+
+.boutique .bouton {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+/* Section Informations pratiques */
+.informations {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 10.31vw;
+    margin-bottom: 10.31vw;
+    gap: 5vw;
+}
+
+.informations .titre {
+    font-family: 'MusBA', sans-serif;
+    font-size: clamp(24px, 3.13vw, 40px);
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-primary);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.informations .contenu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 3vw;
+}
+
+.informations .colonne {
+    display: flex;
+    flex-direction: column;
+    gap: 1.56vw;
+    flex: 0 0 30%;
+}
+
+.informations .texte {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(12px, 1.09vw, 14px);
     font-weight: 500;
@@ -347,64 +425,198 @@
     margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .expositions .contenu,
-    .collections .contenu,
-    .histoire .contenu,
-    .boutique .contenu {
-        flex-direction: column;
-        gap: var(--spacing-xl);
-    }
-    
-    .expositions .contenu > div:first-child,
-    .collections .contenu > div:last-child,
-    .histoire .contenu > div:first-child,
-    .boutique .contenu > div:last-child {
-        width: 100%;
-        flex: 1 1 100%;
-    }
-    
-    .expositions .image-expositions,
-    .collections .image-collections,
-    .histoire .image-histoire,
-    .boutique .image-boutique {
-        width: 100%;
-        flex: 1 1 100%;
-    }
-}
+/* Media Queries - Responsive Design */
 
+/* Section Hero - Responsive */
 @media (max-width: 768px) {
     .accueil {
-        padding: var(--spacing-md) var(--container-padding) 0;
+        padding: 5vw 5% 0;
+        align-items: center;
     }
     
     .image-accueil {
         width: 100%;
         height: auto;
         min-height: 200px;
+        margin-left: 0;
+        align-self: center;
     }
     
     .accueil .contenu {
         flex-direction: column;
-        margin-top: var(--spacing-xl);
-        gap: var(--spacing-lg);
+        margin-top: 5vw;
+        gap: 4vw;
+        width: 100%;
+        align-items: stretch;
     }
     
     .titre-accueil {
+        width: 100%;
+        margin-left: 0;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .titre-principal {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .titre-accueil .sous-titre {
+        text-align: left;
         width: 100%;
     }
     
     .date {
         width: 100%;
+        margin-right: 0;
+        text-align: right;
+        justify-content: flex-end;
     }
-    
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+    /* Sections générales */
     .expositions,
     .collections,
     .histoire,
     .boutique {
-        padding: 0 var(--container-padding);
-        margin-top: var(--spacing-xl);
-        gap: var(--spacing-lg);
+        padding: 0 5%;
+        margin-top: 6vw;
+    }
+
+    .expositions .contenu,
+    .collections .contenu,
+    .histoire .contenu,
+    .boutique .contenu {
+        flex-direction: column;
+        gap: 4vw;
+        align-items: stretch;
+    }
+
+    .expositions .contenu > div:first-child,
+    .collections .contenu > div:last-child,
+    .histoire .contenu > div:first-child,
+    .boutique .contenu > div:last-child {
+        width: 100%;
+        transform: none;
+        align-self: stretch;
+    }
+
+    .expositions .image-expositions,
+    .collections .image-collections,
+    .histoire .image-histoire,
+    .boutique .image-boutique {
+        width: 100%;
+        transform: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .expositions .bouton,
+    .collections .bouton,
+    .histoire .bouton,
+    .boutique .bouton {
+        margin-top: 3vw;
+        align-self: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Sections générales */
+    .expositions,
+    .collections,
+    .histoire,
+    .boutique {
+        padding: 0 5%;
+        margin-top: 8vw;
+    }
+
+    .expositions .titre,
+    .collections .titre,
+    .histoire .titre,
+    .boutique .titre {
+        font-size: clamp(28px, 8vw, 40px);
+        white-space: normal;
+        margin-bottom: 3vw;
+    }
+
+    .expositions .contenu,
+    .collections .contenu,
+    .histoire .contenu,
+    .boutique .contenu {
+        flex-direction: column;
+        gap: 5vw;
+        align-items: stretch;
+    }
+
+    .expositions .contenu > div:first-child,
+    .collections .contenu > div:last-child,
+    .histoire .contenu > div:first-child,
+    .boutique .contenu > div:last-child {
+        width: 100%;
+        transform: none;
+        align-self: stretch;
+        justify-content: flex-start;
+    }
+
+    .expositions .texte,
+    .collections .texte,
+    .histoire .texte,
+    .boutique .texte {
+        margin-top: 3vw;
+    }
+
+    .expositions .texte p,
+    .collections .texte p,
+    .histoire .texte p,
+    .boutique .texte p {
+        font-size: 16px;
+    }
+
+    .expositions .image-expositions,
+    .collections .image-collections,
+    .histoire .image-histoire,
+    .boutique .image-boutique {
+        width: 100%;
+        transform: none;
+        margin-left: 0;
+        margin-right: 0;
+        order: -1;
+    }
+
+    .expositions .image-expositions .image,
+    .collections .image-collections .image,
+    .histoire .image-histoire .image,
+    .boutique .image-boutique .image {
+        width: 100%;
+    }
+
+    .expositions .bouton,
+    .collections .bouton,
+    .histoire .bouton,
+    .boutique .bouton {
+        margin-top: 4vw;
+        align-self: stretch;
+        width: 100%;
+    }
+
+    /* Section Informations pratiques */
+    .informations {
+        padding: 0 5%;
+        margin-top: 8vw;
+        margin-bottom: 8vw;
+    }
+
+    .informations .contenu {
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .informations .colonne {
+        width: 100%;
+        flex: 0 0 auto;
     }
 }
